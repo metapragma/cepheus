@@ -1,0 +1,11 @@
+$cas-local-breakpoints: (
+  // https://github.com/trello/trellisheets/blob/master/styleguide.md#media-queries
+  // https://github.com/at-import/breakpoint/wiki/Advanced-Media-Queries#or-queries
+  small: 'only screen' (max-width 29.99em),
+  not-small: 'only screen' (min-width 30em),
+  medium: 'only screen' 30em 47.99em,
+  large: 'only screen' 48em,
+  extra-large: 'only screen' 64em,
+  print: print
+) !default;
+

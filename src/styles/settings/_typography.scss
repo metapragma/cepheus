@@ -1,0 +1,16 @@
+// TODO: review this
+
+$cas-font: Rubik !default;
+$cas-font-slug: rubik !default;
+$cas-font-baseline: 0.1575 !default;
+$cas-font-x-height-ratio: 0.52 !default;
+$cas-font-scaling-factor: 169.28494041 !default;
+$cas-font-is-sans-serif: true !default;
+$cas-font-is-serif: false !default;
+
+// @import '~@cassiopeia/typeface-rubik/variables';
+
+$cas-font-stack-sans-serif: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif !default;
+$cas-font-stack-serif: $georgia !default;
+$cas-font-stack: if($cas-font-is-sans-serif, $cas-font-stack-sans-serif, $cas-font-stack-serif) !default;
+$cas-font-family: $cas-font, $cas-font-stack !default;
