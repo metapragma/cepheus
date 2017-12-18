@@ -1,0 +1,24 @@
+.cas {
+  sup,
+  sub {
+    font-weight: normal;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+
+    @include plumber(
+      $grid-height: 1em,
+      $font-size: $cas-font-x-height-ratio,
+      $line-height: 1,
+      $leading-top: 0,
+      $leading-bottom: 0
+    );
+  }
+
+  sup {
+    top: $cas-font-x-height-ratio * -2em;
+  }
+
+  sub {
+    bottom: $cas-font-x-height-ratio * -0.5em;
+  }
+}

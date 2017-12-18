@@ -1,0 +1,61 @@
+@import './tint';
+@import './shade';
+@import './contrast';
+@import './reset';
+@import './font-smoothing';
+
+// form element variables
+$cas-form-element-background-color: $white;
+$cas-form-element-background-color-hover: $light-gray;
+$cas-form-element-background-color-focus: opacify($cas-form-element-background-color-hover, 0.025);
+$cas-form-element-background-color-disabled: $light-gray;
+
+$cas-form-element-border: 2px solid $light-silver;
+$cas-form-element-border-focus: 2px solid $silver;
+$cas-form-element-error-border: 2px solid $light-red;
+$cas-form-element-error-border-focus: 2px solid $red;
+
+$cas-form-element-font-size: 1em;
+$cas-form-element-color: $light-silver;
+$cas-form-element-padding: 0.5em 0.75em 0.5em 0.5em;
+$cas-form-element-border-radius: 0.5em;
+
+$cas-form-element-box-shadow: 0.1em 0.1em 0.25em $light-gray;
+
+$cas-form-element-label-font-size: 1em;
+$cas-form-element-label-margin-bottom: 0.5em;
+$cas-form-element-label-color: $gray;
+
+$cas-form-element-helper-font-size: 0.75em;
+$cas-form-element-helper-margin-top: 0.5em;
+$cas-form-element-helper-color: $gray;
+
+$cas-input-height: $cas-form-element-font-size + 2em;
+
+// form element essentials 
+@mixin cas-form-asterisk {
+  content: '*';
+  color: $light-red;
+  margin-right: 0.25em;
+}
+
+@mixin cas-form-help {
+  margin-top: $cas-form-element-helper-margin-top;
+  font-size: $cas-form-element-helper-font-size;
+  color: $cas-form-element-helper-color;
+  text-align: left;
+}
+
+@mixin cas-form-label {
+  display: block;
+  font-size: $cas-form-element-label-font-size;
+  margin-bottom: $cas-form-element-label-margin-bottom;
+  color: $cas-form-element-label-color;
+  text-align: left;
+}
+
+@mixin cas-form-disabled {
+  border: 2px solid $light-gray;
+  pointer-events: none;
+  color: $light-gray;
+}

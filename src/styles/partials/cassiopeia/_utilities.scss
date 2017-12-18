@@ -1,0 +1,28 @@
+.cas {
+
+  // Converted Variables
+  // Custom Media Query Variables
+
+  /*
+
+   UTILITIES
+
+*/
+
+  .overflow-container {
+    overflow-y: scroll;
+  }
+
+  .center {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .absolute-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+  }
+}
