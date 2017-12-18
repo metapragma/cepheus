@@ -1,3 +1,6 @@
+/test/end-to-end/reports
+selenium-debug.log
+
 .DS_Store
 node_modules/
 /dist/
