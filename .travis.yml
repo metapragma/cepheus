@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- 8
+addons:
+  chrome: stable
+  apt:
+    packages:
+    - bc
+before_install:
+- npm install -g npm
+script:
+- gpg --keyserver ha.pool.sks-keyservers.net --recv-key 13F26F82E955B8B8CE469054F29CCEBC83FD4525
+- mkdir -p ~/bin && curl -sSL -o ~/bin/jq $JQ_BINARY && chmod +x ~/bin/jq
+- npm run test
+env:
+  global:
+  - JQ_BINARY="https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64"
+  - PATH="/usr/bin:$PATH"
