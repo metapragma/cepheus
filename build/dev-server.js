@@ -64,7 +64,7 @@ app.use(devMiddleware)
 const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
 
-const uri = 'http://localhost:' + port
+const uri = 'http://0.0.0.0:' + port
 
 let _resolve
 const readyPromise = new Promise(resolve => {
@@ -81,7 +81,7 @@ devMiddleware.waitUntilValid(() => {
   _resolve()
 })
 
-const server = app.listen(port)
+const server = app.listen(port, '0.0.0.0')
 
 module.exports = {
   ready: readyPromise,
