@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="cas">
+  <div id="app">
     <!-- TODO: remove this -->
-    <main class="sans-serif">
+    <main>
       <router-view></router-view>
     </main>
   </div>
@@ -12,8 +12,3 @@ export default {
   name: 'app',
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="sass">
-@import './styles/entrypoints/website';
-</style>

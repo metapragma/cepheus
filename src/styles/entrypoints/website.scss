@@ -1,37 +1,36 @@
 @import './functional';
 @import '~normalize.css/normalize';
 @import '~normalize-opentype.css/normalize-opentype';
-@import '../partials/index';
+// @import '../partials/index';
 
-html {
-  @include respond-to(small) {
-    font-size: $cas-font-scaling-factor * 0.5%;
-  }
-
-  @include respond-to(medium) {
-    font-size: $cas-font-scaling-factor * 0.65%;
-  }
-
-  @include respond-to(large) {
-    font-size: $cas-font-scaling-factor * 0.8%;
-  }
-
-  @include respond-to(extra-large) {
-    font-size: $cas-font-scaling-factor * 0.95%;
-  }
-
-  @include respond-to(print) {
-    font-size: $cas-font-scaling-factor * 0.65%;
-  }
-
-  -webkit: {
-    tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-}
+// html {
+//   @include respond-to(small) {
+//     font-size: $cas-font-scaling-factor * 0.5%;
+//   }
+//
+//   @include respond-to(medium) {
+//     font-size: $cas-font-scaling-factor * 0.65%;
+//   }
+//
+//   @include respond-to(large) {
+//     font-size: $cas-font-scaling-factor * 0.8%;
+//   }
+//
+//   @include respond-to(extra-large) {
+//     font-size: $cas-font-scaling-factor * 0.95%;
+//   }
+//
+//   @include respond-to(print) {
+//     font-size: $cas-font-scaling-factor * 0.65%;
+//   }
+//
+//   -webkit: {
+//     tap-highlight-color: rgba(0, 0, 0, 0);
+//   }
+// }
 
 // @import 'vendor/html5boilerplate-print';
 //
 
 // TODO: review this
-@import '../fonts/rubik';
-
+@import '~cepheus-typeface-inter-ui/lib/index.css';
