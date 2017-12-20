@@ -24,5 +24,19 @@ module.exports = {
       .assert.cssProperty("#t5", "color", "rgba(0, 0, 0, 1)")
       .assert.cssProperty("#t6", "color", "rgba(0, 0, 0, 1)")
       .end()
+  },
+  'partials/text-decoration': function (browser) {
+    // automatically uses dev Server port from /config.index.js
+    // default: http://localhost:8080
+    // see nightwatch.conf.js
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/text-decoration`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty(".strike", "text-decoration", "line-through solid rgb(0, 0, 0)")
+      .assert.cssProperty(".underline", "text-decoration", "underline solid rgb(0, 0, 0)")
+      .assert.cssProperty(".no-underline", "text-decoration", "none solid rgb(0, 0, 0)")
+      .end()
   }
 }

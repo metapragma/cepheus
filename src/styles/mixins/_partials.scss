@@ -1,6 +1,5 @@
 @mixin cepheus-partial-class($name, $property, $value) {
   $properties: (
-    'text-decoration',
     'azimuth',
     'border-collapse',
     'border-spacing',
@@ -44,6 +43,12 @@
     'word-spacing'
   );
 
+  $local-value: $value;
+
+  @if type-of($value) == string {
+    $local-value: unquote($value);
+  }
+
   @if contains($properties, $property) {
     .#{unquote($name)} > * {
       #{unquote($property)}: initial;
@@ -51,6 +56,6 @@
   }
 
   .#{unquote($name)} {
-    #{unquote($property)}: $value;
+    #{unquote($property)}: $local-value;
   }
 }
