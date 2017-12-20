@@ -9,6 +9,7 @@ const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 // add hot-reload related code to entry chunks
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
@@ -17,13 +18,19 @@ Object.keys(baseWebpackConfig.entry).forEach(function (name) {
 
 module.exports = merge(baseWebpackConfig, {
   module: {
-    rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap })
+    rules: utils.styleLoaders({
+      sourceMap: config.dev.cssSourceMap,
+      extract: true
+    })
   },
   // cheap-module-eval-source-map is faster for development
-  devtool: '#cheap-module-eval-source-map',
+  devtool: '#source-map',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.dev.env
+    }),
+    new ExtractTextPlugin({
+      filename: utils.assetsPath('css/[name].[contenthash].css')
     }),
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
     new webpack.HotModuleReplacementPlugin(),
@@ -35,7 +42,6 @@ module.exports = merge(baseWebpackConfig, {
       inject: true,
       serviceWorkerLoader: `<script>${fs.readFileSync(path.join(__dirname,
         './service-worker-dev.js'), 'utf-8')}</script>`
-    }),
-    new FriendlyErrorsPlugin()
+    })
   ]
 })

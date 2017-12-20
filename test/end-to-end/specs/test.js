@@ -2,17 +2,27 @@
 // http://nightwatchjs.org/guide#usage
 
 module.exports = {
-  'default end-to-end tests': function (browser) {
+  'partials/skins': function (browser) {
     // automatically uses dev Server port from /config.index.js
     // default: http://localhost:8080
     // see nightwatch.conf.js
     const devServer = browser.globals.devServerURL
 
     browser
-      .url(devServer)
-      .waitForElementVisible('#app', 5000)
-      .assert.elementPresent('.hello')
-      .assert.containsText('h1', 'Welcome to Your Vue.js PWA')
+      .url(`${devServer}/partials/skins`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#t1", "background-color", "rgba(0, 0, 0, 0.9)")
+      .assert.cssProperty("#t2", "background-color", "rgba(0, 0, 0, 0)")
+      .assert.cssProperty("#t3", "background-color", "rgba(0, 0, 0, 0)")
+      .assert.cssProperty("#t4", "background-color", "rgba(0, 0, 0, 0)")
+      .assert.cssProperty("#t5", "background-color", "rgba(0, 0, 0, 0)")
+      .assert.cssProperty("#t6", "background-color", "rgba(0, 0, 0, 0)")
+      .assert.cssProperty("#t1", "color", "rgba(0, 0, 0, 0.1)")
+      .assert.cssProperty("#t2", "color", "rgba(0, 0, 0, 1)")
+      .assert.cssProperty("#t2", "color", "rgba(0, 0, 0, 1)")
+      .assert.cssProperty("#t4", "color", "rgba(0, 0, 0, 0.9)")
+      .assert.cssProperty("#t5", "color", "rgba(0, 0, 0, 1)")
+      .assert.cssProperty("#t6", "color", "rgba(0, 0, 0, 1)")
       .end()
   }
 }

@@ -1,0 +1,13 @@
+@mixin cepheus-partial-skins($name, $color) {
+  .#{$name} > * {
+    color: initial;
+  }
+
+  .#{$name} {
+    color: $color;
+  }
+
+  .bg-#{$name} {
+    background-color: $color;
+  }
+}
