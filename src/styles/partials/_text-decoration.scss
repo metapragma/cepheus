@@ -1,0 +1,3 @@
+@each $name, $value in $cepheus-text-decoration {
+  @include cepheus-partial-class($name, 'text-decoration', $value);
+}
