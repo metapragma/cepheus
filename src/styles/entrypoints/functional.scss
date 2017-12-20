@@ -22,4 +22,5 @@ $output-bourbon-deprecation-warnings: false;
   @include add-breakpoint($_breakpoint_key, $_breakpoint_value, true);
 }
 
+@import '../functions/index';
 @import '../mixins/index';

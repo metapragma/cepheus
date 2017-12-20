@@ -16,13 +16,6 @@
 /* Text colors */
 
 @each $name, $color in $cepheus-colors {
-  @include cepheus-partial-skins($name, $color);
-}
-
-.color-inherit {
-  color: inherit;
-}
-
-.bg-inherit {
-  background-color: inherit;
+  @include cepheus-partial-class($name, 'color', $color);
+  @include cepheus-partial-class("bg-#{$name}", 'background-color', $color);
 }

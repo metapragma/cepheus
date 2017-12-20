@@ -1,0 +1,12 @@
+@function contains($list, $item) {
+  @if index($list, $item) { @return true; }
+
+  @return false;
+}
+
+@function contains-any($list, $items) {
+  @each $item in $items { @if index($list, $item) { @return true; } }
+
+  @return false;
+}
+
