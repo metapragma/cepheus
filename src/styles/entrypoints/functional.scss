@@ -18,7 +18,7 @@ $output-bourbon-deprecation-warnings: false;
   $leading-bottom: 0
 );
 
-@each $_breakpoint_key, $_breakpoint_value in $cas-local-breakpoints {
+@each $_breakpoint_key, $_breakpoint_value in $cepheus-breakpoints {
   @include add-breakpoint($_breakpoint_key, $_breakpoint_value, true);
 }
 

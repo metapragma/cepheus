@@ -1,3 +1,16 @@
 @each $name, $value in $cepheus-text-decoration {
   @include cepheus-partial-class($name, 'text-decoration', $value);
+
+  @include respond-to(not-small) {
+    @include cepheus-partial-class("#{$name}-ns", 'text-decoration', $value);
+  }
+
+  @include respond-to(medium) {
+    @include cepheus-partial-class("#{$name}-m", 'text-decoration', $value);
+  }
+
+  @include respond-to(large) {
+    @include cepheus-partial-class("#{$name}-l", 'text-decoration', $value);
+  }
 }
+
