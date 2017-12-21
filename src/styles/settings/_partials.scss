@@ -1,27 +1,33 @@
 $cepheus-text-decoration: (
-  'strike': 'line-through',
-  'underline': 'underline',
-  'no-underline': 'none'
+  'strike': ('text-decoration': 'line-through'),
+  'underline': ('text-decoration': 'underline'),
+  'no-underline': ('text-decoration': 'none')
 ) !default;
 
 $cepheus-opacity: (
-  o-100: 1,
-  o-90: 0.9,
-  o-80: 0.8,
-  o-70: 0.7,
-  o-60: 0.6,
-  o-50: 0.5,
-  o-40: 0.4,
-  o-30: 0.3,
-  o-20: 0.2,
-  o-10: 0.1,
-  o-05: 0.05,
-  o-025: 0.025,
-  o-0: 0,
+  o-100: (opacity: 1),
+  o-90: (opacity: 0.9),
+  o-80: (opacity: 0.8),
+  o-70: (opacity: 0.7),
+  o-60: (opacity: 0.6),
+  o-50: (opacity: 0.5),
+  o-40: (opacity: 0.4),
+  o-30: (opacity: 0.3),
+  o-20: (opacity: 0.2),
+  o-10: (opacity: 0.1),
+  o-05: (opacity: 0.05),
+  o-025: (opacity: 0.025),
+  o-0: (opacity: 0)
 ) !default;
 
 $cepheus-letter-spacing: (
-  'tracked': 0.1em,
+  'tracked': ('letter-spacing': 0.1em),
+  'tracked-tight': ('letter-spacing': -0.05em),
+  'tracked-mega': ('letter-spacing': 0.25em)
+) !default;
+
+$cepheus-border: (
+  'ba': (),
   'tracked-tight': -0.05em,
   'tracked-mega': 0.25em
 ) !default;
