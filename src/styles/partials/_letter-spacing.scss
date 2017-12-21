@@ -1,15 +1,15 @@
 @each $name, $value in $cepheus-letter-spacing {
-  @include cepheus-partial-class($name, 'letter-spacing', $value);
+  @include cepheus-partial-class($name, $value);
 
   @include respond-to(not-small) {
-    @include cepheus-partial-class("#{$name}-ns", 'letter-spacing', $value);
+    @include cepheus-partial-class("#{$name}-ns", $value);
   }
 
   @include respond-to(medium) {
-    @include cepheus-partial-class("#{$name}-m", 'letter-spacing', $value);
+    @include cepheus-partial-class("#{$name}-m", $value);
   }
 
   @include respond-to(large) {
-    @include cepheus-partial-class("#{$name}-l", 'letter-spacing', $value);
+    @include cepheus-partial-class("#{$name}-l", $value);
   }
 }

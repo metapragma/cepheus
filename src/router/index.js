@@ -5,6 +5,7 @@ import PartialsSkins from '../components/partials-skins.vue'
 import PartialsTextDecoration from '../components/partials-text-decoration.vue'
 import PartialsOpacity from '../components/partials-opacity.vue'
 import PartialsLetterSpacing from '../components/partials-letter-spacing.vue'
+import PartialsBorderColors from '../components/partials-border-colors.vue'
 
 Vue.use(Router)
 
@@ -31,6 +32,10 @@ export default new Router({
     {
       path: '/partials/letter-spacing',
       component: PartialsLetterSpacing
+    },
+    {
+      path: '/partials/border-colors',
+      component: PartialsBorderColors
     },
   ],
 })

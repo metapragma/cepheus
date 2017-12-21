@@ -2,7 +2,7 @@
 // http://nightwatchjs.org/guide#usage
 
 module.exports = {
-  'partials/skins': function (browser) {
+  'partials/skins': browser => {
     // automatically uses dev Server port from /config.index.js
     // default: http://localhost:8080
     // see nightwatch.conf.js
@@ -25,7 +25,7 @@ module.exports = {
       .assert.cssProperty("#t6", "color", "rgba(0, 0, 0, 1)")
       .end()
   },
-  'partials/text-decoration': function (browser) {
+  'partials/text-decoration': browser => {
     const devServer = browser.globals.devServerURL
 
     browser
@@ -36,7 +36,7 @@ module.exports = {
       .assert.cssProperty(".no-underline", "text-decoration", "none solid rgb(0, 0, 0)")
       .end()
   },
-  'partials/opacity': function (browser) {
+  'partials/opacity': browser => {
     const devServer = browser.globals.devServerURL
 
     browser
@@ -56,7 +56,7 @@ module.exports = {
       .assert.cssProperty("#op0", "opacity", "0")
       .end()
   },
-  'partials/letter-spacing': function (browser) {
+  'partials/letter-spacing': browser => {
     const devServer = browser.globals.devServerURL
 
     browser
@@ -67,6 +67,19 @@ module.exports = {
       .assert.cssProperty("#l3", "letter-spacing", "4px")
       .assert.cssProperty("#l4", "letter-spacing", "normal")
       .assert.cssProperty("#l5", "letter-spacing", "normal")
+      .end()
+  },
+  'partials/border-colors': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/border-colors`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "border-color", "rgb(0, 27, 68)")
+      .assert.cssProperty("#l2", "border-color", "rgb(0, 68, 158)")
+      .assert.cssProperty("#l3", "border-color", "rgb(53, 126, 221)")
+      .assert.cssProperty("#l4", "border-color", "rgb(150, 204, 255)")
+      .assert.cssProperty("#l5", "border-color", "rgb(205, 236, 255)")
       .end()
   }
 }

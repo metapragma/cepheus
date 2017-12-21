@@ -1,4 +1,4 @@
-@mixin cepheus-partial-class($name, $property, $value) {
+@mixin cepheus-partial-class($name, $propertyMap) {
   $properties: (
     'azimuth',
     'border-collapse',
@@ -43,19 +43,21 @@
     'word-spacing'
   );
 
-  $local-value: $value;
+  @each $property, $value in $propertyMap {
+    $local-value: $value;
 
-  @if type-of($value) == string {
-    $local-value: unquote($value);
-  }
-
-  @if contains($properties, $property) {
-    .#{unquote($name)} > * {
-      #{unquote($property)}: initial;
+    @if type-of($value) == string {
+      $local-value: unquote($value);
     }
-  }
 
-  .#{unquote($name)} {
-    #{unquote($property)}: $local-value;
+    @if contains($properties, $property) {
+      .#{unquote($name)} > * {
+        #{unquote($property)}: initial;
+      }
+    }
+
+    .#{unquote($name)} {
+      #{unquote($property)}: $local-value;
+    }
   }
 }
