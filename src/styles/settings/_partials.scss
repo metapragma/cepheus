@@ -5,19 +5,19 @@ $cepheus-text-decoration: (
 ) !default;
 
 $cepheus-opacity: (
-  o-100: (opacity: 1),
-  o-90: (opacity: 0.9),
-  o-80: (opacity: 0.8),
-  o-70: (opacity: 0.7),
-  o-60: (opacity: 0.6),
-  o-50: (opacity: 0.5),
-  o-40: (opacity: 0.4),
-  o-30: (opacity: 0.3),
-  o-20: (opacity: 0.2),
-  o-10: (opacity: 0.1),
-  o-05: (opacity: 0.05),
-  o-025: (opacity: 0.025),
-  o-0: (opacity: 0)
+  o-100: ('opacity': 1),
+  o-90: ('opacity': 0.9),
+  o-80: ('opacity': 0.8),
+  o-70: ('opacity': 0.7),
+  o-60: ('opacity': 0.6),
+  o-50: ('opacity': 0.5),
+  o-40: ('opacity': 0.4),
+  o-30: ('opacity': 0.3),
+  o-20: ('opacity': 0.2),
+  o-10: ('opacity': 0.1),
+  o-05: ('opacity': 0.05),
+  o-025: ('opacity': 0.025),
+  o-0: ('opacity': 0)
 ) !default;
 
 $cepheus-letter-spacing: (
@@ -26,8 +26,45 @@ $cepheus-letter-spacing: (
   'tracked-mega': ('letter-spacing': 0.25em)
 ) !default;
 
-$cepheus-border: (
-  'ba': (),
-  'tracked-tight': -0.05em,
-  'tracked-mega': 0.25em
+$cepheus-borders: (
+  'ba': ('border-style': solid, 'border-width': 1px),
+  'bt': ('border-top-style': solid, 'border-top-width': 1px),
+  'br': ('border-right-style': solid, 'border-right-width': 1px),
+  'bb': ('border-bottom-style': solid, 'border-bottom-width': 1px),
+  'bl': ('border-left-style': solid, 'border-left-width': 1px),
+  'bn': ('border-style': none, 'border-width': 0)
+) !default;
+
+$cepheus-border-widths: (
+  bw0: ('border-width': 0),
+  bw1: ('border-width': 0.125rem),
+  bw2: ('border-width': 0.25rem),
+  bw3: ('border-width': 0.5rem),
+  bw4: ('border-width': 1rem),
+  bw5: ('border-width': 2rem),
+  bt-0: ('border-top-width': 0),
+  br-0: ('border-right-width': 0),
+  bb-0: ('border-bottom-width': 0),
+  bl-0: ('border-left-width': 0)
+) !default;
+
+$cepheus-border-styles: (
+  'b--dotted': ('border-style': dotted),
+  'b--dashed': ('border-style': dashed),
+  'b--solid': ('border-style': solid),
+  'b--none': ('border-style': none),
+) !default;
+
+$cepheus-border-radius: (
+  br0: ('border-radius': 0),
+  br1: ('border-radius': 0.125rem),
+  br2: ('border-radius': 0.25rem),
+  br3: ('border-radius': 0.5rem),
+  br4: ('border-radius': 1rem),
+  br-100: ('border-radius': 100%),
+  'br-pill': ('border-radius': 9999px),
+  'br--top': ('border-bottom-left-radius': 0, 'border-bottom-right-radius': 0),
+  'br--right': ('border-top-left-radius': 0, 'border-bottom-left-radius': 0),
+  'br--bottom': ('border-top-left-radius': 0, 'border-top-right-radius': 0),
+  'br--left': ('border-top-right-radius': 0, 'border-bottom-right-radius': 0)
 ) !default;
