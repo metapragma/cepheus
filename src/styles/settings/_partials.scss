@@ -19,3 +19,9 @@ $cepheus-opacity: (
   o-025: 0.025,
   o-0: 0,
 ) !default;
+
+$cepheus-letter-spacing: (
+  'tracked': 0.1em,
+  'tracked-tight': -0.05em,
+  'tracked-mega': 0.25em
+) !default;

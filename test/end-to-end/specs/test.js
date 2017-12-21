@@ -37,9 +37,6 @@ module.exports = {
       .end()
   },
   'partials/opacity': function (browser) {
-    // automatically uses dev Server port from /config.index.js
-    // default: http://localhost:8080
-    // see nightwatch.conf.js
     const devServer = browser.globals.devServerURL
 
     browser
@@ -57,6 +54,19 @@ module.exports = {
       .assert.cssProperty("#op05", "opacity", "0.05")
       .assert.cssProperty("#op025", "opacity", "0.025")
       .assert.cssProperty("#op0", "opacity", "0")
+      .end()
+  },
+  'partials/letter-spacing': function (browser) {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/letter-spacing`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "letter-spacing", "1.6px")
+      .assert.cssProperty("#l2", "letter-spacing", "-0.8px")
+      .assert.cssProperty("#l3", "letter-spacing", "4px")
+      .assert.cssProperty("#l4", "letter-spacing", "normal")
+      .assert.cssProperty("#l5", "letter-spacing", "normal")
       .end()
   }
 }
