@@ -1,4 +1,4 @@
-@each $name, $value in $cepheus-borders {
+@each $name, $value in $cepheus-border-styles {
   @include cepheus-partial-class($name, $value);
 
   @include respond-to(not-small) {

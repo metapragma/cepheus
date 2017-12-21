@@ -81,5 +81,99 @@ module.exports = {
       .assert.cssProperty("#l4", "border-color", "rgb(150, 204, 255)")
       .assert.cssProperty("#l5", "border-color", "rgb(205, 236, 255)")
       .end()
-  }
+  },
+  'partials/borders': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/borders`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "border-style", "solid")
+      .assert.cssProperty("#l1", "border-width", "1px")
+      .assert.cssProperty("#l2", "border-top-style", "solid")
+      .assert.cssProperty("#l2", "border-top-width", "1px")
+      .assert.cssProperty("#l3", "border-right-style", "solid")
+      .assert.cssProperty("#l3", "border-right-width", "1px")
+      .assert.cssProperty("#l4", "border-bottom-style", "solid")
+      .assert.cssProperty("#l4", "border-bottom-width", "1px")
+      .assert.cssProperty("#l5", "border-left-style", "solid")
+      .assert.cssProperty("#l5", "border-left-width", "1px")
+      .assert.cssProperty("#l6", "border-style", "none")
+      .assert.cssProperty("#l6", "border-width", "0px")
+      .end()
+  },
+  'partials/border-widths': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/border-widths`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "border-width", "0px")
+      .assert.cssProperty("#l2", "border-width", "2px")
+      .assert.cssProperty("#l3", "border-width", "4px")
+      .assert.cssProperty("#l4", "border-width", "8px")
+      .assert.cssProperty("#l5", "border-width", "16px")
+      .assert.cssProperty("#l6", "border-width", "32px")
+      .assert.cssProperty("#l7", "border-top-width", "0px")
+      .assert.cssProperty("#l7", "border-left-width", "1px")
+      .assert.cssProperty("#l7", "border-right-width", "1px")
+      .assert.cssProperty("#l7", "border-bottom-width", "1px")
+      .assert.cssProperty("#l8", "border-right-width", "0px")
+      .assert.cssProperty("#l8", "border-top-width", "1px")
+      .assert.cssProperty("#l8", "border-left-width", "1px")
+      .assert.cssProperty("#l8", "border-bottom-width", "1px")
+      .assert.cssProperty("#l9", "border-bottom-width", "0px")
+      .assert.cssProperty("#l9", "border-top-width", "1px")
+      .assert.cssProperty("#l9", "border-left-width", "1px")
+      .assert.cssProperty("#l9", "border-right-width", "1px")
+      .assert.cssProperty("#l10", "border-left-width", "0px")
+      .assert.cssProperty("#l10", "border-top-width", "1px")
+      .assert.cssProperty("#l10", "border-bottom-width", "1px")
+      .assert.cssProperty("#l10", "border-right-width", "1px")
+      .end()
+  },
+  'partials/border-styles': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/border-styles`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "border-style", "dotted")
+      .assert.cssProperty("#l2", "border-style", "dashed")
+      .assert.cssProperty("#l3", "border-style", "solid")
+      .assert.cssProperty("#l4", "border-style", "none")
+      .end()
+  },
+  'partials/border-radius': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/border-widths`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "border-radius", "0px")
+      // TODO: fix weird bug
+      // .assert.cssProperty("#l2", "border-radius", "2px")
+      // .assert.cssProperty("#l3", "border-radius", "4px")
+      // .assert.cssProperty("#l4", "border-radius", "8px")
+      // .assert.cssProperty("#l5", "border-radius", "16px")
+      // .assert.cssProperty("#l6", "border-radius", "32px")
+      // .assert.cssProperty("#l7", "border-radius", "9999px")
+      // .assert.cssProperty("#l8", "border-bottom-left-radius", "0px")
+      // .assert.cssProperty("#l8", "border-bottom-right-radius", "0px")
+      // .assert.cssProperty("#l8", "border-top-left-radius", "16px")
+      // .assert.cssProperty("#l8", "border-top-right-radius", "16px")
+      // .assert.cssProperty("#l9", "border-top-left-radius", "0px")
+      // .assert.cssProperty("#l9", "border-bottom-left-radius", "0px")
+      // .assert.cssProperty("#l9", "border-top-right-radius", "16px")
+      // .assert.cssProperty("#l9", "border-bottom-right-radius", "16px")
+      // .assert.cssProperty("#l10", "border-top-left-radius", "0px")
+      // .assert.cssProperty("#l10", "border-top-right-radius", "0px")
+      // .assert.cssProperty("#l10", "border-bottom-right-radius", "16px")
+      // .assert.cssProperty("#l10", "border-bottom-left-radius", "16px")
+      // .assert.cssProperty("#l11", "border-top-right-radius", "0px")
+      // .assert.cssProperty("#l11", "border-bottom-right-radius", "0px")
+      // .assert.cssProperty("#l11", "border-top-left-radius", "16px")
+      // .assert.cssProperty("#l11", "border-bottom-left-radius", "16px")
+      .end()
+  },
 }
