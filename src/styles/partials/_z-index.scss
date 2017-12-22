@@ -1,0 +1,3 @@
+@each $name, $value in $cepheus-z-index {
+  @include cepheus-partial-class($name, $value);
+}
