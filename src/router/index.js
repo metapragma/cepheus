@@ -10,6 +10,7 @@ import PartialsBorderColors from '../components/partials-border-colors.vue'
 import PartialsBorderWidths from '../components/partials-border-widths.vue'
 import PartialsBorderStyles from '../components/partials-border-styles.vue'
 import PartialsBorderRadius from '../components/partials-border-radius.vue'
+import PartialsBoxShadow from '../components/partials-box-shadow.vue'
 
 Vue.use(Router)
 
@@ -57,7 +58,11 @@ export default new Router({
       path: '/partials/border-radius',
       component: PartialsBorderRadius
     },
-  ],
+    {
+      path: '/partials/box-shadow',
+      component: PartialsBoxShadow
+    },
+  ]
 })
 
 // TODO: add a 404 router
