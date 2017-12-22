@@ -190,4 +190,24 @@ module.exports = {
       .assert.cssProperty("#l5", "box-shadow", "rgba(0, 0, 0, 0.2) 4px 4px 8px 0px")
       .end()
   },
+  'partials/z-index': browser => {
+    const devServer = browser.globals.devServerURL
+   
+    browser
+      .url(`${devServer}/partials/z-index`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "z-index", "2147483647")
+      .assert.cssProperty("#l2", "z-index", "9999")
+      .assert.cssProperty("#l3", "z-index", "999")
+      .assert.cssProperty("#l4", "z-index", "5")
+      .assert.cssProperty("#l5", "z-index", "4")
+      .assert.cssProperty("#l6", "z-index", "3")
+      .assert.cssProperty("#l7", "z-index", "2")
+      .assert.cssProperty("#l8", "z-index", "1")
+      .assert.cssProperty("#l9", "z-index", "auto")
+      .assert.cssProperty("#l10", "z-index", "0")
+      .assert.cssProperty("#l11", "z-index", "0")
+      .assert.cssProperty("#l12", "z-index", "auto")
+      .end()
+  },
 }

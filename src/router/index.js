@@ -11,6 +11,8 @@ import PartialsBorderWidths from '../components/partials-border-widths.vue'
 import PartialsBorderStyles from '../components/partials-border-styles.vue'
 import PartialsBorderRadius from '../components/partials-border-radius.vue'
 import PartialsBoxShadow from '../components/partials-box-shadow.vue'
+import PartialsZIndex from '../components/partials-z-index.vue'
+import PartialsWordBreak from '../components/partials-word-break.vue'
 
 Vue.use(Router)
 
@@ -61,6 +63,14 @@ export default new Router({
     {
       path: '/partials/box-shadow',
       component: PartialsBoxShadow
+    },
+    {
+      path: '/partials/z-index',
+      component: PartialsZIndex
+    },
+    {
+      path: '/partials/word-break',
+      component: PartialsWordBreak
     },
   ]
 })
