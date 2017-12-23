@@ -1,0 +1,10 @@
+@each $name, $color in $cepheus-colors {
+  @include cepheus-partial-class("hover-#{$name}:hover", ('color': $color));
+  @include cepheus-partial-class("hover-#{$name}:focus", ('color': $color));
+}
+
+// .hover-pink {
+//   &:hover {
+//     color: pink;
+//   }
+// }
