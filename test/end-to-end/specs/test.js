@@ -234,4 +234,16 @@ module.exports = {
       .assert.cssProperty("#l5", "white-space", "normal")
       .end()
   },
+  'partials/vertical-align': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/vertical-align`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "vertical-align", "baseline")
+      .assert.cssProperty("#l2", "vertical-align", "middle")
+      .assert.cssProperty("#l3", "vertical-align", "top")
+      .assert.cssProperty("#l4", "vertical-align", "bottom")
+      .end()
+  },
 }

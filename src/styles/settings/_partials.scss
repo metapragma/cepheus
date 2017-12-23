@@ -103,3 +103,10 @@ $cepheus-white-space: (
   'nowrap': ('white-space': nowrap),
   'pre': ('white-space': pre)
 ) !default;
+
+$cepheus-vertical-align: (
+  'v-base': ('vertical-align': baseline),
+  'v-mid': ('vertical-align': middle),
+  'v-top': ('vertical-align': top),
+  'v-btm': ('vertical-align': bottom),
+) !default;
