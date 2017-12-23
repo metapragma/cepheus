@@ -230,6 +230,8 @@ module.exports = {
       .assert.cssProperty("#l1", "white-space", "normal")
       .assert.cssProperty("#l2", "white-space", "nowrap")
       .assert.cssProperty("#l3", "white-space", "pre")
+      .assert.cssProperty("#l4", "white-space", "normal")
+      .assert.cssProperty("#l5", "white-space", "normal")
       .end()
   },
 }
