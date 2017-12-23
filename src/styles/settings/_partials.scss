@@ -97,3 +97,9 @@ $cepheus-word-break: (
   'word-wrap': ('word-break': break-all),
   'word-nowrap': ('word-break': keep-all)
 ) !default;
+
+$cepheus-white-space: (
+  'ws-normal': ('white-space': normal),
+  'nowrap': ('white-space': nowrap),
+  'pre': ('white-space': pre)
+) !default;

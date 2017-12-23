@@ -221,4 +221,15 @@ module.exports = {
       .assert.cssProperty("#l3", "word-break", "keep-all")
       .end()
   },
+  'partials/white-space': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/white-space`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "white-space", "normal")
+      .assert.cssProperty("#l2", "white-space", "nowrap")
+      .assert.cssProperty("#l3", "white-space", "pre")
+      .end()
+  },
 }
