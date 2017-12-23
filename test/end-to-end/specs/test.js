@@ -210,4 +210,15 @@ module.exports = {
       .assert.cssProperty("#l12", "z-index", "auto")
       .end()
   },
+  'partials/word-break': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/word-break`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "word-break", "normal")
+      .assert.cssProperty("#l2", "word-break", "break-all")
+      .assert.cssProperty("#l3", "word-break", "keep-all")
+      .end()
+  },
 }
