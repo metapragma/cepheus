@@ -246,4 +246,16 @@ module.exports = {
       .assert.cssProperty("#l4", "vertical-align", "bottom")
       .end()
   },
+  'partials/text-align': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/text-align`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "text-align", "left")
+      .assert.cssProperty("#l2", "text-align", "right")
+      .assert.cssProperty("#l3", "text-align", "center")
+      .assert.cssProperty("#l4", "text-align", "start")
+      .end()
+  },
 }
