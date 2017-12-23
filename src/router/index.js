@@ -15,6 +15,7 @@ import PartialsZIndex from '../components/partials-z-index.vue'
 import PartialsWordBreak from '../components/partials-word-break.vue'
 import PartialsWhiteSpace from '../components/partials-white-space.vue'
 import PartialsVerticalAlign from '../components/partials-vertical-align.vue'
+import PartialsTextAlign from '../components/partials-text-align.vue'
 
 Vue.use(Router)
 
@@ -81,6 +82,10 @@ export default new Router({
     {
       path: '/partials/vertical-align',
       component: PartialsVerticalAlign
+    },
+    {
+      path: '/partials/text-align',
+      component: PartialsTextAlign
     },
   ]
 })
