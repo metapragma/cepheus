@@ -259,4 +259,20 @@ module.exports = {
       .end()
   },
   // 'partials/skins-pseudo' working but not testable with Nightwatch (support for pseudo-classes)
+  // 'partials/rotations' working, but no point in testing as browser matrix values are unpredictable
+  // 'partials/rotations': browser => {
+  //   const devServer = browser.globals.devServerURL
+
+  //   browser
+  //     .url(`${devServer}/partials/rotations`)
+  //     .waitForElementVisible('#tests', 5000)
+  //     .assert.cssProperty("#l1", "transform", "matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0)")
+  //     .assert.cssProperty("#l2", "transform", "rotate(90)")
+  //     .assert.cssProperty("#l3", "transform", "rotate(135)")
+  //     .assert.cssProperty("#l4", "transform", "rotate(180)")
+  //     .assert.cssProperty("#l5", "transform", "rotate(225)")
+  //     .assert.cssProperty("#l6", "transform", "rotate(270)")
+  //     .assert.cssProperty("#l7", "transform", "rotate(315)")
+  //     .end()
+  // },
 }

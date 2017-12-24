@@ -17,6 +17,7 @@ import PartialsWhiteSpace from '../components/partials-white-space.vue'
 import PartialsVerticalAlign from '../components/partials-vertical-align.vue'
 import PartialsTextAlign from '../components/partials-text-align.vue'
 import PartialsSkinsPseudo from '../components/partials-skins-pseudo.vue'
+import PartialsRotations from '../components/partials-rotations.vue'
 
 Vue.use(Router)
 
@@ -91,6 +92,10 @@ export default new Router({
     {
       path: '/partials/skins-pseudo',
       component: PartialsSkinsPseudo
+    },
+    {
+      path: '/partials/rotations',
+      component: PartialsRotations
     },
   ]
 })
