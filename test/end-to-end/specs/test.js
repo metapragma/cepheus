@@ -37,7 +37,7 @@ module.exports = {
       .end()
   },
   'partials/opacity': browser => {
-    const devServer = browser.globals.devServerURL
+    const devServer = browser.globals.devServerURL  
 
     browser
       .url(`${devServer}/partials/opacity`)
@@ -275,4 +275,47 @@ module.exports = {
   //     .assert.cssProperty("#l7", "transform", "rotate(315)")
   //     .end()
   // },
+  'partials/position': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/position`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "position", "absolute")
+      .assert.cssProperty("#l2", "position", "relative")
+      .assert.cssProperty("#l3", "position", "static")
+      .assert.cssProperty("#l4", "position", "fixed")
+      .end()
+  },
+  'partials/overflow': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/overflow`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "overflow", "visible")
+      .assert.cssProperty("#l2", "overflow", "hidden")
+      .assert.cssProperty("#l3", "overflow", "scroll")
+      .assert.cssProperty("#l4", "overflow", "visible")
+      .assert.cssProperty("#l5", "overflow-x", "visible")
+      .assert.cssProperty("#l6", "overflow-x", "hidden")
+      .assert.cssProperty("#l7", "overflow-x", "scroll")
+      .assert.cssProperty("#l8", "overflow-x", "auto")
+      .assert.cssProperty("#l9", "overflow-y", "visible")
+      .assert.cssProperty("#l10", "overflow-y", "hidden")
+      .assert.cssProperty("#l11", "overflow-y", "scroll")
+      .assert.cssProperty("#l12", "overflow-y", "auto")
+      .end()
+  },
+  'partials/outlines': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/outlines`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "outline", "rgb(0, 0, 0) solid 1px")
+      .assert.cssProperty("#l2", "outline", "rgba(0, 0, 0, 0) solid 1px")
+      .assert.cssProperty("#l3", "outline", "rgb(0, 0, 0) none 0px")
+      .end()
+  },
 }

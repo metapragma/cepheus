@@ -18,6 +18,9 @@ import PartialsVerticalAlign from '../components/partials-vertical-align.vue'
 import PartialsTextAlign from '../components/partials-text-align.vue'
 import PartialsSkinsPseudo from '../components/partials-skins-pseudo.vue'
 import PartialsRotations from '../components/partials-rotations.vue'
+import PartialsPosition from '../components/partials-position.vue'
+import PartialsOverflow from '../components/partials-overflow.vue'
+import PartialsOutlines from '../components/partials-outlines.vue'
 
 Vue.use(Router)
 
@@ -96,6 +99,18 @@ export default new Router({
     {
       path: '/partials/rotations',
       component: PartialsRotations
+    },
+    {
+      path: '/partials/position',
+      component: PartialsPosition
+    },
+    {
+      path: '/partials/overflow',
+      component: PartialsOverflow
+    },
+    {
+      path: '/partials/outlines',
+      component: PartialsOutlines
     },
   ]
 })
