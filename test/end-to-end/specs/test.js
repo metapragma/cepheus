@@ -399,4 +399,16 @@ module.exports = {
       .assert.cssProperty("#l17", "height", "800px")
       .end()
   },
+  'partials/gradients': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/gradients`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "background-image", "linear-gradient(rgb(69, 112, 176), rgb(0, 129, 194))")
+      .assert.cssProperty("#l2", "background-image", "linear-gradient(rgb(0, 129, 194), rgb(69, 112, 176))")
+      .assert.cssProperty("#l3", "background-image", "linear-gradient(rgb(118, 211, 254), rgb(0, 138, 224))")
+      .assert.cssProperty("#l4", "background-image", "linear-gradient(rgb(0, 138, 224), rgb(118, 211, 254))")
+      .end()
+  },
 }

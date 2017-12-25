@@ -26,6 +26,7 @@ import PartialsLists from '../components/partials-lists.vue'
 import PartialsLinks from '../components/partials-links.vue'
 import PartialsImages from '../components/partials-images.vue'
 import PartialsHeights from '../components/partials-heights.vue'
+import PartialsGradients from '../components/partials-gradients.vue'
 
 Vue.use(Router)
 
@@ -136,6 +137,10 @@ export default new Router({
     {
       path: '/partials/heights',
       component: PartialsHeights
+    },
+    {
+      path: '/partials/gradients',
+      component: PartialsGradients
     },
   ]
 })
