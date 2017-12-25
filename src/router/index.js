@@ -21,6 +21,7 @@ import PartialsRotations from '../components/partials-rotations.vue'
 import PartialsPosition from '../components/partials-position.vue'
 import PartialsOverflow from '../components/partials-overflow.vue'
 import PartialsOutlines from '../components/partials-outlines.vue'
+import PartialsMaxWidths from '../components/partials-max-widths.vue'
 
 Vue.use(Router)
 
@@ -111,6 +112,10 @@ export default new Router({
     {
       path: '/partials/outlines',
       component: PartialsOutlines
+    },
+    {
+      path: '/partials/max-widths',
+      component: PartialsMaxWidths
     },
   ]
 })
