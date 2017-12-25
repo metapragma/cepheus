@@ -349,20 +349,54 @@ module.exports = {
   //     .assert.cssProperty("#l4", "list-style-type", "none")
   //     .end()
   // },
-  'partials/links': browser => {
+  // 'partials/links': browser => {
+  //   const devServer = browser.globals.devServerURL
+
+  //   browser
+  //     .url(`${devServer}/partials/lists`)
+  //     .waitForElementVisible('#tests', 5000)
+  //     .assert.cssProperty("#l1", "text-decoration", "none solid rgb(0, 0, 0)")
+  //     .assert.cssProperty("#l1", "transition", "all 0s ease 0s")
+  //     .assert.cssProperty("#l2", "text-decoration", "none solid rgb(0, 0, 0)")
+  //     .assert.cssProperty("#l2", "transition", "all 0s ease 0s")
+  //     .assert.cssProperty("#l3", "text-decoration", "none solid rgb(0, 0, 0)")
+  //     .assert.cssProperty("#l3", "transition", "all 0s ease 0s")
+  //     .assert.cssProperty("#l4", "text-decoration", "none solid rgb(0, 0, 0)")
+  //     .assert.cssProperty("#l4", "transition", "all 0s ease 0s")
+  //     .end()
+  // },
+  // 'partials/images': browser => {
+  //   const devServer = browser.globals.devServerURL
+
+  //   browser
+  //     .url(`${devServer}/partials/images`)
+  //     .waitForElementVisible('#tests', 5000)
+  //     .assert.cssProperty("#l1", "max-width", "100%")
+  //     .end()
+  // },
+  'partials/heights': browser => {
     const devServer = browser.globals.devServerURL
 
     browser
-      .url(`${devServer}/partials/lists`)
+      .url(`${devServer}/partials/heights`)
       .waitForElementVisible('#tests', 5000)
-      .assert.cssProperty("#l1", "text-decoration", "none solid rgb(0, 0, 0)")
-      .assert.cssProperty("#l1", "transition", "all 0s ease 0s")
-      .assert.cssProperty("#l2", "text-decoration", "none solid rgb(0, 0, 0)")
-      .assert.cssProperty("#l2", "transition", "all 0s ease 0s")
-      .assert.cssProperty("#l3", "text-decoration", "none solid rgb(0, 0, 0)")
-      .assert.cssProperty("#l3", "transition", "all 0s ease 0s")
-      .assert.cssProperty("#l4", "text-decoration", "none solid rgb(0, 0, 0)")
-      .assert.cssProperty("#l4", "transition", "all 0s ease 0s")
+      .assert.cssProperty("#l1", "height", "16px")
+      .assert.cssProperty("#l2", "height", "32px")
+      .assert.cssProperty("#l3", "height", "64px")
+      .assert.cssProperty("#l4", "height", "128px")
+      .assert.cssProperty("#l5", "height", "256px")
+      .assert.cssProperty("#l6", "height", "200px")
+      .assert.cssProperty("#l7", "height", "400px")
+      .assert.cssProperty("#l8", "height", "600px")
+      .assert.cssProperty("#l9", "height", "800px")
+      .assert.cssProperty("#l10", "height", "800px")
+      .assert.cssProperty("#l11", "height", "150px")
+      .assert.cssProperty("#l12", "height", "300px")
+      .assert.cssProperty("#l13", "height", "450px")
+      .assert.cssProperty("#l14", "height", "600px")
+      .assert.cssProperty("#l15", "height", "600px")
+      .assert.cssProperty("#l16", "height", "0px")
+      .assert.cssProperty("#l17", "height", "800px")
       .end()
   },
 }
