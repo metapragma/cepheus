@@ -318,23 +318,51 @@ module.exports = {
   //     .assert.cssProperty("#l3", "outline", "rgb(0, 0, 0) none 0px")
   //     .end()
   // },
-  'partials/max-widths': browser => {
+  // 'partials/max-widths': browser => {
+  //   const devServer = browser.globals.devServerURL
+
+  //   browser
+  //     .url(`${devServer}/partials/max-widths`)
+  //     .waitForElementVisible('#tests', 5000)
+  //     .assert.cssProperty("#l1", "max-width", "16px")
+  //     .assert.cssProperty("#l2", "max-width", "32px")
+  //     .assert.cssProperty("#l3", "max-width", "64px")
+  //     .assert.cssProperty("#l4", "max-width", "128px")
+  //     .assert.cssProperty("#l5", "max-width", "256px")
+  //     .assert.cssProperty("#l6", "max-width", "512px")
+  //     .assert.cssProperty("#l7", "max-width", "768px")
+  //     .assert.cssProperty("#l8", "max-width", "1024px")
+  //     .assert.cssProperty("#l9", "max-width", "1536px")
+  //     .assert.cssProperty("#l10", "max-width", "100%")
+  //     .assert.cssProperty("#l11", "max-width", "none")
+  //     .end()
+  // },
+  // 'partials/lists': browser => {
+  //   const devServer = browser.globals.devServerURL
+
+  //   browser
+  //     .url(`${devServer}/partials/lists`)
+  //     .waitForElementVisible('#tests', 5000)
+  //     .assert.cssProperty("#l1", "list-style-type", "none")
+  //     .assert.cssProperty("#l2", "list-style-type", "none")
+  //     .assert.cssProperty("#l3", "list-style-type", "none")
+  //     .assert.cssProperty("#l4", "list-style-type", "none")
+  //     .end()
+  // },
+  'partials/links': browser => {
     const devServer = browser.globals.devServerURL
 
     browser
-      .url(`${devServer}/partials/max-widths`)
+      .url(`${devServer}/partials/lists`)
       .waitForElementVisible('#tests', 5000)
-      .assert.cssProperty("#l1", "max-width", "16px")
-      .assert.cssProperty("#l2", "max-width", "32px")
-      .assert.cssProperty("#l3", "max-width", "64px")
-      .assert.cssProperty("#l4", "max-width", "128px")
-      .assert.cssProperty("#l5", "max-width", "256px")
-      .assert.cssProperty("#l6", "max-width", "512px")
-      .assert.cssProperty("#l7", "max-width", "768px")
-      .assert.cssProperty("#l8", "max-width", "1024px")
-      .assert.cssProperty("#l9", "max-width", "1536px")
-      .assert.cssProperty("#l10", "max-width", "100%")
-      .assert.cssProperty("#l11", "max-width", "none")
+      .assert.cssProperty("#l1", "text-decoration", "none solid rgb(0, 0, 0)")
+      .assert.cssProperty("#l1", "transition", "all 0s ease 0s")
+      .assert.cssProperty("#l2", "text-decoration", "none solid rgb(0, 0, 0)")
+      .assert.cssProperty("#l2", "transition", "all 0s ease 0s")
+      .assert.cssProperty("#l3", "text-decoration", "none solid rgb(0, 0, 0)")
+      .assert.cssProperty("#l3", "transition", "all 0s ease 0s")
+      .assert.cssProperty("#l4", "text-decoration", "none solid rgb(0, 0, 0)")
+      .assert.cssProperty("#l4", "transition", "all 0s ease 0s")
       .end()
   },
 }
