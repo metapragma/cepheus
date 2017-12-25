@@ -170,3 +170,15 @@ $cepheus-max-widths: (
   'mw-none': ('max-width': none)
 ) !default;
 
+$cepheus-lists: (
+  'list': ('list-style-type': 'none')
+) !default;
+
+$cepheus-links: (
+  'link': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
+  'link:link': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
+  'link:visited': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
+  'link:active': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
+  'link:hover': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
+  'link:focus': ('transition': 'color .15s ease-in', 'outline': '1px dotted currentColor')
+) !default;

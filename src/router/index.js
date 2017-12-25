@@ -22,6 +22,8 @@ import PartialsPosition from '../components/partials-position.vue'
 import PartialsOverflow from '../components/partials-overflow.vue'
 import PartialsOutlines from '../components/partials-outlines.vue'
 import PartialsMaxWidths from '../components/partials-max-widths.vue'
+import PartialsLists from '../components/partials-lists.vue'
+import PartialsLinks from '../components/partials-links.vue'
 
 Vue.use(Router)
 
@@ -116,6 +118,14 @@ export default new Router({
     {
       path: '/partials/max-widths',
       component: PartialsMaxWidths
+    },
+    {
+      path: '/partials/lists',
+      component: PartialsLists
+    },
+    {
+      path: '/partials/links',
+      component: PartialsLinks
     },
   ]
 })
