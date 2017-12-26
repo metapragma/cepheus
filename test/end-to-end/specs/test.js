@@ -443,15 +443,33 @@ module.exports = {
   //     .assert.cssProperty("#l21", "left", "0px")
   //     .end()
   // },
-  'partials/code': browser => {
+  // 'partials/code': browser => {
+  //   const devServer = browser.globals.devServerURL
+
+  //   browser
+  //     .url(`${devServer}/partials/code`)
+  //     .waitForElementVisible('#tests', 5000)
+  //     .assert.cssProperty("#l1", "overflow-x", "scroll")
+  //     .assert.cssProperty("#l1", "overflow-y", "scroll")
+  //     .assert.cssProperty("#l1", "overflow", "scroll")
+  //     .end()
+  // },
+  'partials/background-position': browser => {
     const devServer = browser.globals.devServerURL
 
     browser
-      .url(`${devServer}/partials/code`)
+      .url(`${devServer}/partials/background-position`)
       .waitForElementVisible('#tests', 5000)
-      .assert.cssProperty("#l1", "overflow-x", "scroll")
-      .assert.cssProperty("#l1", "overflow-y", "scroll")
-      .assert.cssProperty("#l1", "overflow", "scroll")
+      .assert.cssProperty("#l1", "background-repeat", "no-repeat")
+      .assert.cssProperty("#l1", "background-position", "50% 50%")
+      .assert.cssProperty("#l2", "background-repeat", "no-repeat")
+      .assert.cssProperty("#l2", "background-position", "50% 0%")
+      .assert.cssProperty("#l3", "background-repeat", "no-repeat")
+      .assert.cssProperty("#l3", "background-position", "100% 50%")
+      .assert.cssProperty("#l4", "background-repeat", "no-repeat")
+      .assert.cssProperty("#l4", "background-position", "50% 100%")
+      .assert.cssProperty("#l5", "background-repeat", "no-repeat")
+      .assert.cssProperty("#l5", "background-position", "0% 50%")
       .end()
   },
 }
