@@ -374,41 +374,84 @@ module.exports = {
   //     .assert.cssProperty("#l1", "max-width", "100%")
   //     .end()
   // },
-  'partials/heights': browser => {
+  // 'partials/heights': browser => {
+  //   const devServer = browser.globals.devServerURL
+
+  //   browser
+  //     .url(`${devServer}/partials/heights`)
+  //     .waitForElementVisible('#tests', 5000)
+  //     .assert.cssProperty("#l1", "height", "16px")
+  //     .assert.cssProperty("#l2", "height", "32px")
+  //     .assert.cssProperty("#l3", "height", "64px")
+  //     .assert.cssProperty("#l4", "height", "128px")
+  //     .assert.cssProperty("#l5", "height", "256px")
+  //     .assert.cssProperty("#l6", "height", "200px")
+  //     .assert.cssProperty("#l7", "height", "400px")
+  //     .assert.cssProperty("#l8", "height", "600px")
+  //     .assert.cssProperty("#l9", "height", "800px")
+  //     .assert.cssProperty("#l10", "height", "800px")
+  //     .assert.cssProperty("#l11", "height", "150px")
+  //     .assert.cssProperty("#l12", "height", "300px")
+  //     .assert.cssProperty("#l13", "height", "450px")
+  //     .assert.cssProperty("#l14", "height", "600px")
+  //     .assert.cssProperty("#l15", "height", "600px")
+  //     .assert.cssProperty("#l16", "height", "0px")
+  //     .assert.cssProperty("#l17", "height", "800px")
+  //     .end()
+  // },
+  // 'partials/gradients': browser => {
+  //   const devServer = browser.globals.devServerURL
+
+  //   browser
+  //     .url(`${devServer}/partials/gradients`)
+  //     .waitForElementVisible('#tests', 5000)
+  //     .assert.cssProperty("#l1", "background-image", "linear-gradient(rgb(69, 112, 176), rgb(0, 129, 194))")
+  //     .assert.cssProperty("#l2", "background-image", "linear-gradient(rgb(0, 129, 194), rgb(69, 112, 176))")
+  //     .assert.cssProperty("#l3", "background-image", "linear-gradient(rgb(118, 211, 254), rgb(0, 138, 224))")
+  //     .assert.cssProperty("#l4", "background-image", "linear-gradient(rgb(0, 138, 224), rgb(118, 211, 254))")
+  //     .end()
+  // },
+  // 'partials/coordinates': browser => {
+  //   const devServer = browser.globals.devServerURL
+
+  //   browser
+  //     .url(`${devServer}/partials/coordinates`)
+  //     .waitForElementVisible('#tests', 5000)
+  //     .assert.cssProperty("#l1", "top", "0px")
+  //     .assert.cssProperty("#l2", "right", "0px")
+  //     .assert.cssProperty("#l3", "bottom", "0px")
+  //     .assert.cssProperty("#l4", "left", "0px")
+  //     .assert.cssProperty("#l5", "top", "16px")
+  //     .assert.cssProperty("#l6", "right", "16px")
+  //     .assert.cssProperty("#l7", "bottom", "16px")
+  //     .assert.cssProperty("#l8", "left", "16px")
+  //     .assert.cssProperty("#l9", "top", "32px")
+  //     .assert.cssProperty("#l10", "right", "32px")
+  //     .assert.cssProperty("#l11", "bottom", "32px")
+  //     .assert.cssProperty("#l12", "left", "32px")
+  //     .assert.cssProperty("#l13", "top", "-16px")
+  //     .assert.cssProperty("#l14", "right", "-16px")
+  //     .assert.cssProperty("#l15", "bottom", "-16px")
+  //     .assert.cssProperty("#l16", "left", "-16px")
+  //     .assert.cssProperty("#l17", "top", "-32px")
+  //     .assert.cssProperty("#l18", "right", "-32px")
+  //     .assert.cssProperty("#l19", "bottom", "-32px")
+  //     .assert.cssProperty("#l20", "left", "-32px")
+  //     .assert.cssProperty("#l21", "top", "0px")
+  //     .assert.cssProperty("#l21", "right", "0px")
+  //     .assert.cssProperty("#l21", "bottom", "0px")
+  //     .assert.cssProperty("#l21", "left", "0px")
+  //     .end()
+  // },
+  'partials/code': browser => {
     const devServer = browser.globals.devServerURL
 
     browser
-      .url(`${devServer}/partials/heights`)
+      .url(`${devServer}/partials/code`)
       .waitForElementVisible('#tests', 5000)
-      .assert.cssProperty("#l1", "height", "16px")
-      .assert.cssProperty("#l2", "height", "32px")
-      .assert.cssProperty("#l3", "height", "64px")
-      .assert.cssProperty("#l4", "height", "128px")
-      .assert.cssProperty("#l5", "height", "256px")
-      .assert.cssProperty("#l6", "height", "200px")
-      .assert.cssProperty("#l7", "height", "400px")
-      .assert.cssProperty("#l8", "height", "600px")
-      .assert.cssProperty("#l9", "height", "800px")
-      .assert.cssProperty("#l10", "height", "800px")
-      .assert.cssProperty("#l11", "height", "150px")
-      .assert.cssProperty("#l12", "height", "300px")
-      .assert.cssProperty("#l13", "height", "450px")
-      .assert.cssProperty("#l14", "height", "600px")
-      .assert.cssProperty("#l15", "height", "600px")
-      .assert.cssProperty("#l16", "height", "0px")
-      .assert.cssProperty("#l17", "height", "800px")
-      .end()
-  },
-  'partials/gradients': browser => {
-    const devServer = browser.globals.devServerURL
-
-    browser
-      .url(`${devServer}/partials/gradients`)
-      .waitForElementVisible('#tests', 5000)
-      .assert.cssProperty("#l1", "background-image", "linear-gradient(rgb(69, 112, 176), rgb(0, 129, 194))")
-      .assert.cssProperty("#l2", "background-image", "linear-gradient(rgb(0, 129, 194), rgb(69, 112, 176))")
-      .assert.cssProperty("#l3", "background-image", "linear-gradient(rgb(118, 211, 254), rgb(0, 138, 224))")
-      .assert.cssProperty("#l4", "background-image", "linear-gradient(rgb(0, 138, 224), rgb(118, 211, 254))")
+      .assert.cssProperty("#l1", "overflow-x", "scroll")
+      .assert.cssProperty("#l1", "overflow-y", "scroll")
+      .assert.cssProperty("#l1", "overflow", "scroll")
       .end()
   },
 }
