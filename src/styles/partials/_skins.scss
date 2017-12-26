@@ -16,6 +16,6 @@
 /* Text colors */
 
 @each $name, $color in $cepheus-colors {
-  @include cepheus-partial-class($name, ('color': $color));
-  @include cepheus-partial-class("bg-#{$name}", ('background-color': $color));
+  @include cepheus-partial-class(".#{$name}", ('color': $color));
+  @include cepheus-partial-class(".bg-#{$name}", ('background-color': $color));
 }

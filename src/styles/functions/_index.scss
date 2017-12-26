@@ -1,3 +1,14 @@
+@function cepheus-selector-nest($list) {
+  $list: selector-nest($list);
+  $result: ();
+
+  @each $selector in $list {
+    $result: join($result, unquote-if-string($selector), space, false);
+  }
+
+  @return $result;
+}
+
 @function unquote-if-string($value) {
   @return if(type-of($value) == string, unquote($value), $value);
 }

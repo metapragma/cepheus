@@ -7,7 +7,7 @@
     $fallback: if(map-get($font, 'font-is-sans-serif'), $cepheus-fallback-sans-serif, $cepheus-fallback-serif);
     $family: '#{map-get($font, 'font-family')}';
 
-    @include cepheus-partial-class($slug, ('font-family': "#{$fallback}"));
+    @include cepheus-partial-class('.#{$slug}', ('font-family': "#{$fallback}"));
     @include cepheus-partial-class(('.wf-#{$slug}-active', '.#{$slug}'), ('font-family': "#{$family}, #{$fallback}"));
   }
 }
