@@ -2,3 +2,14 @@
 @import '~normalize.css/normalize';
 @import '~normalize-opentype.css/normalize-opentype';
 @import '../partials/index';
+
+@each $map in $cepheus-state-initial {
+  $property: map-get($map, 'property');
+  $selector: map-get($map, 'selector');
+  $value: map-get($map, 'value');
+
+  #{$selector} {
+    #{$property}: $value;
+  }
+}
+

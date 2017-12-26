@@ -31,6 +31,10 @@ module.exports = {
       .assert.cssProperty('#a3', 'font-family', '"Times New Roman"')
       .assert.cssProperty('#a4', 'font-family', '"Bodoni MT", serif')
       .assert.cssProperty('#a5', 'font-family', 'baskerville, serif')
+      .assert.cssProperty('#a7', 'font-family', '"Bodoni MT", serif')
+      .assert.cssProperty('#a8', 'font-family', 'baskerville, serif')
+      .assert.cssProperty('#a9', 'font-family', 'baskerville, serif')
+      .assert.cssProperty('#a10', 'font-family', '"Bodoni MT", serif')
       .end()
   },
   'partials/font-family custom font': browser => {

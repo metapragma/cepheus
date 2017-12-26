@@ -1,247 +1,247 @@
 $cepheus-text-decoration: (
-  'strike': ('text-decoration': 'line-through'),
-  'underline': ('text-decoration': 'underline'),
-  'no-underline': ('text-decoration': 'none')
+  '.strike': ('text-decoration': 'line-through'),
+  '.underline': ('text-decoration': 'underline'),
+  '.no-underline': ('text-decoration': 'none')
 ) !default;
 
 $cepheus-opacity: (
-  o-100: ('opacity': 1),
-  o-90: ('opacity': 0.9),
-  o-80: ('opacity': 0.8),
-  o-70: ('opacity': 0.7),
-  o-60: ('opacity': 0.6),
-  o-50: ('opacity': 0.5),
-  o-40: ('opacity': 0.4),
-  o-30: ('opacity': 0.3),
-  o-20: ('opacity': 0.2),
-  o-10: ('opacity': 0.1),
-  o-05: ('opacity': 0.05),
-  o-025: ('opacity': 0.025),
-  o-0: ('opacity': 0)
+  '.o-100': ('opacity': 1),
+  '.o-90': ('opacity': 0.9),
+  '.o-80': ('opacity': 0.8),
+  '.o-70': ('opacity': 0.7),
+  '.o-60': ('opacity': 0.6),
+  '.o-50': ('opacity': 0.5),
+  '.o-40': ('opacity': 0.4),
+  '.o-30': ('opacity': 0.3),
+  '.o-20': ('opacity': 0.2),
+  '.o-10': ('opacity': 0.1),
+  '.o-05': ('opacity': 0.05),
+  '.o-025': ('opacity': 0.025),
+  '.o-0': ('opacity': 0)
 ) !default;
 
 $cepheus-letter-spacing: (
-  'tracked': ('letter-spacing': 0.1em),
-  'tracked-tight': ('letter-spacing': -0.05em),
-  'tracked-mega': ('letter-spacing': 0.25em)
+  '.tracked': ('letter-spacing': 0.1em),
+  '.tracked-tight': ('letter-spacing': -0.05em),
+  '.tracked-mega': ('letter-spacing': 0.25em)
 ) !default;
 
 $cepheus-borders: (
-  'ba': ('border-style': solid, 'border-width': 1px),
-  'bt': ('border-top-style': solid, 'border-top-width': 1px),
-  'br': ('border-right-style': solid, 'border-right-width': 1px),
-  'bb': ('border-bottom-style': solid, 'border-bottom-width': 1px),
-  'bl': ('border-left-style': solid, 'border-left-width': 1px),
-  'bn': ('border-style': none, 'border-width': 0)
+  '.ba': ('border-style': solid, 'border-width': 1px),
+  '.bt': ('border-top-style': solid, 'border-top-width': 1px),
+  '.br': ('border-right-style': solid, 'border-right-width': 1px),
+  '.bb': ('border-bottom-style': solid, 'border-bottom-width': 1px),
+  '.bl': ('border-left-style': solid, 'border-left-width': 1px),
+  '.bn': ('border-style': none, 'border-width': 0)
 ) !default;
 
 $cepheus-border-widths: (
-  bw0: ('border-width': 0),
-  bw1: ('border-width': 0.125rem),
-  bw2: ('border-width': 0.25rem),
-  bw3: ('border-width': 0.5rem),
-  bw4: ('border-width': 1rem),
-  bw5: ('border-width': 2rem),
-  bt-0: ('border-top-width': 0),
-  br-0: ('border-right-width': 0),
-  bb-0: ('border-bottom-width': 0),
-  bl-0: ('border-left-width': 0)
+  '.bw0': ('border-width': 0),
+  '.bw1': ('border-width': 0.125rem),
+  '.bw2': ('border-width': 0.25rem),
+  '.bw3': ('border-width': 0.5rem),
+  '.bw4': ('border-width': 1rem),
+  '.bw5': ('border-width': 2rem),
+  '.bt-0': ('border-top-width': 0),
+  '.br-0': ('border-right-width': 0),
+  '.bb-0': ('border-bottom-width': 0),
+  '.bl-0': ('border-left-width': 0)
 ) !default;
 
 $cepheus-border-styles: (
-  'b--dotted': ('border-style': dotted),
-  'b--dashed': ('border-style': dashed),
-  'b--solid': ('border-style': solid),
-  'b--none': ('border-style': none),
+  '.b--dotted': ('border-style': dotted),
+  '.b--dashed': ('border-style': dashed),
+  '.b--solid': ('border-style': solid),
+  '.b--none': ('border-style': none),
 ) !default;
 
 $cepheus-border-radius: (
-  br0: ('border-radius': 0),
-  br1: ('border-radius': 0.125rem),
-  br2: ('border-radius': 0.25rem),
-  br3: ('border-radius': 0.5rem),
-  br4: ('border-radius': 1rem),
-  br-100: ('border-radius': 100%),
-  'br-pill': ('border-radius': 9999px),
-  'br--top': ('border-bottom-left-radius': 0, 'border-bottom-right-radius': 0),
-  'br--right': ('border-top-left-radius': 0, 'border-bottom-left-radius': 0),
-  'br--bottom': ('border-top-left-radius': 0, 'border-top-right-radius': 0),
-  'br--left': ('border-top-right-radius': 0, 'border-bottom-right-radius': 0)
+  '.br0': ('border-radius': 0),
+  '.br1': ('border-radius': 0.125rem),
+  '.br2': ('border-radius': 0.25rem),
+  '.br3': ('border-radius': 0.5rem),
+  '.br4': ('border-radius': 1rem),
+  '.br-100': ('border-radius': 100%),
+  '.br-pill': ('border-radius': 9999px),
+  '.br--top': ('border-bottom-left-radius': 0, 'border-bottom-right-radius': 0),
+  '.br--right': ('border-top-left-radius': 0, 'border-bottom-left-radius': 0),
+  '.br--bottom': ('border-top-left-radius': 0, 'border-top-right-radius': 0),
+  '.br--left': ('border-top-right-radius': 0, 'border-bottom-right-radius': 0)
 ) !default;
 
 $cepheus-box-shadow: (
-  shadow-1: (box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2)),
-  shadow-2: (box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2)),
-  shadow-3: (box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2)),
-  shadow-4: (box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2)),
-  shadow-5: (box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2))
+  '.shadow-1': (box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.2)),
+  '.shadow-2': (box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2)),
+  '.shadow-3': (box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2)),
+  '.shadow-4': (box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2)),
+  '.shadow-5': (box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2))
 ) !default;
 
 $cepheus-z-index: (
-  z-0: (z-index: 0),
-  z-1: (z-index: 1),
-  z-2: (z-index: 2),
-  z-3: (z-index: 3),
-  z-4: (z-index: 4),
-  z-5: (z-index: 5),
-  z-999: (z-index: 999),
-  z-9999: (z-index: 9999),
-  z-max: (z-index: 2147483647),
-  z-inherit: (z-index: inherit),
-  z-initial: (z-index: initial),
-  z-unset: (z-index: unset),
+  '.z-0': (z-index: 0),
+  '.z-1': (z-index: 1),
+  '.z-2': (z-index: 2),
+  '.z-3': (z-index: 3),
+  '.z-4': (z-index: 4),
+  '.z-5': (z-index: 5),
+  '.z-999': (z-index: 999),
+  '.z-9999': (z-index: 9999),
+  '.z-max': (z-index: 2147483647),
+  '.z-inherit': (z-index: inherit),
+  '.z-initial': (z-index: initial),
+  '.z-unset': (z-index: unset),
 ) !default;
 
 $cepheus-word-break: (
-  'word-normal': ('word-break': normal),
-  'word-wrap': ('word-break': break-all),
-  'word-nowrap': ('word-break': keep-all)
+  '.word-normal': ('word-break': normal),
+  '.word-wrap': ('word-break': break-all),
+  '.word-nowrap': ('word-break': keep-all)
 ) !default;
 
 $cepheus-white-space: (
-  'ws-normal': ('white-space': normal),
-  'nowrap': ('white-space': nowrap),
-  'pre': ('white-space': pre)
+  '.ws-normal': ('white-space': normal),
+  '.nowrap': ('white-space': nowrap),
+  '.pre': ('white-space': pre)
 ) !default;
 
 $cepheus-vertical-align: (
-  'v-base': ('vertical-align': baseline),
-  'v-mid': ('vertical-align': middle),
-  'v-top': ('vertical-align': top),
-  'v-btm': ('vertical-align': bottom),
+  '.v-base': ('vertical-align': baseline),
+  '.v-mid': ('vertical-align': middle),
+  '.v-top': ('vertical-align': top),
+  '.v-btm': ('vertical-align': bottom),
 ) !default;
 
 $cepheus-text-align: (
-  'tl': ('text-align': left),
-  'tr': ('text-align': right),
-  'tc': ('text-align': center),
-  'tj': ('text-align': justified)
+  '.tl': ('text-align': left),
+  '.tr': ('text-align': right),
+  '.tc': ('text-align': center),
+  '.tj': ('text-align': justified)
 ) !default;
 
 $cepheus-rotations: (
-  rotate-45: ('transform': rotate(45deg)),
-  rotate-90: ('transform': rotate(90deg)),
-  rotate-135: ('transform': rotate(135deg)),
-  rotate-180: ('transform': rotate(180deg)),
-  rotate-225: ('transform': rotate(225deg)),
-  rotate-270: ('transform': rotate(270deg)),
-  rotate-315: ('transform': rotate(315deg)),
+  '.rotate-45': ('transform': rotate(45deg)),
+  '.rotate-90': ('transform': rotate(90deg)),
+  '.rotate-135': ('transform': rotate(135deg)),
+  '.rotate-180': ('transform': rotate(180deg)),
+  '.rotate-225': ('transform': rotate(225deg)),
+  '.rotate-270': ('transform': rotate(270deg)),
+  '.rotate-315': ('transform': rotate(315deg)),
 ) !default;
 
 $cepheus-position: (
-  'static': ('position': 'static'),
-  'relative':  ('position': 'relative'),
-  'absolute':  ('position': 'absolute'),
-  'fixed':  ('position': 'fixed'),
+  '.static': ('position': 'static'),
+  '.relative':  ('position': 'relative'),
+  '.absolute':  ('position': 'absolute'),
+  '.fixed':  ('position': 'fixed'),
 ) !default;
 
 $cepheus-overflow: (
-  'overflow-visible': ('overflow': visible),
-  'overflow-hidden': ('overflow': hidden),
-  'overflow-scroll': ('overflow': scroll),
-  'overflow-auto': ('overflow': auto),
-  'overflow-x-visible': ('overflow-x': visible),
-  'overflow-x-hidden': ('overflow-x': hidden),
-  'overflow-x-scroll': ('overflow-x': scroll),
-  'overflow-x-auto': ('overflow-x': auto),
-  'overflow-y-visible': ('overflow-y': visible),
-  'overflow-y-hidden': ('overflow-y': hidden),
-  'overflow-y-scroll': ('overflow-y': scroll),
-  'overflow-y-auto': ('overflow-y': auto)
+  '.overflow-visible': ('overflow': visible),
+  '.overflow-hidden': ('overflow': hidden),
+  '.overflow-scroll': ('overflow': scroll),
+  '.overflow-auto': ('overflow': auto),
+  '.overflow-x-visible': ('overflow-x': visible),
+  '.overflow-x-hidden': ('overflow-x': hidden),
+  '.overflow-x-scroll': ('overflow-x': scroll),
+  '.overflow-x-auto': ('overflow-x': auto),
+  '.overflow-y-visible': ('overflow-y': visible),
+  '.overflow-y-hidden': ('overflow-y': hidden),
+  '.overflow-y-scroll': ('overflow-y': scroll),
+  '.overflow-y-auto': ('overflow-y': auto)
 ) !default;
 
 $cepheus-outlines: (
-  'outline': ('outline': 1px solid),
-  'outline-transparent': ('outline': 1px solid transparent),
-  'outline-0': ('outline': 0)
+  '.outline': ('outline': 1px solid),
+  '.outline-transparent': ('outline': 1px solid transparent),
+  '.outline-0': ('outline': 0)
 ) !default;
 
 $cepheus-max-widths: (
-  'mw-100': ('max-width': 100%),
-  'mw1': ('max-width': 1rem),
-  'mw2': ('max-width': 2rem),
-  'mw3': ('max-width': 4rem),
-  'mw4': ('max-width': 8rem),
-  'mw5': ('max-width': 16rem),
-  'mw6': ('max-width': 32rem),
-  'mw7': ('max-width': 48rem),
-  'mw8': ('max-width': 64rem),
-  'mw9': ('max-width': 96rem),
-  'mw-none': ('max-width': none)
+  '.mw-100': ('max-width': 100%),
+  '.mw1': ('max-width': 1rem),
+  '.mw2': ('max-width': 2rem),
+  '.mw3': ('max-width': 4rem),
+  '.mw4': ('max-width': 8rem),
+  '.mw5': ('max-width': 16rem),
+  '.mw6': ('max-width': 32rem),
+  '.mw7': ('max-width': 48rem),
+  '.mw8': ('max-width': 64rem),
+  '.mw9': ('max-width': 96rem),
+  '.mw-none': ('max-width': none)
 ) !default;
 
 $cepheus-lists: (
-  'list': ('list-style-ordinatestype': 'none')
+  '.list': ('list-style-type': 'none')
 ) !default;
 
 $cepheus-links: (
-  'link': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
-  'link:link': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
-  'link:visited': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
-  'link:active': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
-  'link:hover': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
-  'link:focus': ('transition': 'color .15s ease-in', 'outline': '1px dotted currentColor')
+  '.link': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
+  '.link:link': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
+  '.link:visited': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
+  '.link:active': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
+  '.link:hover': ('text-decoration': 'none', 'transition': 'color 0.15s ease-in'),
+  '.link:focus': ('transition': 'color .15s ease-in', 'outline': '1px dotted currentColor')
 ) !default;
 
 $cepheus-heights: (
-  'h1': ('height': 1rem),
-  'h2': ('height': 2rem),
-  'h3': ('height': 4rem),
-  'h4': ('height': 8rem),
-  'h5': ('height': 16rem),
-  'h-25': ('height':  25%),
-  'h-50': ('height':  50%),
-  'h-75': ('height':  75%),
-  'h-100': ('height': 100%),
-  'min-h-100': ('min-height': 100%),
-  'vh-25': ('height':  25vh),
-  'vh-50': ('height':  50vh),
-  'vh-75': ('height':  75vh),
-  'vh-100': ('height': 100vh),
-  'min-vh-100': ('min-height': 100vh),
-  'h-auto': ('height': auto),
-  'h-inherit': ('height': inherit)
+  '.h1': ('height': 1rem),
+  '.h2': ('height': 2rem),
+  '.h3': ('height': 4rem),
+  '.h4': ('height': 8rem),
+  '.h5': ('height': 16rem),
+  '.h-25': ('height':  25%),
+  '.h-50': ('height':  50%),
+  '.h-75': ('height':  75%),
+  '.h-100': ('height': 100%),
+  '.min-h-100': ('min-height': 100%),
+  '.vh-25': ('height':  25vh),
+  '.vh-50': ('height':  50vh),
+  '.vh-75': ('height':  75vh),
+  '.vh-100': ('height': 100vh),
+  '.min-vh-100': ('min-height': 100vh),
+  '.h-auto': ('height': auto),
+  '.h-inherit': ('height': inherit)
 ) !default;
 
 $cepheus-gradients: (
-  'gradient-blue': ('background-image': linear-gradient(#4570B0, #0081C2)),
-  'gradient-blue-reversed': ('background-image': linear-gradient(#0081C2, #4570B0)),
-  'gradient-light-blue': ('background-image': linear-gradient(#76D3FE, #008AE0)),
-  'gradient-light-blue-reversed': ('background-image': linear-gradient(#008AE0, #76D3FE))
+  '.gradient-blue': ('background-image': linear-gradient(#4570b0, #0081c2)),
+  '.gradient-blue-reversed': ('background-image': linear-gradient(#0081c2, #4570b0)),
+  '.gradient-light-blue': ('background-image': linear-gradient(#76d3fe, #008ae0)),
+  '.gradient-light-blue-reversed': ('background-image': linear-gradient(#008ae0, #76d3fe))
 ) !default;
 
 $cepheus-coordinates: (
-  'top-0': (top: 0),
-  'right-0': (right: 0),
-  'bottom-0': (bottom: 0),
-  'left-0': (left: 0),
-  'top-1': (top: 1rem),
-  'right-1': (right: 1rem),
-  'bottom-1': (bottom: 1rem),
-  'left-1': (left: 1rem),
-  'top-2': (top: 2rem),
-  'right-2': (right: 2rem),
-  'bottom-2': (bottom: 2rem),
-  'left-2': (left: 2rem),
-  'top--1': (top: -1rem),
-  'right--1': (right: -1rem),
-  'bottom--1': (bottom: -1rem),
-  'left--1': (left: -1rem),
-  'top--2': (top: -2rem),
-  'right--2': (right: -2rem),
-  'bottom--2': (bottom: -2rem),
-  'left--2': (left: -2rem),
-  'absolute--fill': (top: 0, right: 0, bottom: 0, left: 0)
+  '.top-0': (top: 0),
+  '.right-0': (right: 0),
+  '.bottom-0': (bottom: 0),
+  '.left-0': (left: 0),
+  '.top-1': (top: 1rem),
+  '.right-1': (right: 1rem),
+  '.bottom-1': (bottom: 1rem),
+  '.left-1': (left: 1rem),
+  '.top-2': (top: 2rem),
+  '.right-2': (right: 2rem),
+  '.bottom-2': (bottom: 2rem),
+  '.left-2': (left: 2rem),
+  '.top--1': (top: -1rem),
+  '.right--1': (right: -1rem),
+  '.bottom--1': (bottom: -1rem),
+  '.left--1': (left: -1rem),
+  '.top--2': (top: -2rem),
+  '.right--2': (right: -2rem),
+  '.bottom--2': (bottom: -2rem),
+  '.left--2': (left: -2rem),
+  '.absolute--fill': (top: 0, right: 0, bottom: 0, left: 0)
 ) !default;
 
 $cepheus-code: (
-  'pre': ('overflow-x': 'auto', 'overflow-y': 'hidden', 'overflow': 'scroll')
+  '.pre': ('overflow-x': 'auto', 'overflow-y': 'hidden', 'overflow': 'scroll')
 ) !default;
 
 $cepheus-background-position: (
-  'bg-center': ('background-repeat': no-repeat, 'background-position': center center),
-  'bg-top': ('background-repeat': no-repeat, 'background-position': top center),
-  'bg-right': ('background-repeat': no-repeat, 'background-position': center right),
-  'bg-bottom': ('background-repeat': no-repeat, 'background-position': bottom center),
-  'bg-left': ('background-repeat': no-repeat, 'background-position': center left)
+  '.bg-center': ('background-repeat': no-repeat, 'background-position': center center),
+  '.bg-top': ('background-repeat': no-repeat, 'background-position': top center),
+  '.bg-right': ('background-repeat': no-repeat, 'background-position': center right),
+  '.bg-bottom': ('background-repeat': no-repeat, 'background-position': bottom center),
+  '.bg-left': ('background-repeat': no-repeat, 'background-position': center left)
 ) !default;

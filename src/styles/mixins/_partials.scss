@@ -1,14 +1,3 @@
-@function cepheus-selector-nest($list) {
-  $list: selector-nest($list);
-  $result: ();
-
-  @each $selector in $list {
-    $result: join($result, unquote-if-string($selector), space, false);
-  }
-
-  @return $result;
-}
-
 @mixin cepheus-partial-class($input, $propertyMap) {
   $properties: (
     'azimuth',
@@ -55,16 +44,19 @@
   );
 
   @each $property, $value in $propertyMap {
-    $selector: if(type-of($input) == 'list' and length($input) != 1, cepheus-selector-nest($input), '.' + unquote-if-string($input));
+    $selector: if(type-of($input) == 'list' and length($input) != 1, cepheus-selector-nest($input), unquote-if-string($input));
+    $value: unquote-if-string($value);
 
-    #{$selector} {
-      #{unquote($property)}: unquote-if-string($value);
-    }
+    $cepheus-state-initial: append($cepheus-state-initial, ('property': $property, 'selector': $selector, 'value': $value)) !global;
 
     @if contains($properties, $property) {
       #{$selector} > * {
         #{unquote($property)}: initial;
       }
     }
+
+    // #{$selector} {
+    //   #{unquote($property)}: $value;
+    // }
   }
 }

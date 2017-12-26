@@ -14,6 +14,19 @@
         </div>
       </div>
     </div>
+
+    <div id="case-two">
+      <div id="a1" class="black-10" style="width: 500px; height: 300px;">
+        <div id="a2" class="black-90" style="width: 75px; height: 75px;">
+        </div>
+      </div>
+
+      <div id="a3" class="black-90" style="width: 500px; height: 300px;">
+        <div id="a4" class="black-10" style="width: 75px; height: 75px;">
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
