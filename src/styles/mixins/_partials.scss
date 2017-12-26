@@ -1,4 +1,15 @@
-@mixin cepheus-partial-class($name, $propertyMap) {
+@function cepheus-selector-nest($list) {
+  $list: selector-nest($list);
+  $result: ();
+
+  @each $selector in $list {
+    $result: join($result, unquote-if-string($selector), space, false);
+  }
+
+  @return $result;
+}
+
+@mixin cepheus-partial-class($input, $propertyMap) {
   $properties: (
     'azimuth',
     'border-collapse',
@@ -44,20 +55,16 @@
   );
 
   @each $property, $value in $propertyMap {
-    $local-value: $value;
+    $selector: if(type-of($input) == 'list' and length($input) != 1, cepheus-selector-nest($input), '.' + unquote-if-string($input));
 
-    @if type-of($value) == string {
-      $local-value: unquote($value);
+    #{$selector} {
+      #{unquote($property)}: unquote-if-string($value);
     }
 
     @if contains($properties, $property) {
-      .#{unquote($name)} > * {
+      #{$selector} > * {
         #{unquote($property)}: initial;
       }
-    }
-
-    .#{unquote($name)} {
-      #{unquote($property)}: $local-value;
     }
   }
 }

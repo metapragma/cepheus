@@ -10,13 +10,13 @@ $output-bourbon-deprecation-warnings: false;
 
 @include breakpoint-set('no query fallbacks', true);
 @include breakpoint-set('to ems', true);
-@include plumber-set-defaults(
-  $grid-height: 0.25em,
-  $font-size: 4,
-  $baseline: $cas-font-baseline,
-  $leading-top: 0,
-  $leading-bottom: 0
-);
+// @include plumber-set-defaults(
+//   $grid-height: 0.25em,
+//   $font-size: 4,
+//   $baseline: $cas-font-baseline,
+//   $leading-top: 0,
+//   $leading-bottom: 0
+// );
 
 @each $_breakpoint_key, $_breakpoint_value in $cepheus-breakpoints {
   @include add-breakpoint($_breakpoint_key, $_breakpoint_value, true);

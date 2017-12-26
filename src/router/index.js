@@ -30,6 +30,7 @@ import PartialsGradients from '../components/partials-gradients.vue'
 import PartialsCoordinates from '../components/partials-coordinates.vue'
 import PartialsCode from '../components/partials-code.vue'
 import PartialsBackgroundPosition from '../components/partials-background-position.vue'
+import PartialsFontFamily from '../components/partials-font-family.vue'
 
 Vue.use(Router)
 
@@ -152,6 +153,10 @@ export default new Router({
     {
       path: '/partials/code',
       component: PartialsCode
+    },
+    {
+      path: '/partials/font-family',
+      component: PartialsFontFamily
     },
     {
       path: '/partials/background-position',
