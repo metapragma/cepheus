@@ -31,6 +31,7 @@ import PartialsCoordinates from '../components/partials-coordinates.vue'
 import PartialsCode from '../components/partials-code.vue'
 import PartialsBackgroundPosition from '../components/partials-background-position.vue'
 import PartialsFontFamily from '../components/partials-font-family.vue'
+import PartialsHovers from '../components/partials-hovers.vue'
 
 Vue.use(Router)
 
@@ -161,6 +162,10 @@ export default new Router({
     {
       path: '/partials/background-position',
       component: PartialsBackgroundPosition
+    },
+    {
+      path: '/partials/hovers',
+      component: PartialsHovers
     },
   ]
 })

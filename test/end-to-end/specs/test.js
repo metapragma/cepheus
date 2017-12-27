@@ -476,4 +476,5 @@ module.exports = {
       .assert.cssProperty("#l5", "background-position", "0% 50%")
       .end()
   },
+  // 'partials/hovers'
 }
