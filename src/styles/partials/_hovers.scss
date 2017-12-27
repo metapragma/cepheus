@@ -1,0 +1,3 @@
+@each $name, $value in $cepheus-hovers {
+  @include cepheus-partial-class($name, $value);
+}
