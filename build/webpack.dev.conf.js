@@ -3,7 +3,6 @@
 const fs = require('fs')
 const path = require('path')
 const utils = require('./utils')
-const config = require('../config')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
@@ -26,7 +25,7 @@ module.exports = merge(baseWebpackConfig, {
   devtool: '#source-map',
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': config.dev.env
+      'process.env.NODE_ENV': JSON.stringify('production'),
     }),
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css')
