@@ -1,5 +1,4 @@
 require('babel-register')
-var config = require('../../config')
 
 // http://nightwatchjs.org/gettingstarted#settings-file
 module.exports = {
@@ -24,7 +23,7 @@ module.exports = {
       silent: true,
       globals: {
         devServerURL:
-          'http://localhost:' + (process.env.PORT || config.dev.port)
+          'http://localhost:' + (process.env.PORT || 8080)
       }
     },
 
