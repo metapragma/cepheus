@@ -1,11 +1,11 @@
 $output-bourbon-deprecation-warnings: false;
 
-@import '~mathsass/dist/math';
-@import '~susy/sass/susy';
-@import '~susy/sass/plugins/svg-grid';
-@import '~breakpoint-sass/stylesheets/breakpoint';
-@import '~bourbon/app/assets/stylesheets/bourbon';
-@import '~plumber-sass';
+@import 'mathsass/dist/math';
+@import 'susy/sass/susy';
+@import 'susy/sass/plugins/svg-grid';
+@import 'breakpoint-sass/stylesheets/breakpoint';
+@import 'bourbon/app/assets/stylesheets/bourbon';
+@import 'plumber-sass/plumber';
 @import '../settings/index';
 
 @include breakpoint-set('no query fallbacks', true);
