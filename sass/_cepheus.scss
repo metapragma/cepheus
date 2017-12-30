@@ -1,7 +1,7 @@
-@import './functional';
-@import '~normalize.css/normalize';
-@import '~normalize-opentype.css/normalize-opentype';
-@import '../partials/index';
+@import './cepheus/entrypoints/functional';
+// @import '~normalize.css/normalize';
+// @import '~normalize-opentype.css/normalize-opentype';
+@import './cepheus/partials/index';
 
 @each $map in $cepheus-state-initial {
   $property: map-get($map, 'property');
@@ -12,4 +12,3 @@
     #{$property}: $value;
   }
 }
-

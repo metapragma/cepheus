@@ -1,7 +1,3 @@
-'use strict'
-
-const fs = require('fs')
-const path = require('path')
 const utils = require('./utils')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
@@ -10,8 +6,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 // add hot-reload related code to entry chunks
-Object.keys(baseWebpackConfig.entry).forEach(function (name) {
-  baseWebpackConfig.entry[name] = ['webpack-hot-middleware/client'].concat(baseWebpackConfig.entry[name])
+Object.keys(baseWebpackConfig.entry).forEach(name => {
+  baseWebpackConfig.entry[name] = ['webpack-hot-middleware/client'].concat(
+    baseWebpackConfig.entry[name]
+  )
 })
 
 module.exports = merge(baseWebpackConfig, {
@@ -25,7 +23,7 @@ module.exports = merge(baseWebpackConfig, {
   devtool: '#source-map',
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css')
