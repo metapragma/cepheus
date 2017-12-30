@@ -1,6 +1,7 @@
 @each $name, $value in $cepheus-text-decoration {
-  @include cepheus-partial-class('text-decoration', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-partial-class('text-decoration', '#{$name}-m', $value, 'medium');
-  @include cepheus-partial-class('text-decoration', '#{$name}-l', $value, 'large');
+  @include cepheus-register-partial('text-decoration', $name, $value);
+  @include cepheus-register-partial('text-decoration', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register-partial('text-decoration', '#{$name}-m', $value, 'medium');
+  @include cepheus-register-partial('text-decoration', '#{$name}-l', $value, 'large');
 }
 

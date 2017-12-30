@@ -1,4 +1,4 @@
-@mixin cepheus-partial-class($name, $input, $property-map, $breakpoint: false) {
+@mixin cepheus-register-partial($name, $input, $property-map, $breakpoint: false) {
   @if type-of($name) != 'string' {
     @error('Partial name is invalid');
   }

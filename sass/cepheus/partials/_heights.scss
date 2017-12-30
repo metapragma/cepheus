@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-heights {
-  @include cepheus-partial-class('heights', $name, $value);
-  @include cepheus-partial-class('heights', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-partial-class('heights', '#{$name}-m', $value, 'medium');
-  @include cepheus-partial-class('heights', '#{$name}-l', $value, 'large');
+  @include cepheus-register-partial('heights', $name, $value);
+  @include cepheus-register-partial('heights', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register-partial('heights', '#{$name}-m', $value, 'medium');
+  @include cepheus-register-partial('heights', '#{$name}-l', $value, 'large');
 }

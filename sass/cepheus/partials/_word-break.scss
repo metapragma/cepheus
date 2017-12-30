@@ -1,3 +1,3 @@
 @each $name, $value in $cepheus-word-break {
-  @include cepheus-partial-class('word-break', $name, $value);
+  @include cepheus-register-partial('word-break', $name, $value);
 }

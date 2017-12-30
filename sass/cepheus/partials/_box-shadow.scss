@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-box-shadow {
-  @include cepheus-partial-class('box-shadow', $name, $value);
-  @include cepheus-partial-class('box-shadow', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-partial-class('box-shadow', '#{$name}-m', $value, 'medium');
-  @include cepheus-partial-class('box-shadow', '#{$name}-l', $value, 'large');
+  @include cepheus-register-partial('box-shadow', $name, $value);
+  @include cepheus-register-partial('box-shadow', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register-partial('box-shadow', '#{$name}-m', $value, 'medium');
+  @include cepheus-register-partial('box-shadow', '#{$name}-l', $value, 'large');
 }

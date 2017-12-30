@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-letter-spacing {
-  @include cepheus-partial-class('letter-spacing', $name, $value);
-  @include cepheus-partial-class('letter-spacing', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-partial-class('letter-spacing', '#{$name}-m', $value, 'medium');
-  @include cepheus-partial-class('letter-spacing', '#{$name}-l', $value, 'large');
+  @include cepheus-register-partial('letter-spacing', $name, $value);
+  @include cepheus-register-partial('letter-spacing', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register-partial('letter-spacing', '#{$name}-m', $value, 'medium');
+  @include cepheus-register-partial('letter-spacing', '#{$name}-l', $value, 'large');
 }

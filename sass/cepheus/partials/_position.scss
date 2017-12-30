@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-position {
-  @include cepheus-partial-class('position', $name, $value);
-  @include cepheus-partial-class('position', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-partial-class('position', '#{$name}-m', $value, 'medium');
-  @include cepheus-partial-class('position', '#{$name}-l', $value, 'large');
+  @include cepheus-register-partial('position', $name, $value);
+  @include cepheus-register-partial('position', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register-partial('position', '#{$name}-m', $value, 'medium');
+  @include cepheus-register-partial('position', '#{$name}-l', $value, 'large');
 }

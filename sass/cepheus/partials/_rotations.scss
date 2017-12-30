@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-rotations {
-  @include cepheus-partial-class('rotations', $name, $value);
-  @include cepheus-partial-class('rotations', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-partial-class('rotations', '#{$name}-m', $value, 'medium');
-  @include cepheus-partial-class('rotations', '#{$name}-l', $value, 'large');
+  @include cepheus-register-partial('rotations', $name, $value);
+  @include cepheus-register-partial('rotations', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register-partial('rotations', '#{$name}-m', $value, 'medium');
+  @include cepheus-register-partial('rotations', '#{$name}-l', $value, 'large');
 }
