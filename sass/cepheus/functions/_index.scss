@@ -3,40 +3,40 @@
   $result: ();
 
   @each $selector in $list {
-    $result: join($result, unquote-if-string($selector), space, false);
+    $result: join($result, cepheus-unquote-if-string($selector), space, false);
   }
 
   @return $result;
 }
 
-@function unquote-if-string($value) {
+@function cepheus-unquote-if-string($value) {
   @return if(type-of($value) == string, unquote($value), $value);
 }
 
-@function contains($list, $item) {
+@function cepheus-contains($list, $item) {
   @if index($list, $item) { @return true; }
 
   @return false;
 }
 
-@function contains-any($list, $items) {
-  @each $item in $items { @if index($list, $item) { @return true; } }
+// @function cepheus-contains-any($list, $items) {
+//   @each $item in $items { @if index($list, $item) { @return true; } }
+//
+//   @return false;
+// }
 
-  @return false;
-}
-
-/// Replace `$search` with `$replace` in `$string`
-/// @author Hugo Giraudel
-/// @param {String} $string - Initial string
-/// @param {String} $search - Substring to replace
-/// @param {String} $replace ('') - New value
-/// @return {String} - Updated string
-@function str-replace($string, $search, $replace: '') {
-  $index: str-index($string, $search);
-
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-
-  @return $string;
-}
+// /// Replace `$search` with `$replace` in `$string`
+// /// @author Hugo Giraudel
+// /// @param {String} $string - Initial string
+// /// @param {String} $search - Substring to replace
+// /// @param {String} $replace ('') - New value
+// /// @return {String} - Updated string
+// @function str-replace($string, $search, $replace: '') {
+//   $index: str-index($string, $search);
+//
+//   @if $index {
+//     @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+//   }
+//
+//   @return $string;
+// }

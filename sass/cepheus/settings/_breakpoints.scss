@@ -8,3 +8,10 @@ $cepheus-breakpoints: (
   extra-large: 'only screen' 64em,
   print: print
 ) !default;
+
+@include breakpoint-set('no query fallbacks', true);
+@include breakpoint-set('to ems', true);
+
+@each $breakpoint-key, $breakpoint-value in $cepheus-breakpoints {
+  @include add-breakpoint($breakpoint-key, $breakpoint-value, true);
+}
