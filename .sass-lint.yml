@@ -49,7 +49,7 @@ rules:
 
   # Style Guide
   border-zero: 2
-  brace-style: 2
+  brace-style: 0
   clean-import-paths:
     - 2
     - leading-underscore: false

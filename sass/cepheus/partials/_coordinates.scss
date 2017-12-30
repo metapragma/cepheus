@@ -1,17 +1,7 @@
-
 @each $name, $value in $cepheus-coordinates {
-  @include cepheus-partial-class($name, $value);
-
-  @include respond-to(not-small) {
-    @include cepheus-partial-class("#{$name}-ns", $value);
-  }
-
-  @include respond-to(medium) {
-    @include cepheus-partial-class("#{$name}-m", $value);
-  }
-
-  @include respond-to(large) {
-    @include cepheus-partial-class("#{$name}-l", $value);
-  }
+  @include cepheus-partial-class('coordinates', $name, $value);
+  @include cepheus-partial-class('coordinates', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-partial-class('coordinates', '#{$name}-m', $value, 'medium');
+  @include cepheus-partial-class('coordinates', '#{$name}-l', $value, 'large');
 }
 

@@ -1,62 +1,76 @@
-@mixin cepheus-partial-class($input, $property-map) {
-  $properties: (
-    'azimuth',
-    'border-collapse',
-    'border-spacing',
-    'caption-side',
-    'color',
-    'cursor',
-    'direction',
-    'elevation',
-    'empty-cells',
-    'font-family',
-    'font-size',
-    'font-style',
-    'font-variant',
-    'font-weight',
-    'font',
-    'letter-spacing',
-    'line-height',
-    'list-style-image',
-    'list-style-position',
-    'list-style-type',
-    'list-style',
-    'orphans',
-    'pitch-range',
-    'pitch',
-    'quotes',
-    'richness',
-    'speak-header',
-    'speak-numeral',
-    'speak-punctuation',
-    'speak',
-    'speech-rate',
-    'stress',
-    'text-align',
-    'text-indent',
-    'text-transform',
-    'visibility',
-    'voice-family',
-    'volume',
-    'white-space',
-    'widows',
-    'word-spacing'
-  );
+@mixin cepheus-partial-class($name, $input, $property-map, $breakpoint: false) {
+  @if type-of($name) != 'string' {
+    @error('Partial name is invalid');
+  }
 
-  @each $property, $value in $property-map {
-    $selector: if(type-of($input) == 'list' and length($input) != 1, cepheus-selector-nest($input), cepheus-unquote-if-string($input));
-    $value: cepheus-unquote-if-string($value);
+  @if type-of($breakpoint) == 'string' {
+    @if not cepheus-breakpoint-exists($breakpoint) {
+      @error('Breakpoint #{$breakpoint} does not exist')
+    }
+  }
 
-    $cepheus-state-initial: append($cepheus-state-initial, ('property': $property, 'selector': $selector, 'value': $value)) !global;
+  $selector: if(type-of($input) == 'list' and length($input) != 1, cepheus-selector-nest($input), cepheus-unquote-if-string($input));
+  $cepheus-state: append($cepheus-state,
+    (
+      'breakpoint': $breakpoint,
+      'property-map': $property-map,
+      'selector': $selector,
+    )
+  ) !global;
+}
 
-    @if cepheus-contains($properties, $property) {
-      #{$selector} > * {
-        #{unquote($property)}: initial;
+// Stage 0
+@mixin cepheus-reset-inheritance {
+  @each $map in $cepheus-state {
+    $breakpoint: map-get($map, 'breakpoint');
+    $property-map: map-get($map, 'property-map');
+    $selector: map-get($map, 'selector');
+
+    @if cepheus-contains-any($cepheus-inhertiable-properties, cepheus-to-list($property-map, 'keys')) {
+      @if cepheus-breakpoint-exists($breakpoint) {
+        @include respond-to($breakpoint) {
+          #{$selector} > * {
+            @each $property, $_ in $property-map {
+              @if cepheus-contains-any($cepheus-inhertiable-properties, $property) {
+                #{unquote($property)}: initial;
+              }
+            }
+          }
+        }
+      } @else {
+        #{$selector} > * {
+          @each $property, $_ in $property-map {
+            @if cepheus-contains-any($cepheus-inhertiable-properties, $property) {
+              #{unquote($property)}: initial;
+            }
+          }
+        }
       }
     }
+  }
+}
 
-    // #{$selector} {
-    //   #{unquote($property)}: $value;
-    // }
+// Stage 1
+@mixin cepheus-partials {
+  @each $map in $cepheus-state {
+    $breakpoint: map-get($map, 'breakpoint');
+    $property-map: map-get($map, 'property-map');
+    $selector: map-get($map, 'selector');
+
+    @if cepheus-breakpoint-exists($breakpoint) {
+      @include respond-to($breakpoint) {
+        #{$selector} {
+          @each $property, $value in $property-map {
+            #{unquote($property)}: cepheus-unquote-if-string($value);
+          }
+        }
+      }
+    } @else {
+      #{$selector} {
+        @each $property, $value in $property-map {
+          #{unquote($property)}: cepheus-unquote-if-string($value);
+        }
+      }
+    }
   }
 }
