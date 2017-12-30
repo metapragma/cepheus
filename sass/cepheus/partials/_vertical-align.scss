@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-vertical-align {
-  @include cepheus-partial-class('vertical-align', $name, $value);
-  @include cepheus-partial-class('vertical-align', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-partial-class('vertical-align', '#{$name}-m', $value, 'medium');
-  @include cepheus-partial-class('vertical-align', '#{$name}-l', $value, 'large');
+  @include cepheus-register-partial('vertical-align', $name, $value);
+  @include cepheus-register-partial('vertical-align', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register-partial('vertical-align', '#{$name}-m', $value, 'medium');
+  @include cepheus-register-partial('vertical-align', '#{$name}-l', $value, 'large');
 }

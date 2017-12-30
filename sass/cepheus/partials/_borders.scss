@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-borders {
-  @include cepheus-partial-class('borders', $name, $value);
-  @include cepheus-partial-class('borders', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-partial-class('borders', '#{$name}-m', $value, 'medium');
-  @include cepheus-partial-class('borders', '#{$name}-l', $value, 'large');
+  @include cepheus-register-partial('borders', $name, $value);
+  @include cepheus-register-partial('borders', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register-partial('borders', '#{$name}-m', $value, 'medium');
+  @include cepheus-register-partial('borders', '#{$name}-l', $value, 'large');
 }

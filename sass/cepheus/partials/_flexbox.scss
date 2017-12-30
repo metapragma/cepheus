@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-flexbox {
-  @include cepheus-partial-class('flexbox', $name, $value);
-  @include cepheus-partial-class('flexbox', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-partial-class('flexbox', '#{$name}-m', $value, 'medium');
-  @include cepheus-partial-class('flexbox', '#{$name}-l', $value, 'large');
+  @include cepheus-register-partial('flexbox', $name, $value);
+  @include cepheus-register-partial('flexbox', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register-partial('flexbox', '#{$name}-m', $value, 'medium');
+  @include cepheus-register-partial('flexbox', '#{$name}-l', $value, 'large');
 }

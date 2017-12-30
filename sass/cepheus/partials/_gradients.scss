@@ -1,3 +1,3 @@
 @each $name, $value in $cepheus-gradients {
-  @include cepheus-partial-class('gradients', $name, $value);
+  @include cepheus-register-partial('gradients', $name, $value);
 }

@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-max-widths {
-  @include cepheus-partial-class('max-widths', $name, $value);
-  @include cepheus-partial-class('max-widths', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-partial-class('max-widths', '#{$name}-m', $value, 'medium');
-  @include cepheus-partial-class('max-widths', '#{$name}-l', $value, 'large');
+  @include cepheus-register-partial('max-widths', $name, $value);
+  @include cepheus-register-partial('max-widths', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register-partial('max-widths', '#{$name}-m', $value, 'medium');
+  @include cepheus-register-partial('max-widths', '#{$name}-l', $value, 'large');
 }
