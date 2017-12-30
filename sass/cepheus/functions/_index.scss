@@ -19,11 +19,43 @@
   @return false;
 }
 
-// @function cepheus-contains-any($list, $items) {
-//   @each $item in $items { @if index($list, $item) { @return true; } }
-//
-//   @return false;
-// }
+@function cepheus-breakpoint-exists($breakpoint) {
+  @if ((type-of($breakpoint) == string) and (map-has-key($cepheus-breakpoints, $breakpoint))) {
+    @return true
+  } @else {
+    @return false
+  }
+}
+
+@function cepheus-contains-any($list, $items) {
+  @each $item in $items { @if index($list, $item) { @return true; } }
+
+  @return false;
+}
+
+@function cepheus-to-list($value, $keep: 'both') {
+  $keep: if(index('keys' 'values', $keep), $keep, 'both');
+
+  @if type-of($value) == 'map' {
+    $keys: ();
+    $values: ();
+
+    @each $key, $val in $value {
+      $keys: append($keys, $key);
+      $values: append($values, $val);
+    }
+
+    @if $keep == 'keys' {
+      @return $keys;
+    } @else if $keep == 'values' {
+      @return $values;
+    } @else {
+      @return zip($keys, $values);
+    }
+  }
+
+  @return if(type-of($value) != 'list', ($value,), $value);
+}
 
 // /// Replace `$search` with `$replace` in `$string`
 // /// @author Hugo Giraudel

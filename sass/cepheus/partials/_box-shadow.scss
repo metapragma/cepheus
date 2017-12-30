@@ -1,15 +1,6 @@
 @each $name, $value in $cepheus-box-shadow {
-  @include cepheus-partial-class($name, $value);
-
-  @include respond-to(not-small) {
-    @include cepheus-partial-class("#{$name}-ns", $value);
-  }
-
-  @include respond-to(medium) {
-    @include cepheus-partial-class("#{$name}-m", $value);
-  }
-
-  @include respond-to(large) {
-    @include cepheus-partial-class("#{$name}-l", $value);
-  }
+  @include cepheus-partial-class('box-shadow', $name, $value);
+  @include cepheus-partial-class('box-shadow', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-partial-class('box-shadow', '#{$name}-m', $value, 'medium');
+  @include cepheus-partial-class('box-shadow', '#{$name}-l', $value, 'large');
 }

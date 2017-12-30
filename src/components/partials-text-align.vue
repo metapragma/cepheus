@@ -22,6 +22,18 @@
         reprehenderit omnis laborum voluptate sapiente dicta libero!
       </div>
     </div>
+    <div id="case-two">
+      <div id="t2" class="ba tr tc-ns" style="width: 15rem; height: 15rem; margin: 4em; padding: 1em;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste odio culpa quo quasi 
+        excepturi dolor recusandae laboriosam expedita deserunt incidunt, est aperiam facilis 
+        reprehenderit omnis laborum voluptate sapiente dicta libero!
+      </div>
+      <div id="t3" class="ba tl tc-ns" style="width: 15rem; height: 15rem; margin: 4em; padding: 1em;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste odio culpa quo quasi 
+        excepturi dolor recusandae laboriosam expedita deserunt incidunt, est aperiam facilis 
+        reprehenderit omnis laborum voluptate sapiente dicta libero!
+      </div>
+    </div>
   </div>
 </template>
 

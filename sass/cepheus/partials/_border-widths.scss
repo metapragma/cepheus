@@ -1,15 +1,6 @@
 @each $name, $value in $cepheus-border-widths {
-  @include cepheus-partial-class($name, $value);
-
-  @include respond-to(not-small) {
-    @include cepheus-partial-class("#{$name}-ns", $value);
-  }
-
-  @include respond-to(medium) {
-    @include cepheus-partial-class("#{$name}-m", $value);
-  }
-
-  @include respond-to(large) {
-    @include cepheus-partial-class("#{$name}-l", $value);
-  }
+  @include cepheus-partial-class('border-widths', $name, $value);
+  @include cepheus-partial-class('border-widths', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-partial-class('border-widths', '#{$name}-m', $value, 'medium');
+  @include cepheus-partial-class('border-widths', '#{$name}-l', $value, 'large');
 }
