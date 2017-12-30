@@ -317,9 +317,9 @@ module.exports = {
     browser
       .url(`${devServer}/partials/outlines`)
       .waitForElementVisible('#tests', 5000)
-      .assert.cssProperty("#l1", "outline", "rgb(0, 0, 0) solid 1px")
-      .assert.cssProperty("#l2", "outline", "rgba(0, 0, 0, 0) solid 1px")
-      .assert.cssProperty("#l3", "outline", "rgb(0, 0, 0) none 0px")
+      .assert.cssProperty("#l1", "outline", "rgb(3, 108, 219) solid 1px")
+      .assert.cssProperty("#l2", "outline", "rgb(3, 108, 219) solid 1px")
+      .assert.cssProperty("#l3", "outline", "rgb(3, 108, 219) solid 1px")
       .end()
   },
   'partials/max-widths': browser => {
@@ -357,16 +357,25 @@ module.exports = {
     const devServer = browser.globals.devServerURL
 
     browser
-      .url(`${devServer}/partials/lists`)
+      .url(`${devServer}/partials/links`)
       .waitForElementVisible('#tests', 5000)
-      .assert.cssProperty("#l1", "text-decoration", "none solid rgb(0, 0, 0)")
-      .assert.cssProperty("#l1", "transition", "all 0s ease 0s")
-      .assert.cssProperty("#l2", "text-decoration", "none solid rgb(0, 0, 0)")
-      .assert.cssProperty("#l2", "transition", "all 0s ease 0s")
-      .assert.cssProperty("#l3", "text-decoration", "none solid rgb(0, 0, 0)")
-      .assert.cssProperty("#l3", "transition", "all 0s ease 0s")
-      .assert.cssProperty("#l4", "text-decoration", "none solid rgb(0, 0, 0)")
-      .assert.cssProperty("#l4", "transition", "all 0s ease 0s")
+      .assert.cssProperty("#l1", "text-decoration", "none solid rgb(0, 0, 238)")
+      .assert.cssProperty("#l1", "transition", "color 0.15s ease-in 0s")
+      .assert.cssProperty("#l2", "text-decoration", "none solid rgb(0, 0, 238)")
+      .assert.cssProperty("#l2", "transition", "color 0.15s ease-in 0s")
+      .assert.cssProperty("#l3", "text-decoration", "none solid rgb(0, 0, 238)")
+      .assert.cssProperty("#l3", "transition", "color 0.15s ease-in 0s")
+      .assert.cssProperty("#l4", "text-decoration", "none solid rgb(0, 0, 238)")
+      .assert.cssProperty("#l4", "transition", "color 0.15s ease-in 0s")
+      .end()
+  },
+  'partials/images': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/images`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "max-width", "100%")
       .end()
   },
   'partials/heights': browser => {

@@ -75,5 +75,4 @@ export default {
 
 <style lang="scss">
 @import "~cepheus-typeface-inter-ui/lib/variables";
-@import '../styles/entrypoints/partials';
 </style>

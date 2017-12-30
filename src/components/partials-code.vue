@@ -19,7 +19,3 @@
     </div>  
   </div>
 </template>
- 
-<style lang="scss">
-@import '../styles/entrypoints/partials';
-</style>

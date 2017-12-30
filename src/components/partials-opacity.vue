@@ -17,8 +17,6 @@
 </template>
 
 <style lang="scss">
-@import '../styles/entrypoints/partials';
-
 .box {
   margin-left: 6em;
   margin-bottom: 6em;

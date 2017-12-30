@@ -11,7 +11,3 @@
     </div>
   </div>
 </template>
-
-<style lang="sass">
-@import '../styles/entrypoints/partials';
-</style>

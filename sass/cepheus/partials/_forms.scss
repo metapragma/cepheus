@@ -1,0 +1,3 @@
+@each $name, $value in $cepheus-forms {
+  @include cepheus-partial-class($name, $value);
+}
