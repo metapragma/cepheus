@@ -1,0 +1,15 @@
+@each $name, $value in $cepheus-aspect-ratios {
+  @include cepheus-partial-class($name, $value);
+
+  @include respond-to(not-small) {
+    @include cepheus-partial-class("#{$name}-ns", $value);
+  }
+
+  @include respond-to(medium) {
+    @include cepheus-partial-class("#{$name}-m", $value);
+  }
+
+  @include respond-to(large) {
+    @include cepheus-partial-class("#{$name}-l", $value);
+  }
+}

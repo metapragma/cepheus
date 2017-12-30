@@ -16,8 +16,6 @@
 </template>
 
 <style lang="scss">
-@import '../styles/entrypoints/partials';
-
 .border {
   border-width: 5px;
   border-style: solid;

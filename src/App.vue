@@ -12,3 +12,7 @@ export default {
   name: 'app',
 };
 </script>
+
+<style lang="sass">
+@import './styles/entrypoints/partials';
+</style>

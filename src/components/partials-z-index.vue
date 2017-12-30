@@ -47,8 +47,6 @@
 </template>
 
 <style lang="scss">
-@import '../styles/entrypoints/partials';
-
 .box {
   width: 20rem; 
   height: 20rem; 

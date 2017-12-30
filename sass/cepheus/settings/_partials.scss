@@ -251,31 +251,27 @@ $cepheus-hovers: (
   '.dim:hover': ('opacity': 0.5, 'transition': opacity 0.15s ease-in),
   '.dim:focus': ('opacity': 0.5, 'transition': opacity 0.15s ease-in),
   '.dim:active': ('opacity': 0.8, 'transition': opacity 0.15s ease-out),
-  /*
-    Animate opacity to 100% on hover by adding the glow class.
-  */
+    // Animate opacity to 100% on hover by adding the glow class.
   '.glow': ('transition': opacity 0.15s ease-in),
   '.glow:hover': ('opacity': 1, 'transition': opacity 0.15s ease-in),
   '.glow:focus': ('opacity': 1, 'transition': opacity 0.15s ease-in),
-  /*
-    Hide child & reveal on hover:
-    Put the hide-child class on a parent element and any nested element with the
-    child class will be hidden and displayed on hover or focus.
-    <div class="hide-child">
-      <div class="child"> Hidden until hover or focus </div>
-      <div class="child"> Hidden until hover or focus </div>
-      <div class="child"> Hidden until hover or focus </div>
-      <div class="child"> Hidden until hover or focus </div>
-    </div>
-  */
+    // Hide child & reveal on hover:
+    // Put the hide-child class on a parent element and any nested element with the
+    // child class will be hidden and displayed on hover or focus.
+    // <div class="hide-child">
+    //   <div class="child"> Hidden until hover or focus </div>
+    //   <div class="child"> Hidden until hover or focus </div>
+    //   <div class="child"> Hidden until hover or focus </div>
+    //   <div class="child"> Hidden until hover or focus </div>
+    // </div>
   '.hide-child .child': ('opacity': 0, 'transition': opacity 0.15s ease-in),
   '.hide-child:hover .child': ('opacity': 1, 'transition': opacity 0.15s ease-in),
   '.hide-child:focus .child': ('opacity': 1, 'transition': opacity 0.15s ease-in),
   '.hide-child:active .child': ('opacity': 1, 'transition': opacity 0.15s ease-in),
   '.underline-hover:hover': ('text-decoration': underline),
   '.underline-hover:focus': ('text-decoration': underline),
-  /* Can combine this with overflow-hidden to make background images grow on hover
-  * even if you are using background-size: cover */
+  // Can combine this with overflow-hidden to make background images grow on hover
+  // * even if you are using background-size: cover
   '.grow': ('-moz-osx-font-smoothing': grayscale, 'backface-visibility': hidden, 'transform': translateZ(0), 'transition': transform 0.25s ease-out),
   '.grow:hover': ('transform': scale(1.05)),
   '.grow:focus': ('transform': scale(1.05)),
@@ -284,7 +280,7 @@ $cepheus-hovers: (
   'grow-large:hover': ('transform': scale(1.2)),
   'grow-large:focus': ('transform': scale(1.2)),
   '.grow-large:active': ('transform': scale(.95)),
-  /* Add pointer on hover */
+  // Add pointer on hover
   '.pointer:hover': ('cursor': pointer),
   /*
     Add shadow on hover.
@@ -361,3 +357,456 @@ $cepheus-flexbox: (
   '.flex-shrink-1': ('flex-shrink': 1)
 ) !default;
 
+$cepheus-aspect-ratios: (
+  'aspect-ratio': ('height': 0, 'position': relative),
+  '.aspect-ratio--16x9': ('padding-bottom': 56.25%),
+  '.aspect-ratio--9x16': ('padding-bottom': 177.77%),
+  '.aspect-ratio--4x3': ('padding-bottom': 75%),
+  '.aspect-ratio--3x4': ('padding-bottom': 133.33%),
+  '.aspect-ratio--6x4': ('padding-bottom': 66.6%),
+  '.aspect-ratio--4x6': ('padding-bottom': 150%),
+  '.aspect-ratio--8x5': ('padding-bottom': 62.5%),
+  '.aspect-ratio--5x8': ('padding-bottom': 160%),
+  '.aspect-ratio--7x5': ('padding-bottom': 71.42%),
+  '.aspect-ratio--5x7': ('padding-bottom': 140%),
+  '.aspect-ratio--1x1': ('padding-bottom': 100%),
+  '.aspect-ratio--object': (
+    'position': absolute,
+    'top': 0,
+    'right': 0,
+    'bottom': 0,
+    'left': 0,
+    'width': 100%,
+    'height': 100%,
+    'z-index': 100,
+  )
+) !default;
+
+$cepheus-background-size: (
+  '.cover': ('background-size': cover !important),
+  '.contain': ('background-size': contain !important)
+) !default;
+
+$cepheus-display: (
+'.dn': ('display': none),
+'.di': ('display': inline),
+'.db': ('display': block),
+'.dib': ('display': inline-block),
+'.dit': ('display': inline-table),
+'.dt': ('display': table),
+'.dtc': ('display': table-cell),
+'.dt-row': ('display': table-row),
+'.dt-row-group': ('display': table-row-group),
+'.dt-column': ('display': table-column),
+'.dt-column-group': ('display': table-column-group),
+'.dt--fixed': ('table-layout': fixed, 'width': 100%)
+) !default;
+
+$cepheus-debug: (
+  'body': ('outline': 1px solid  #2980b9 !important), 
+  'article': ('outline': 1px solid  #3498db !important),
+  'nav': ('outline': 1px solid  #0088c3 !important),
+  'aside': ('outline': 1px solid  #33a0Ce !important),
+  'section': ('outline': 1px solid  #66b8da !important),
+  'header': ('outline': 1px solid  #99cfe7 !important),
+  'footer': ('outline': 1px solid  #cce7f3 !important),
+  'h1': ('outline': 1px solid  #162544 !important),
+  'h2': ('outline': 1px solid  #314E6E !important),
+  'h3': ('outline': 1px solid  #3E5E85 !important),
+  'h4': ('outline': 1px solid  #449BAF !important),
+  'h5': ('outline': 1px solid  #C7D1CB !important),
+  'h6': ('outline': 1px solid  #4371D0 !important),
+  'main': ('outline': 1px solid  #2F4F90 !important),
+  'address': ('outline': 1px solid  #1A2C51 !important),
+  'div': ('outline': 1px solid  #036CDB !important),
+  'p': ('outline': 1px solid  #AC050B !important),
+  'hr': ('outline': 1px solid  #FF063F !important),
+  'pre': ('outline': 1px solid  #850440 !important),
+  'blockquote': ('outline': 1px solid  #F1B8E7 !important),
+  'ol': ('outline': 1px solid  #FF050C !important),
+  'ul': ('outline': 1px solid  #D90416 !important),
+  'li': ('outline': 1px solid  #D90416 !important),
+  'dl': ('outline': 1px solid  #FD3427 !important),
+  'dt': ('outline': 1px solid  #FF0043 !important),
+  'dd': ('outline': 1px solid  #E80174 !important),
+  'figure': ('outline': 1px solid  #FF00BB !important),
+  'figcaption': ('outline': 1px solid  #BF0032 !important),
+  'table': ('outline': 1px solid  #00CC99 !important),
+  'caption': ('outline': 1px solid  #37FFC4 !important),
+  'thead': (  'outline': 1px solid  #98DACA !important),
+  'tbody': (  'outline': 1px solid  #64A7A0 !important),
+  'tfoot': (  'outline': 1px solid  #22746B !important),
+  'tr': ('outline': 1px solid  #86C0B2 !important),
+  'th': ('outline': 1px solid  #A1E7D6 !important),
+  'td': ('outline': 1px solid  #3F5A54 !important),
+  'col': ('outline': 1px solid  #6C9A8F !important),
+  'colgroup': ('outline': 1px solid  #6C9A9D !important),
+  'button': ('outline': 1px solid  #DA8301 !important),
+  'datalist': ('outline': 1px solid  #C06000 !important),
+  'fieldset': ('outline': 1px solid  #D95100 !important),
+  'form': ('outline': 1px solid  #D23600 !important),
+  'input': ('outline': 1px solid  #FCA600 !important),
+  'keygen': ( 'outline': 1px solid  #B31E00 !important),
+  'label': ('outline': 1px solid  #EE8900 !important),
+  'legend': ('outline': 1px solid  #DE6D00 !important),
+  'meter': ('outline': 1px solid  #E8630C !important),
+  'optgroup': ('outline': 1px solid  #B33600 !important),
+  'option': ( 'outline': 1px solid  #FF8A00 !important),
+  'output': ( 'outline': 1px solid  #FF9619 !important),
+  'progress': ('outline': 1px solid  #E57C00 !important),
+  'select': ( 'outline': 1px solid  #E26E0F !important),
+  'textarea': ('outline': 1px solid  #CC5400 !important),
+  'details': ('outline': 1px solid  #33848F !important),
+  'summary': ('outline': 1px solid  #60A1A6 !important),
+  'command': ('outline': 1px solid  #438DA1 !important),
+  'menu': ('outline': 1px solid  #449DA6 !important),
+  'del': ( 'outline': 1px solid  #BF0000 !important),
+  'ins': ( 'outline': 1px solid  #400000 !important),
+  'img': ('outline': 1px solid #22746B !important),
+  'iframe': ('outline': 1px solid #64A7A0 !important),
+  'embed': ('outline': 1px solid #98DACA !important),
+  'object': ('outline': 1px solid #00CC99 !important),
+  'param': ('outline': 1px solid #37FFC4 !important),
+  'video': ('outline': 1px solid #6EE866 !important),
+  'audio': ('outline': 1px solid #027353 !important),
+  'source': ('outline': 1px solid #012426 !important),
+  'canvas': ('outline': 1px solid #A2F570 !important),
+  'track': ('outline': 1px solid #59A600 !important),
+  'map': ('outline': 1px solid #7BE500 !important),
+  'area': ('outline': 1px solid #305900 !important),
+  'a': ('outline': 1px solid #FF62AB !important),
+  'em': ('outline': 1px solid #800B41 !important),
+  'strong': ('outline': 1px solid #FF1583 !important),
+  'i': ('outline': 1px solid #803156 !important),
+  'b': ('outline': 1px solid #CC1169 !important),
+  'u': ('outline': 1px solid #FF0430 !important),
+  's': ('outline': 1px solid #F805E3 !important),
+  'small': ('outline': 1px solid #D107B2 !important),
+  'abbr': ('outline': 1px solid #4A0263 !important),
+  'q': ('outline': 1px solid #240018 !important),
+  'cite': ('outline': 1px solid #64003C !important),
+  'dfn': ('outline': 1px solid #B4005A !important),
+  'sub': ('outline': 1px solid #DBA0C8 !important),
+  'sup': ('outline': 1px solid #CC0256 !important),
+  'time': ('outline': 1px solid #D6606D !important),
+  'code': ('outline': 1px solid #E04251 !important),
+  'kbd': ('outline': 1px solid #5E001F !important),
+  'samp': ('outline': 1px solid #9C0033 !important),
+  'var': ('outline': 1px solid #D90047 !important),
+  'mark': ('outline': 1px solid #FF0053 !important),
+  'bdi': ('outline': 1px solid #BF3668 !important),
+  'bdo': ('outline': 1px solid #6F1400 !important),
+  'ruby': ('outline': 1px solid #FF7B93 !important),
+  'rt': ('outline': 1px solid #FF2F54 !important),
+  'rp': ('outline': 1px solid #803E49 !important),
+  'span': ('outline': 1px solid #CC2643 !important),
+  'br': ('outline': 1px solid #DB687D !important)
+) !default;
+
+$cepheus-debug-children: (
+  '.debug *': ('outline': 1px solid gold),
+  '.debug-white *': ('outline': 1px solid white),
+  '.debug-black *': ('outline': 1px solid black)
+) !default;
+
+$cepheus-font-style: (
+  '.i': ('font-style': italic),
+  '.fs-normal': ('font-style': normal)
+) !default;
+
+$cepheus-font-weight: (
+  '.normal': ('font-weight': normal),
+  '.b': ('font-weight': bold),
+  '.fw1': ('font-weight': 100),
+  '.fw2': ('font-weight': 200),
+  '.fw3': ('font-weight': 300),
+  '.fw4': ('font-weight': 400),
+  '.fw5': ('font-weight': 500),
+  '.fw6': ('font-weight': 600),
+  '.fw7': ('font-weight': 700),
+  '.fw8': ('font-weight': 800),
+  '.fw9': ('font-weight': 900)
+) !default;
+
+$cepheus-forms: (
+  '.input-reset': ('-webkit-appearance': none, '-moz-appearance': none),
+  '.button-reset::-moz-focus-inner': ('border': 0, 'padding': 0),
+  '.input-reset::-moz-focus-inner': ('border': 0, 'padding': 0)
+) !default;
+
+$cepheus-floats: (
+  '.fl': ('float': left,  '_display': inline),
+  '.fr': ('float': right, '_display': inline),
+  '.fn': ('float': none)
+) !default;
+
+$cepheus-clears: (
+  '.cf:before': ('content': ' ', 'display': table),
+  '.cf:after': ('content': ' ', display: table, clear: both),
+  // asterisk string?
+  '.cf': ('*zoom': 1),
+  '.cl': ('clear': left),
+  '.cr': ('clear': right),
+  '.cb': ('clear': both),
+  '.cn': ('clear': none)
+) !default;
+
+$cepheus-line-height: (
+  '.lh-solid': ('line-height': 1),
+  '.lh-title': ('line-height': 1.25),
+  '.lh-copy':  ('line-height': 1.5)
+) !default;
+
+$cepheus-spacing: (
+  '.pa0': ('padding': 0),
+  '.pa1': ('padding': 0.25rem),
+  '.pa2': ('padding': 0.5rem),
+  '.pa3': ('padding': 1rem),
+  '.pa4': ('padding': 2rem),
+  '.pa5': ('padding': 4rem),
+  '.pa6': ('padding': 8rem),
+  '.pa7': ('padding': 16rem),
+  '.pl0': ('padding-left': 0),
+  '.pl1': ('padding-left': 0.25rem),
+  '.pl2': ('padding-left': 0.5rem),
+  '.pl3': ('padding-left': 1rem),
+  '.pl4': ('padding-left': 2rem),
+  '.pl5': ('padding-left': 4rem),
+  '.pl6': ('padding-left': 8rem),
+  '.pl7': ('padding-left': 16rem),
+  '.pr0': ('padding-right': 0),
+  '.pr1': ('padding-right': 0.25rem),
+  '.pr2': ('padding-right': 0.5rem),
+  '.pr3': ('padding-right': 1rem),
+  '.pr4': ('padding-right': 2rem),
+  '.pr5': ('padding-right': 4rem),
+  '.pr6': ('padding-right': 8rem),
+  '.pr7': ('padding-right': 16rem),
+  '.pb0': ('padding-bottom': 0),
+  '.pb1': ('padding-bottom': 0.25rem),
+  '.pb2': ('padding-bottom': 0.5rem),
+  '.pb3': ('padding-bottom': 1rem),
+  '.pb4': ('padding-bottom': 2rem),
+  '.pb5': ('padding-bottom': 4rem),
+  '.pb6': ('padding-bottom': 8rem),
+  '.pb7': ('padding-bottom': 16rem),
+  '.pt0': ('padding-top': 0),
+  '.pt1': ('padding-top': 0.25rem),
+  '.pt2': ('padding-top': 0.5rem),
+  '.pt3': ('padding-top': 1rem),
+  '.pt4': ('padding-top': 2rem),
+  '.pt5': ('padding-top': 4rem),
+  '.pt6': ('padding-top': 8rem),
+  '.pt7': ('padding-top': 16rem),
+  '.pv0': ('padding-top': 0, 'padding-bottom': 0),
+  '.pv1': ('padding-top': 0.25rem, 'padding-bottom': 0.25rem),
+  '.pv2': ('padding-top': 0.5rem, 'padding-bottom': 0.5rem),
+  '.pv3': ('padding-top': 1rem, 'padding-bottom': 1rem),
+  '.pv4': ('padding-top': 2rem, 'padding-bottom': 2rem),
+  '.pv5': ('padding-top': 4rem, 'padding-bottom': 4rem),
+  '.pv6': ('padding-top': 8rem, 'padding-bottom': 8rem),
+  '.pv7': ('padding-top': 16rem, 'padding-bottom': 16rem),
+  '.ph0': (padding-left: 0, padding-right: 0,),
+  '.ph1': (padding-left: 0.25rem, padding-right: 0.25rem),
+  '.ph2': (padding-left: 0.5rem, padding-right: 0.5rem),
+  '.ph3': (padding-left: 1rem, padding-right: 1rem),
+  '.ph4': (padding-left: 2rem, padding-right: 2rem),
+  '.ph5': (padding-left: 4rem, padding-right: 4rem),
+  '.ph6': (padding-left: 8rem, padding-right: 8rem),
+  '.ph7': (padding-left: 16rem, padding-right: 16rem),
+  '.ma0': ('margin': 0),
+  '.ma1': ('margin': 0.25rem),
+  '.ma2': ('margin': 0.5rem),
+  '.ma3': ('margin': 1rem),
+  '.ma4': ('margin': 2rem),
+  '.ma5': ('margin': 4rem),
+  '.ma6': ('margin': 8rem),
+  '.ma7': ('margin': 16rem),
+  '.ml0': ('margin-left': 0),
+  '.ml1': ('margin-left': 0.25rem),
+  '.ml2': ('margin-left': 0.5rem),
+  '.ml3': ('margin-left': 1rem),
+  '.ml4': ('margin-left': 2rem),
+  '.ml5': ('margin-left': 4rem),
+  '.ml6': ('margin-left': 8rem),
+  '.ml7': ('margin-left': 16rem),
+  '.mr0': ('margin-right': 0),
+  '.mr1': ('margin-right': 0.25rem),
+  '.mr2': ('margin-right': 0.5rem),
+  '.mr3': ('margin-right': 1rem),
+  '.mr4': ('margin-right': 2rem),
+  '.mr5': ('margin-right': 4rem),
+  '.mr6': ('margin-right': 8rem),
+  '.mr7': ('margin-right': 16rem),
+  '.mb0': ('margin-bottom': 0),
+  '.mb1': ('margin-bottom': 0.25rem),
+  '.mb2': ('margin-bottom': 0.5rem),
+  '.mb3': ('margin-bottom': 1rem),
+  '.mb4': ('margin-bottom': 2rem),
+  '.mb5': ('margin-bottom': 4rem),
+  '.mb6': ('margin-bottom': 8rem),
+  '.mb7': ('margin-bottom': 16rem),
+  '.mt0': ('margin-top': 0),
+  '.mt1': ('margin-top': 0.25rem),
+  '.mt2': ('margin-top': 0.5rem),
+  '.mt3': ('margin-top': 1rem),
+  '.mt4': ('margin-top': 2rem),
+  '.mt5': ('margin-top': 4rem),
+  '.mt6': ('margin-top': 8rem),
+  '.mt7': ('margin-top': 16rem),
+  '.mv0': ('margin-top': 0, 'margin-bottom': 0),
+  '.mv1': ('margin-top': 0.25rem, 'margin-bottom': 0.25rem),
+  '.mv2': ('margin-top': 0.5rem, 'margin-bottom': 0.5rem),
+  '.mv3': ('margin-top': 1rem, 'margin-bottom': 1rem),
+  '.mv4': ('margin-top': 2rem, 'margin-bottom': 2rem),
+  '.mv5': ('margin-top': 4rem, 'margin-bottom': 4rem),
+  '.mv6': ('margin-top': 8rem, 'margin-bottom': 8rem),
+  '.mv7': ('margin-top': 16rem, 'margin-bottom': 16rem),
+  '.mh0': ('margin-left': 0, 'margin-right': 0),
+  '.mh1': ('margin-left': 0.25rem, 'margin-right': 0.25rem),
+  '.mh2': ('margin-left': 0.5rem, 'margin-right': 0.5rem),
+  '.mh3': ('margin-left': 1rem, 'margin-right': 1rem),
+  '.mh4': ('margin-left': 2rem, 'margin-right': 2rem),
+  '.mh5': ('margin-left': 4rem, 'margin-right': 4rem),
+  '.mh6': ('margin-left': 8rem, 'margin-right': 8rem),
+  '.mh7': ('margin-left': 16rem, 'margin-right': 16rem)
+) !default;
+
+$cepheus-tables: (
+  '.collapse': ('border-collapse': collapse, 'border-spacing': 0),
+  '.striped--light-silver:nth-child(odd)': ('background-color': #aaa),
+  '.striped--moon-gray:nth-child(odd)': ('background-color': #ccc),
+  '.striped--light-gray:nth-child(odd)': ('background-color': #eee),
+  '.striped--near-white:nth-child(odd)': ('background-color': #f4f4f4),
+  '.stripe-light:nth-child(odd)': ('background-color': rgba(255, 255, 255, 0.1)),
+  '.stripe-dark:nth-child(odd)': ('background-color': rgba(0, 0, 0, 0.1))
+) !default;
+
+$cepheus-text-transform: (
+  '.ttc': ('text-transform': capitalize),
+  '.ttl': ('text-transform': lowercase),
+  '.ttu': ('text-transform': uppercase),
+  '.ttn': ('text-transform': none)
+) !default;
+
+$cepheus-type-scale: (
+  '.f-6': ('font-size': 6rem),
+  '.f-headline': ('font-size': 6rem),
+  '.f-5': ('font-size': 5rem),
+  '.f-subheadline': ('font-size': 5rem),
+  '.f1': ('font-size': 3rem),
+  '.f2': ('font-size': 2.25rem),
+  '.f3': ('font-size': 1.5rem),
+  '.f4': ('font-size': 1.25rem),
+  '.f5': ('font-size': 1rem),
+  '.f6': ('font-size': 0.875rem),
+  '.f7': ('font-size': 0.75rem)
+) !default;
+
+$cepheus-typography: (
+  '.measure': ('max-width': 30em),
+  '.measure-wide': ('max-width': 34em),
+  '.measure-narrow': ('max-width': 20em),
+  '.indent': ('text-indent': 1em, 'margin-top': 0, 'margin-bottom': 0),
+  '.small-caps': ('font-variant': small-caps),
+  '.truncate': ('white-space': nowrap, 'overflow': hidden, 'text-overflow': ellipsis)
+) !default;
+
+$cepheus-utilities: (
+  '.overflow-container': ('overflow-y': scroll),
+  '.center': ('margin-right': auto, 'margin-left': auto),
+  '.mr-auto': ('margin-right': auto),
+  '.ml-auto': ('margin-left':  auto)
+) !default;
+
+$cepheus-visibility: (
+  '.clip': (
+    'position': fixed !important, 
+    '_position': absolute !important, 
+    'clip': rect(1px, 1px, 1px, 1px)
+  )
+) !default;
+
+$cepheus-widths: (
+  '.w1': ('width': 1rem),
+  '.w2': ('width': 2rem),
+  '.w3': ('width': 4rem),
+  '.w4': ('width': 8rem),
+  '.w5': ('width': 16rem),
+  '.w-10': ('width':  10%),
+  '.w-20': ('width':  20%),
+  '.w-25': ('width':  25%),
+  '.w-30': ('width':  30%),
+  '.w-33': ('width':  33%),
+  '.w-34': ('width':  34%),
+  '.w-40': ('width':  40%),
+  '.w-50': ('width':  50%),
+  '.w-60': ('width':  60%),
+  '.w-70': ('width':  70%),
+  '.w-75': ('width':  75%),
+  '.w-80': ('width':  80%),
+  '.w-90': ('width':  90%),
+  '.w-100': ('width': 100%),
+  '.w-third': ('width': (100% / 3)),
+  '.w-two-thirds': ('width': (100% / 1.5)),
+  '.w-auto': ('width': auto)
+) !default;
+
+$cepheus-negative-margins: (
+  '.na1': ('margin': 0.25rem),
+  '.na2': ('margin': 0.5rem),
+  '.na3': ('margin': 1rem),
+  '.na4': ('margin': 2rem),
+  '.na5': ('margin': 4rem),
+  '.na6': ('margin': 8rem),
+  '.na7': ('margin': 16rem),
+  '.nl1': ('margin-left': 0.25rem),
+  '.nl2': ('margin-left': 0.5rem),
+  '.nl3': ('margin-left': 1rem),
+  '.nl4': ('margin-left': 2rem),
+  '.nl5': ('margin-left': 4rem),
+  '.nl6': ('margin-left': 8rem),
+  '.nl7': ('margin-left': 16rem),
+  '.nr1': ('margin-right': 0.25rem),
+  '.nr2': ('margin-right': 0.5rem),
+  '.nr3': ('margin-right': 1rem),
+  '.nr4': ('margin-right': 2rem),
+  '.nr5': ('margin-right': 4rem),
+  '.nr6': ('margin-right': 8rem),
+  '.nr7': ('margin-right': 16rem),
+  '.nb1': ('margin-bottom': 0.25rem),
+  '.nb2': ('margin-bottom': 0.5rem),
+  '.nb3': ('margin-bottom': 1rem),
+  '.nb4': ('margin-bottom': 2rem),
+  '.nb5': ('margin-bottom': 4rem),
+  '.nb6': ('margin-bottom': 8rem),
+  '.nb7': ('margin-bottom': 16rem),
+  '.nt1': ('margin-top': 0.25rem),
+  '.nt2': ('margin-top': 0.5rem),
+  '.nt3': ('margin-top': 1rem),
+  '.nt4': ('margin-top': 2rem),
+  '.nt5': ('margin-top': 4rem),
+  '.nt6': ('margin-top': 8rem),
+  '.nt7': ('margin-top': 16rem)
+) !default;
+
+$cepheus-nested: (
+  '.nested-copy-line-height p': ('line-height': 1.5),
+  '.nested-copy-line-height ul': ('line-height': 1.5),
+  '.nested-copy-line-height ol': ('line-height': 1.5),
+  '.nested-headline-line-height h1': ('line-height': 1.25rem),
+  '.nested-headline-line-height h2': ('line-height': 1.25rem),
+  '.nested-headline-line-height h3': ('line-height': 1.25rem),
+  '.nested-headline-line-height h4': ('line-height': 1.25rem),
+  '.nested-headline-line-height h5': ('line-height': 1.25rem),
+  '.nested-headline-line-height h6': ('line-height': 1.25rem),
+  '.nested-list-reset ul': ('padding-left': 0, 'margin-left': 0, 'list-style-type': none),
+  '.nested-list-reset ol': ('padding-left': 0, 'margin-left': 0, 'list-style-type': none),
+  '.nested-copy-indent p+p': ('text-indent': 0.1em, 'margin-top': 0, 'margin-bottom': 0),
+  '.nested-copy-seperator p+p': ('margin-top': 1.5em),
+  '.nested-img img': ('width': 100%, 'max-width': 100%, 'display': block),
+  '.nested-links a': ('color': #357edd, 'transition': color 0.15s ease-in),
+  '.nested-links a:hover': ('color': #96ccff, 'transition': color 0.15s ease-in),
+  '.nested-links a:focus': ('color': #96ccff, 'transition': color 0.15s ease-in), 
+  'ad': (color: red)
+) !default;

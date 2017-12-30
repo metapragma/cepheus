@@ -12,8 +12,6 @@
 </template>
  
 <style lang="scss">
-@import '../styles/entrypoints/partials';
-
 .image {
   background-image: url(https://goo.gl/mTShhV);
 }
