@@ -1,15 +1,13 @@
-'use strict'
-
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = 'development'
 }
 
-const path = require('path')
 const express = require('express')
 const webpack = require('webpack')
-const webpackConfig = process.env.NODE_ENV === 'testing'
-  ? require('./webpack.prod.conf')
-  : require('./webpack.dev.conf')
+const webpackConfig =
+  process.env.NODE_ENV === 'testing'
+    ? require('./webpack.prod.conf')
+    : require('./webpack.dev.conf')
 
 // default port where dev server listens for incoming traffic
 const port = process.env.PORT || 8080
@@ -29,8 +27,8 @@ const hotMiddleware = require('webpack-hot-middleware')(compiler, {
   log: false
 })
 // force page reload when html-webpack-plugin template changes
-compiler.plugin('compilation', function (compilation) {
-  compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
+compiler.plugin('compilation', compilation => {
+  compilation.plugin('html-webpack-plugin-after-emit', (data, cb) => {
     hotMiddleware.publish({ action: 'reload' })
     cb()
   })
@@ -46,7 +44,7 @@ app.use(require('connect-history-api-fallback')())
 // serve webpack bundle output
 app.use(devMiddleware)
 
-const uri = 'http://localhost:' + port
+const uri = `http://localhost:${port}`
 
 let _resolve
 const readyPromise = new Promise(resolve => {
@@ -55,7 +53,7 @@ const readyPromise = new Promise(resolve => {
 
 console.log('> Starting dev server...')
 devMiddleware.waitUntilValid(() => {
-  console.log('> Listening at ' + uri + '\n')
+  console.log(`> Listening at ${uri}\n`)
   _resolve()
 })
 

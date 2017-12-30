@@ -1,7 +1,3 @@
-'use strict'
-
-const fs = require('fs')
-const path = require('path')
 const utils = require('./utils')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
@@ -25,7 +21,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('development'),
+      'process.env.NODE_ENV': JSON.stringify('development')
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
