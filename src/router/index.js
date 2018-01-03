@@ -37,7 +37,8 @@ import PartialsBackgroundSize from '../components/partials-background-size.vue'
 import PartialsDebugChildren from '../components/partials-debug-children.vue'
 import PartialsDisplay from '../components/partials-display.vue'
 import PartialsFontStyle from '../components/partials-font-style.vue'
-// float, clear, debug
+import PartialsFontWeight from '../components/partials-font-weight.vue'
+// float, clear, debug, forms
 
 Vue.use(Router)
 
@@ -192,6 +193,10 @@ export default new Router({
     {
       path: '/partials/font-style',
       component: PartialsFontStyle
+    },
+    {
+      path: '/partials/font-weight',
+      component: PartialsFontWeight
     },
   ]
 })
