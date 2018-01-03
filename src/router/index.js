@@ -36,6 +36,7 @@ import PartialsAspectRatios from '../components/partials-aspect-ratios.vue'
 import PartialsBackgroundSize from '../components/partials-background-size.vue'
 import PartialsDebugChildren from '../components/partials-debug-children.vue'
 import PartialsDisplay from '../components/partials-display.vue'
+import PartialsFontStyle from '../components/partials-font-style.vue'
 // float, clear, debug
 
 Vue.use(Router)
@@ -187,6 +188,10 @@ export default new Router({
     {
       path: '/partials/display',
       component: PartialsDisplay
+    },
+    {
+      path: '/partials/font-style',
+      component: PartialsFontStyle
     },
   ]
 })

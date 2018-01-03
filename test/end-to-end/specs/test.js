@@ -630,4 +630,18 @@ module.exports = {
       .assert.cssProperty("#l11", "display", "table-column-group")
       .end()
   },
+  'partials/font-style': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/font-style`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "font-style", "italic")
+      .assert.cssProperty("#l2", "font-style", "normal")
+      .assert.cssProperty("#l3", "font-style", "normal")
+      .assert.cssProperty("#l4", "font-style", "italic")
+      .assert.cssProperty("#l5", "font-style", "normal")
+      .assert.cssProperty("#l6", "font-style", "normal")
+      .end()
+  },
 }
