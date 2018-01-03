@@ -779,4 +779,37 @@ module.exports = {
       .assert.cssProperty("#l88", "padding-bottom", "256px")
       .end()
   },
+  'partials/text-transform': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/text-transform`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "text-transform", "capitalize")
+      .assert.cssProperty("#l2", "text-transform", "lowercase")
+      .assert.cssProperty("#l3", "text-transform", "none")
+      .assert.cssProperty("#l4", "text-transform", "uppercase")
+      .assert.cssProperty("#l5", "text-transform", "none")
+      .end()
+  },
+  'partials/type-scale': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/type-scale`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "font-size", "48px")
+      .assert.cssProperty("#l2", "font-size", "36px")
+      .assert.cssProperty("#l3", "font-size", "16px")
+      .assert.cssProperty("#l4", "font-size", "96px")
+      .assert.cssProperty("#l5", "font-size", "96px")
+      .assert.cssProperty("#l6", "font-size", "80px")
+      .assert.cssProperty("#l7", "font-size", "80px")
+      .assert.cssProperty("#l8", "font-size", "24px")
+      .assert.cssProperty("#l9", "font-size", "20px")
+      .assert.cssProperty("#l10", "font-size", "16px")
+      .assert.cssProperty("#l11", "font-size", "14px")
+      .assert.cssProperty("#l12", "font-size", "12px")
+      .end()
+  },
 }
