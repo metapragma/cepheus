@@ -41,7 +41,9 @@ import PartialsFontWeight from '../components/partials-font-weight.vue'
 import PartialsLineHeight from '../components/partials-line-height.vue'
 import PartialsNegativeMargins from '../components/partials-negative-margins.vue'
 import PartialsSpacing from '../components/partials-spacing.vue'
-// float, clear, debug, forms, nested
+import PartialsTextTransform from '../components/partials-text-transform.vue'
+import PartialsTypeScale from '../components/partials-type-scale.vue'
+// float, clear, debug, forms, nested, tables
 
 Vue.use(Router)
 
@@ -212,6 +214,14 @@ export default new Router({
     {
       path: '/partials/spacing',
       component: PartialsSpacing
+    },
+    {
+      path: '/partials/text-transform',
+      component: PartialsTextTransform
+    },
+    {
+      path: '/partials/type-scale',
+      component: PartialsTypeScale
     },
   ]
 })
