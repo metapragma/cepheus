@@ -676,4 +676,19 @@ module.exports = {
       .assert.cssProperty("#l4", "line-height", "24px")
       .end()
   },
+  'partials/negative-margins': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/negative-margins`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "margin", "-4px")
+      .assert.cssProperty("#l2", "margin", "-8px")
+      .assert.cssProperty("#l3", "margin", "-16px")
+      .assert.cssProperty("#l4", "margin", "-32px")
+      .assert.cssProperty("#l5", "margin", "-64px")
+      .assert.cssProperty("#l6", "margin", "-128px")
+      .assert.cssProperty("#l7", "margin", "-256px")
+      .end()
+  },
 }
