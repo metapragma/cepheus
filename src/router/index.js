@@ -39,6 +39,7 @@ import PartialsDisplay from '../components/partials-display.vue'
 import PartialsFontStyle from '../components/partials-font-style.vue'
 import PartialsFontWeight from '../components/partials-font-weight.vue'
 import PartialsLineHeight from '../components/partials-line-height.vue'
+import PartialsNegativeMargins from '../components/partials-negative-margins.vue'
 // float, clear, debug, forms
 
 Vue.use(Router)
@@ -202,6 +203,10 @@ export default new Router({
     {
       path: '/partials/line-height',
       component: PartialsLineHeight
+    },
+    {
+      path: '/partials/negative-margins',
+      component: PartialsNegativeMargins
     },
   ]
 })
