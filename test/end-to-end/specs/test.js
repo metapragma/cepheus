@@ -644,4 +644,24 @@ module.exports = {
       .assert.cssProperty("#l6", "font-style", "normal")
       .end()
   },
+  'partials/font-weight': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/font-weight`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "font-weight", "100")
+      .assert.cssProperty("#l2", "font-weight", "200")
+      .assert.cssProperty("#l3", "font-weight", "400")
+      .assert.cssProperty("#l4", "font-weight", "400")
+      .assert.cssProperty("#l5", "font-weight", "700")
+      .assert.cssProperty("#l6", "font-weight", "300")
+      .assert.cssProperty("#l7", "font-weight", "400")
+      .assert.cssProperty("#l8", "font-weight", "500")
+      .assert.cssProperty("#l9", "font-weight", "600")
+      .assert.cssProperty("#l10", "font-weight", "700")
+      .assert.cssProperty("#l11", "font-weight", "800")
+      .assert.cssProperty("#l12", "font-weight", "900")
+      .end()
+  },
 }
