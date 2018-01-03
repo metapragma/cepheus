@@ -169,5 +169,3 @@ export default new Router({
     },
   ]
 })
-
-// TODO: add a 404 router

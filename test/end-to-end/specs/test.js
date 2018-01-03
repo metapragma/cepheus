@@ -369,15 +369,6 @@ module.exports = {
       .assert.cssProperty("#l4", "transition", "color 0.15s ease-in 0s")
       .end()
   },
-  'partials/images': browser => {
-    const devServer = browser.globals.devServerURL
-
-    browser
-      .url(`${devServer}/partials/images`)
-      .waitForElementVisible('#tests', 5000)
-      .assert.cssProperty("#l1", "max-width", "100%")
-      .end()
-  },
   'partials/heights': browser => {
     const devServer = browser.globals.devServerURL
 

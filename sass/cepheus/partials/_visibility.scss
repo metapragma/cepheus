@@ -1,15 +1,6 @@
 @each $name, $value in $cepheus-visibility {
-  @include cepheus-partial-class($name, $value);
-
-  @include respond-to(not-small) {
-    @include cepheus-partial-class("#{$name}-ns", $value);
-  }
-
-  @include respond-to(medium) {
-    @include cepheus-partial-class("#{$name}-m", $value);
-  }
-
-  @include respond-to(large) {
-    @include cepheus-partial-class("#{$name}-l", $value);
-  }
+  @include cepheus-register-partial('visibility', $name, $value);
+  @include cepheus-register-partial('visibility', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register-partial('visibility', '#{$name}-m', $value, 'medium');
+  @include cepheus-register-partial('visibility', '#{$name}-l', $value, 'large');
 }

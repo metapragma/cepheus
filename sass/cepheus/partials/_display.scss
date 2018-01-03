@@ -1,15 +1,6 @@
 @each $name, $value in $cepheus-display {
-  @include cepheus-partial-class($name, $value);
-
-  @include respond-to(not-small) {
-    @include cepheus-partial-class("#{$name}-ns", $value);
-  }
-
-  @include respond-to(medium) {
-    @include cepheus-partial-class("#{$name}-m", $value);
-  }
-
-  @include respond-to(large) {
-    @include cepheus-partial-class("#{$name}-l", $value);
-  }
+  @include cepheus-register-partial('display', $name, $value);
+  @include cepheus-register-partial('display', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register-partial('display', '#{$name}-m', $value, 'medium');
+  @include cepheus-register-partial('display', '#{$name}-l', $value, 'large');
 }
