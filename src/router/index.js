@@ -40,7 +40,8 @@ import PartialsFontStyle from '../components/partials-font-style.vue'
 import PartialsFontWeight from '../components/partials-font-weight.vue'
 import PartialsLineHeight from '../components/partials-line-height.vue'
 import PartialsNegativeMargins from '../components/partials-negative-margins.vue'
-// float, clear, debug, forms
+import PartialsSpacing from '../components/partials-spacing.vue'
+// float, clear, debug, forms, nested
 
 Vue.use(Router)
 
@@ -207,6 +208,10 @@ export default new Router({
     {
       path: '/partials/negative-margins',
       component: PartialsNegativeMargins
+    },
+    {
+      path: '/partials/spacing',
+      component: PartialsSpacing
     },
   ]
 })
