@@ -34,6 +34,7 @@ import PartialsHovers from '../components/partials-hovers.vue'
 import PartialsFlexbox from '../components/partials-flexbox.vue'
 import PartialsAspectRatios from '../components/partials-aspect-ratios.vue'
 import PartialsBackgroundSize from '../components/partials-background-size.vue'
+import PartialsDebugChildren from '../components/partials-debug-children.vue'
 
 Vue.use(Router)
 
@@ -176,6 +177,10 @@ export default new Router({
     {
       path: '/partials/background-size',
       component: PartialsBackgroundSize
+    },
+    {
+      path: '/partials/debug-children',
+      component: PartialsDebugChildren
     },
   ]
 })
