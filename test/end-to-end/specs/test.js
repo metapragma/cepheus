@@ -812,4 +812,31 @@ module.exports = {
       .assert.cssProperty("#l12", "font-size", "12px")
       .end()
   },
+  'partials/widths': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/widths`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "width", "16px")
+      .assert.cssProperty("#l2", "width", "32px")
+      .assert.cssProperty("#l3", "width", "64px")
+      .assert.cssProperty("#l4", "width", "128px")
+      .assert.cssProperty("#l5", "width", "256px")
+      .assert.cssProperty("#l6", "width", "100px")
+      .assert.cssProperty("#l7", "width", "200px")
+      .assert.cssProperty("#l8", "width", "250px")
+      .assert.cssProperty("#l9", "width", "300px")
+      .assert.cssProperty("#l10", "width", "330px")
+      .assert.cssProperty("#l11", "width", "340px")
+      .assert.cssProperty("#l12", "width", "400px")
+      .assert.cssProperty("#l13", "width", "500px")
+      .assert.cssProperty("#l14", "width", "600px")
+      .assert.cssProperty("#l15", "width", "700px")
+      .assert.cssProperty("#l16", "width", "750px")
+      .assert.cssProperty("#l17", "width", "800px")
+      .assert.cssProperty("#l18", "width", "900px")
+      .assert.cssProperty("#l19", "width", "1000px")
+      .end()
+  },
 }
