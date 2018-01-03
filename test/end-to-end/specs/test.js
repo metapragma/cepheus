@@ -664,4 +664,16 @@ module.exports = {
       .assert.cssProperty("#l12", "font-weight", "900")
       .end()
   },
+  'partials/line-height': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/line-height`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "line-height", "16px")
+      .assert.cssProperty("#l2", "line-height", "20px")
+      .assert.cssProperty("#l3", "line-height", "normal")
+      .assert.cssProperty("#l4", "line-height", "24px")
+      .end()
+  },
 }
