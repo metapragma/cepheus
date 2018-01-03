@@ -611,4 +611,23 @@ module.exports = {
       .assert.cssProperty("#l3", "outline", "rgb(0, 0, 0) solid 1px")
       .end()
   },
+  'partials/display': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/display`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "display", "none")
+      .assert.cssProperty("#l2", "display", "inline")
+      .assert.cssProperty("#l3", "display", "block")
+      .assert.cssProperty("#l4", "display", "inline-block")
+      .assert.cssProperty("#l5", "display", "inline-table")
+      .assert.cssProperty("#l6", "display", "table")
+      .assert.cssProperty("#l7", "display", "table-cell")
+      .assert.cssProperty("#l8", "display", "table-row")
+      .assert.cssProperty("#l9", "display", "table-row-group")
+      .assert.cssProperty("#l10", "display", "table-column")
+      .assert.cssProperty("#l11", "display", "table-column-group")
+      .end()
+  },
 }
