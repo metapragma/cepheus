@@ -590,4 +590,14 @@ module.exports = {
       .assert.cssProperty("#l11", "z-index", "100")
       .end()
   },
+  'partials/background-size': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/background-size`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "background-size", "cover")
+      .assert.cssProperty("#l2", "background-size", "contain")
+      .end()
+  },
 }

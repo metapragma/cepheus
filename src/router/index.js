@@ -33,6 +33,7 @@ import PartialsFontFamily from '../components/partials-font-family.vue'
 import PartialsHovers from '../components/partials-hovers.vue'
 import PartialsFlexbox from '../components/partials-flexbox.vue'
 import PartialsAspectRatios from '../components/partials-aspect-ratios.vue'
+import PartialsBackgroundSize from '../components/partials-background-size.vue'
 
 Vue.use(Router)
 
@@ -171,6 +172,10 @@ export default new Router({
     {
       path: '/partials/aspect-ratios',
       component: PartialsAspectRatios
+    },
+    {
+      path: '/partials/background-size',
+      component: PartialsBackgroundSize
     },
   ]
 })
