@@ -45,7 +45,12 @@ import PartialsTextTransform from '../components/partials-text-transform.vue'
 import PartialsTypeScale from '../components/partials-type-scale.vue'
 import PartialsTypography from '../components/partials-typography.vue'
 import PartialsWidths from '../components/partials-widths.vue'
-// float, clear, debug, forms, nested, tables, utilities, typography
+import PartialsFloats from '../components/partials-floats.vue'
+import PartialsClears from '../components/partials-clears.vue'
+import PartialsTables from '../components/partials-tables.vue'
+import PartialsUtilities from '../components/partials-utilities.vue'
+import PartialsNested from '../components/partials-nested.vue'
+// debug, forms, nested
 
 Vue.use(Router)
 
@@ -232,6 +237,26 @@ export default new Router({
     {
       path: '/partials/widths',
       component: PartialsWidths
+    },
+    {
+      path: '/partials/floats',
+      component: PartialsFloats
+    },
+    {
+      path: '/partials/clears',
+      component: PartialsClears
+    },
+    {
+      path: '/partials/tables',
+      component: PartialsTables
+    },
+    {
+      path: '/partials/utilities',
+      component: PartialsUtilities
+    },
+    {
+      path: '/partials/nested',
+      component: PartialsNested
     },
   ]
 })
