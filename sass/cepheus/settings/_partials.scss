@@ -809,3 +809,7 @@ $cepheus-nested: (
   '.nested-links a:hover': ('color': #96ccff, 'transition': color 0.15s ease-in),
   '.nested-links a:focus': ('color': #96ccff, 'transition': color 0.15s ease-in), 
 ) !default;
+
+$cepheus-images: (
+  'img': (max-width: 100%)
+) !default;
