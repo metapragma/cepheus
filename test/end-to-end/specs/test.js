@@ -839,4 +839,100 @@ module.exports = {
       .assert.cssProperty("#l19", "width", "1000px")
       .end()
   },
+  'partials/floats': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/floats`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "float", "left")
+      .assert.cssProperty("#l2", "float", "right")
+      .assert.cssProperty("#l3", "float", "none")
+      .end()
+  },
+  'partials/clears': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/clears`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l4", "clear", "left")
+      .assert.cssProperty("#l5", "clear", "right")
+      .assert.cssProperty("#l6", "clear", "both")
+      .assert.cssProperty("#l7", "clear", "none")
+      .end()
+  },
+  'partials/tables': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/tables`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "border-collapse", "collapse")
+      .assert.cssProperty("#l1", "border-spacing", "0px 0px")
+      .assert.cssProperty("#l2", "background-color", "rgba(238, 238, 238, 1)")
+      .assert.cssProperty("#l3", "background-color", "rgba(238, 238, 238, 1)")
+      .assert.cssProperty("#l4", "background-color", "rgba(238, 238, 238, 1)")
+      .end()
+  },
+  'partials/utilities': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/tables`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l4", "overflow-y", "visible")
+      .end()
+  },
+  'partials/typography': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/typography`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "max-width", "480px")
+      .assert.cssProperty("#l2", "max-width", "544px")
+      .assert.cssProperty("#l3", "max-width", "320px")
+      .assert.cssProperty("#l4", "text-indent", "16px")
+      .assert.cssProperty("#l4", "margin-top", "0px")
+      .assert.cssProperty("#l4", "margin-bottom", "0px")
+      .assert.cssProperty("#l5", "font-variant", "small-caps")
+      .assert.cssProperty("#l6", "white-space", "nowrap")
+      .assert.cssProperty("#l6", "overflow", "hidden")
+      .assert.cssProperty("#l6", "text-overflow", "ellipsis")
+      .end()
+  },
+  'partials/nested': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/nested`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l1", "line-height", "24px")
+      .assert.cssProperty("#l2", "line-height", "24px")
+      .assert.cssProperty("#l3", "line-height", "24px")
+      .assert.cssProperty("#l4", "line-height", "20px")
+      .assert.cssProperty("#l5", "line-height", "20px")
+      .assert.cssProperty("#l6", "line-height", "20px")
+      .assert.cssProperty("#l7", "line-height", "20px")
+      .assert.cssProperty("#l8", "line-height", "20px")
+      .assert.cssProperty("#l9", "line-height", "20px")
+      .assert.cssProperty("#l10", "padding-left", "0px")
+      .assert.cssProperty("#l10", "margin-left", "0px")
+      .assert.cssProperty("#l10", "list-style-type", "none")
+      .assert.cssProperty("#l11", "padding-left", "0px")
+      .assert.cssProperty("#l11", "margin-left", "0px")
+      .assert.cssProperty("#l11", "list-style-type", "none")
+      .assert.cssProperty("#l14", "text-indent", "1.6px")
+      .assert.cssProperty("#l14", "margin-top", "0px")
+      .assert.cssProperty("#l14", "margin-bottom", "0px")
+      .assert.cssProperty("#l15", "margin-top", "24px")
+      .assert.cssProperty("#l16", "width", "400px")
+      .assert.cssProperty("#l16", "max-width", "100%")
+      .assert.cssProperty("#l16", "display", "block")
+      .assert.cssProperty("#l17", "color", "rgba(53, 126, 221, 1)")
+      .assert.cssProperty("#l17", "transition", "color 0.15s ease-in 0s")
+      .end()
+  },
 }
+
