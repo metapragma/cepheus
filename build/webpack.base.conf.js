@@ -1,6 +1,7 @@
 const path = require('path')
 const utils = require('./utils')
 const vueLoaderConfig = require('./vue-loader.conf')
+const config = require('./config')
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -8,7 +9,7 @@ function resolve(dir) {
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: `./${path.join(config.directory, 'main.js')}`
   },
   output: {
     filename: '[name].js',
@@ -18,7 +19,7 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       vue$: 'vue/dist/vue.esm.js',
-      '@': resolve('src')
+      '@': resolve(config.directory)
     }
   },
   module: {
@@ -31,7 +32,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        include: [resolve(config.directory), resolve('test')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

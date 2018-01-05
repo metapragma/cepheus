@@ -6,8 +6,8 @@
   "license": "MPL-2.0",
   "scripts": {
     "lint": "sass-lint -vq",
-    "watch": "node build/dev-server.js",
-    "test:end-to-end": "node test/end-to-end/runner.js",
+    "watch:end-to-end": "cross-env NODE_END_TO_END=True node build/dev-server.js",
+    "test:end-to-end": "cross-env NODE_END_TO_END=True node test/end-to-end/runner.js",
     "test": "npm run test:end-to-end"
   },
   "eyeglass": {
@@ -34,6 +34,7 @@
     "chalk": "^2.3.0",
     "chromedriver": "^2.34.0",
     "connect-history-api-fallback": "^1.5.0",
+    "cross-env": "^5.1.3",
     "cross-spawn": "^5.1.0",
     "css-loader": "^0.28.7",
     "eslint": "^4.14.0",
