@@ -1,7 +1,6 @@
 <template>
   <div>
     <Page>
-     
       <div slot="introduction" class="fl w-100 w-50-l">
         <p class="measure f4 lh-copy">
           Measure refers to the length of a line of text. It is one of the most important aspects
@@ -19,8 +18,9 @@
           .measure-wide = line lengths ~80 characters
         </code>
       </div>
-      
+
       <div slot="examples" class="ph3 ph5-ns">
+        <h3 class="f5 mb4 pb2 bb">Examples</h3>
         <h4 class="f6 ttu tracked fw6  mb0">6rem/96px at 30em</h4>
         <code class="pre f6">
         &lt;h3 class="f-headline measure"&gt;Title&lt;/h3&gt;
@@ -107,9 +107,9 @@
             Designers create hierarchy and contrast. Changes in scale help create visual contrast, movement, and depth as well as express hierarchies of importance.
           </p>
           <h4 class="f6 ttu tracked fw6 mt4 mb0">1.25rem (20px) at 20em</h4>
-        <code class="pre f6 mv0">
-        &lt;h3 class="f4 measure-narrow"&gt;Title&lt;/h3&gt;
-        </code>
+          <code class="pre f6 mv0">
+          &lt;h3 class="f4 measure-narrow"&gt;Title&lt;/h3&gt;
+          </code>
            <div class="dib f4 measure-narrow mr5 v-top">
               <p class="f4 lh-copy">
                 Scale is the size of design elements in comparison to other elements in a
@@ -210,18 +210,17 @@
           vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
           no sea takimata sanctus est Lorem ipsum dolor sit amet.
         </p>
-
-        <div slot="reference" class="mv4 pv4 bt bb b--black-10">
-          <div class="dib">
-            <h4 class="f6 fw6 mv0">Reference</h4>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width" class="dib link fw6 blue dim mr3">MDN - width</a>
-            <a href="http://webtypography.net/2.1.2" class="link fw6 blue dib dim">Choose a Comfortable Measure</a>
-          </div>
-        </div>
-
       </div>
+
+      <div slot="reference" class="mv4 pv4 bt bb b--black-10">
+        <div class="dib">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width" class="dib link fw6 blue dim mr3">MDN - width</a>
+          <a href="http://webtypography.net/2.1.2" class="link fw6 blue dib dim">Choose a Comfortable Measure</a>
+        </div>
+      </div>
+
     </Page>
-  </div> 
+  </div>
 </template>
 
 <script>
@@ -230,9 +229,15 @@ import Page from '../components/Page.vue'
 export default {
   data () {
     return {}
-  },
+  }, 
   components: {
     Page
   }
 }
 </script>
+
+<style lang="scss">
+
+</style>
+
+

@@ -800,6 +800,7 @@ $cepheus-nested: (
   '.nested-headline-line-height h4': ('line-height': 1.25rem),
   '.nested-headline-line-height h5': ('line-height': 1.25rem),
   '.nested-headline-line-height h6': ('line-height': 1.25rem),
+  // TODO review this
   '.nested-list-reset ul': ('padding-left': 0, 'margin-left': 0, 'list-style-type': none),
   '.nested-list-reset ol': ('padding-left': 0, 'margin-left': 0, 'list-style-type': none),
   '.nested-copy-indent p+p': ('text-indent': 0.1em, 'margin-top': 0, 'margin-bottom': 0),

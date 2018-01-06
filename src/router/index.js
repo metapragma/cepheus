@@ -15,7 +15,7 @@ export default new Router({
     },
     {
       path: '/measure',
-      name: 'Test',
+      name: 'Measure',
       component: Measure
     }
   ]

@@ -1,14 +1,20 @@
 <template>
   <div id="app">
     <main>
-      <router-view/>
+    <Sidebar />
+    <router-view />
     </main>
   </div>
 </template>
 
 <script>
+import Sidebar from './components/Sidebar.vue'
+
 export default {
-  name: 'app'
+  name: 'app', 
+  components: {
+    Sidebar
+  }
 }
 </script>
 
@@ -21,6 +27,5 @@ export default {
 
 * {
   margin: 0;
-  padding: 0;
 }
 </style>
