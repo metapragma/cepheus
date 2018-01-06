@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import TypeScale from '../pages/type-scale.vue'
-import Test from '../pages/test.vue'
+import Measure from '../pages/measure.vue'
 
 Vue.use(Router)
 
@@ -14,9 +14,9 @@ export default new Router({
       component: TypeScale
     },
     {
-      path: '/test',
+      path: '/measure',
       name: 'Test',
-      component: Test
+      component: Measure
     }
   ]
 })
