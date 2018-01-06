@@ -1,9 +1,9 @@
 <template>
-  <div class="fixed top-0 right-0 bg-light-gray w-75 overflow-y-scroll">
-    <ul class="pl3">
+  <div class="fixed top-0 right-0 bg-light-gray w-75 overflow-y-scroll" style="max-height: 100vh;">
+    <ul class="pl4">
       <template v-for="(value, key, index) in sidebar">
-        <li :key="index" class="f4 mv2 uppercase" style="list-style-type: none;">{{ key }}</li>
-        <ul :key="index" class="pl3">
+        <li :key="index" class="f4 mv2 ttu b" style="list-style-type: none;">{{ key }}</li>
+        <ul :key="index" class="pl4">
           <li v-for="(item, index) in value" :key="index" class="mv2" style="list-style-type: none;">{{ item }}</li>
         </ul>
       </template>
