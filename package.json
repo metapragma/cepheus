@@ -6,6 +6,7 @@
   "license": "MPL-2.0",
   "scripts": {
     "lint": "sass-lint -vq",
+    "watch": "node build/dev-server.js",
     "watch:end-to-end": "cross-env NODE_END_TO_END=True node build/dev-server.js",
     "test:end-to-end": "cross-env NODE_END_TO_END=True node test/end-to-end/runner.js",
     "test": "npm run test:end-to-end"
