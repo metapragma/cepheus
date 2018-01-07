@@ -1,7 +1,7 @@
 <template>
   <div class="bb b--black-10">
-    <header class="w-100 pa3 ph5-ns bg-white">
-      <div class="db dt-ns mw9 center w-100">
+    <header class="pa3 ph5-ns bg-white">
+      <div class="db dt-ns mw9 center">
         <div class="db dtc-ns v-mid w-100 justify-center items-center" style="display: flex;">
           <a href="/" class="dib f4 f4-ns fw6 mt0 link black-70" title="Home">
             Cepheus

@@ -1,9 +1,9 @@
 <template>
   <div>
     <Header />   
-    <div class="fl w-100 w-50-l pr4-l h1 pa3">
+     <div class="fl w-100 w-50-l pr4-l h1 pa3">
       <h3 class="w-100 f5 ttu tracked mt0 black-70">Type Scale</h3>
-    </div>
+    </div> 
     <main class="bg-white black-70">
       <Nav at="introduction" />
       <div id="introduction" class="f4 b tl mt3 mb1 pl3">Introduction</div>

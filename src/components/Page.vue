@@ -1,8 +1,8 @@
 <template>
   <div>
     <Header />   
-    <div class="fl w-100 w-50-l pr4-l h1 pa3">
-      <h3 class="w-100 f5 ttu tracked mt0 black-70">Type Scale</h3>
+    <div class="fl w-50-l pr4-l h1 pa3">
+      <h3 class="f5 ttu tracked mt0 black-70">{{ this.$route.name }}</h3>
     </div>
     <main class="bg-white black-70">
       <Nav at="introduction" />
@@ -49,6 +49,9 @@ export default {
     Header, 
     Nav, 
     Links
+  }, 
+  mounted () {
+    console.log(this.$route)
   }
 }
 </script>

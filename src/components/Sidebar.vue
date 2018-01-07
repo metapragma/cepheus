@@ -1,15 +1,33 @@
 <template>
-  <div class="fixed top-0 right-0 bg-light-gray w-75 overflow-y-scroll" style="max-height: 100vh;">
-    <ul class="pl4">
-      <template v-for="(value, key, index) in sidebar">
-        <li :key="index" class="f4 mv2 ttu b" style="list-style-type: none;">{{ key }}</li>
-        <ul :key="index" class="pl4">
-          <li v-for="(item, index) in value" :key="index" class="mv2" style="list-style-type: none;">{{ item }}</li>
+  <div>
+    <transition name="enter">
+      <div class="fixed top-0 right-0 bg-near-white w-75 overflow-y-scroll sidebar" :class="{ transform: open }">
+        <ul class="pl4">
+          <template v-for="(value, key, index) in sidebar">
+            <li class="f4 mt4 mb3 ttu b black-80" style="list-style-type: none;" :key="index">{{ key }}</li>
+            <ul class="pl0" :key="index">
+              <li
+                :key="index" class="mv2 black-70" 
+                style="list-style-type: none;"
+                v-for="(item, index) in value" 
+              >
+                {{ item }}
+              </li>
+            </ul>
+          </template>
         </ul>
-      </template>
-    </ul>
-  </div> 
-
+      </div> 
+    </transition>
+      <div>
+        <img 
+          @click="toggleSidebar"
+          src="../assets/left.png" 
+          class="fixed right-0 init" 
+          :class="{ rotate: open }"
+          style="width: 2rem; height: 2rem; top: 80vh;"
+        />
+      </div>
+  </div>
 </template>
 
 <script>
@@ -75,8 +93,38 @@ const sidebar = {
 export default {
   data () {
     return {
-      sidebar
+      sidebar, 
+      open: false
     }
-  }  
+  },
+  methods: {
+    toggleSidebar () {
+      this.open = !this.open
+      console.log('blah')
+    }
+  }
 }
 </script>
+
+<style lang="scss" scoped>
+.sidebar {
+  max-height: 100vh; 
+  transform: translateX(100vw);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+}
+
+.init {
+  color: blue;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+}
+
+.rotate {
+  transform: rotate3d(0, 1, 0, 180deg);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+}
+
+.transform {
+  transform: translateX(0);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+}
+</style>
