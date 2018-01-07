@@ -38,7 +38,8 @@ export default {
   },
   methods: {
     scroll (target) {
-      console.log(target)
+      const currentRoute = this.$route.name.toLowerCase()
+      this.$router.push({ path: `/${currentRoute}#${target}` })
       document.querySelector(`#${target}`).scrollIntoView({ 
         behavior: 'smooth',
         alignTop: true
