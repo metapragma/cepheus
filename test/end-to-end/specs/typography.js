@@ -37,19 +37,19 @@ module.exports = {
       .assert.cssProperty('#a10', 'font-family', '"Bodoni MT", serif')
       .end()
   },
-  // 'partials/font-family custom font': browser => {
-  //   // automatically uses dev Server port from /config.index.js
-  //   // default: http://localhost:8080
-  //   // see nightwatch.conf.js
-  //   const devServer = browser.globals.devServerURL
-  //
-  //   browser
-  //     .url(`${devServer}/partials/font-family`)
-  //     .waitForElementVisible('#tests', 5000)
-  //     .waitForElementVisible('#toggle', 5000)
-  //     .assert.cssProperty('#a6', 'font-family', '-apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif')
-  //     .click('#toggle')
-  //     .assert.cssProperty('#a6', 'font-family', '"Inter UI", -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif')
-  //     .end()
-  // }
+  'partials/font-family custom font': browser => {
+    // automatically uses dev Server port from /config.index.js
+    // default: http://localhost:8080
+    // see nightwatch.conf.js
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/font-family`)
+      .waitForElementVisible('#tests', 5000)
+      .waitForElementVisible('#toggle', 5000)
+      .assert.cssProperty('#a6', 'font-family', '-apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif')
+      .click('#toggle')
+      .assert.cssProperty('#a6', 'font-family', '"Inter UI", -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif')
+      .end()
+  }
 }

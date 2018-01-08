@@ -4,7 +4,7 @@
 
 @if global-variable-exists('cepheus-fonts') {
   @each $slug, $font in $cepheus-fonts {
-    $fallback: if(map-get($font, 'font-is-sans-serif'), $cepheus-fallback-sans-serif, $cepheus-fallback-serif);
+    $fallback: cepheus-get-font-fallback($slug);
     $family: '#{map-get($font, 'font-family')}';
 
     @include cepheus-register-partial('font-family', '.#{$slug}', ('font-family': '#{$fallback}'));

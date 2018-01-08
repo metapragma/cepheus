@@ -1,12 +1,15 @@
-$cepheus-fallback-sans-serif: '-apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif' !default;
-$cepheus-fallback-serif: 'georgia, times, serif' !default;
+$cepheus-font-family-fallback: (
+  'sans-serif': '-apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif',
+  'serif': 'georgia, times, serif',
+  'monospace': 'Consolas, monaco, monospace'
+);
 
 $cepheus-font-family: (
-  '.sans-serif': ('font-family': $cepheus-fallback-sans-serif),
-  '.serif': ('font-family': $cepheus-fallback-serif),
+  '.sans-serif': ('font-family': map-get($cepheus-font-family-fallback, 'sans-serif')),
+  '.serif': ('font-family': map-get($cepheus-font-family-fallback, 'serif')),
+  '.code': ('font-family': map-get($cepheus-font-family-fallback, 'monospace')),
   '.system-sans-serif': ('font-family': 'sans-serif'),
   '.system-serif': ('font-family': 'serif'),
-  '.code': ('font-family': 'Consolas, monaco, monospace'),
   '.courier': ('font-family': '"Courier Next", courier, monospace'),
   '.helvetica': ('font-family': '"helvetica neue", helvetica, sans-serif'),
   '.avenir': ('font-family': '"avenir next", avenir, sans-serif'),

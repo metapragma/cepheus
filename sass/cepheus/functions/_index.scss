@@ -1,3 +1,19 @@
+@function cepheus-get-font-fallback ($slug) {
+  @if map-has-key($cepheus-fonts, $slug) {
+    $font: map-get($cepheus-fonts, $slug);
+
+    @if map-has-key($font, 'font-family-fallback') and type-of(map-get($font, 'font-family-fallback') == 'string') {
+      @return unquote(map-get($font, 'font-family-fallback'))
+    } @else if map-has-key($font, 'font-letterform') and map-has-key($cepheus-font-family-fallback, map-get($font, 'font-letterform')) {
+      @return map-get($cepheus-font-family-fallback, map-get($font, 'font-letterform'));
+    } @else {
+      @error 'Cepheus: font-slug "#{$font}" has no font-family fallback'
+    }
+  } @else {
+    @error 'Cepheus: font-slug "#{$font}" is invalid'
+  }
+}
+
 @function cepheus-selector-nest($list) {
   $list: selector-nest($list);
   $result: ();
