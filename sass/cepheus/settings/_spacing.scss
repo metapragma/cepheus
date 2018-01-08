@@ -1,8 +1,14 @@
-$cepheus-spacing-none: 0 !default;
-$cepheus-spacing-extra-small: 0.25rem !default;
-$cepheus-spacing-small: 0.5rem !default;
-$cepheus-spacing-medium: 1rem !default;
-$cepheus-spacing-large: 2rem !default;
-$cepheus-spacing-extra-large: 4rem !default;
-$cepheus-spacing-extra-extra-large: 8rem !default;
-$cepheus-spacing-extra-extra-extra-large: 16rem !default;
+$cepheus-spacing-scale: (
+  '1': 0.125rem,
+  '2': 0.25rem,
+  '3': 0.5rem,
+  '4': 1rem,
+  '5': 2rem,
+  '6': 4rem,
+  '7': 8rem,
+  '8': 16rem,
+  '9': 32rem,
+  '10': 48rem,
+  '11': 64rem,
+  '12': 96rem,
+) !default;

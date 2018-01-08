@@ -1,3 +1,17 @@
+@function cepheus-spacing ($key) {
+  @if type-of($key) == 'number' {
+    @if $key == 0 {
+      @return 0
+    } @else if $key < 0 {
+      @return -1 * map-get($cepheus-spacing-scale, '#{abs($key)}')
+    } @else {
+      @return map-get($cepheus-spacing-scale, '#{$key}')
+    }
+  } @else {
+    @error 'Cepheus: cepheus-spacing key must be a number'
+  }
+}
+
 @function cepheus-get-font-fallback ($slug) {
   @if map-has-key($cepheus-fonts, $slug) {
     $font: map-get($cepheus-fonts, $slug);
