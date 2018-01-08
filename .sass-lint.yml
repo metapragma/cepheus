@@ -5,7 +5,8 @@ files:
   include:
     - 'sass/**/*.s+(a|c)ss'
   ignore:
-    - 'test/scss/**/*.s+(a|c)ss'
+    - 'test/**/*.s+(a|c)ss'
+    - 'src/**/*.s+(a|c)ss'
 
 # Rules
 rules:
@@ -56,7 +57,7 @@ rules:
       filename-extension: false
   empty-args: 1
   function-name-format: 2
-  hex-length: 2
+  hex-length: 0
   hex-notation: 2
   indentation:
     - 1
@@ -84,7 +85,9 @@ rules:
   space-before-bang: 2
   space-before-brace: 2
   space-before-colon: 2
+
   space-between-parens: 2
+  space-around-operator: 2
 
   # Final Items
   final-newline: 2
