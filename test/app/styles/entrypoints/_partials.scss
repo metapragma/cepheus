@@ -2,9 +2,6 @@
 @import '~cepheus-typeface-inter-ui/lib/variables';
 @import 'cepheus';
 
-@include cepheus-reset-inheritance;
-@include cepheus-partials;
-
 // html {
 //   @include respond-to(small) {
 //     font-size: $cas-font-scaling-factor * 0.5%;

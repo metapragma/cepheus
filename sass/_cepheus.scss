@@ -1,6 +1,4 @@
-@import 'breakpoint-sass/stylesheets/breakpoint';
-@import 'plumber-sass/plumber';
-@import './cepheus/functions/index';
-@import './cepheus/settings/index';
-@import './cepheus/mixins/index';
-@import './cepheus/partials/index';
+@import './cepheus-functional';
+
+@include cepheus-reset-inheritance;
+@include cepheus-partials;

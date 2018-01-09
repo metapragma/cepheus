@@ -1,5 +1,173 @@
 // sass-lint:disable no-important
 
+$cepheus-state: () !global;
+
+$cepheus-inhertiable-properties: (
+  'azimuth',
+  'border-collapse',
+  'border-spacing',
+  'caption-side',
+  'color',
+  'cursor',
+  'direction',
+  'elevation',
+  'empty-cells',
+  'font-family',
+  'font-size',
+  'font-style',
+  'font-variant',
+  'font-weight',
+  'font',
+  'letter-spacing',
+  'line-height',
+  'list-style-image',
+  'list-style-position',
+  'list-style-type',
+  'list-style',
+  'orphans',
+  'pitch-range',
+  'pitch',
+  'quotes',
+  'richness',
+  'speak-header',
+  'speak-numeral',
+  'speak-punctuation',
+  'speak',
+  'speech-rate',
+  'stress',
+  'text-align',
+  'text-indent',
+  'text-transform',
+  'visibility',
+  'voice-family',
+  'volume',
+  'white-space',
+  'widows',
+  'word-spacing'
+);
+
+$cepheus-breakpoints: (
+  // https://github.com/trello/trellisheets/blob/master/styleguide.md#media-queries
+  // https://github.com/at-import/breakpoint/wiki/Advanced-Media-Queries#or-queries
+  small: 'only screen' (max-width 29.9375em),
+  not-small: 'only screen' (min-width 30em),
+  medium: 'only screen' 30em 47.9375em,
+  large: 'only screen' 48em,
+  extra-large: 'only screen' 64em,
+  print: print
+) !default;
+
+@include breakpoint-set('no query fallbacks', true);
+@include breakpoint-set('to ems', true);
+
+@each $breakpoint-key, $breakpoint-value in $cepheus-breakpoints {
+  @include add-breakpoint($breakpoint-key, $breakpoint-value, true);
+}
+
+$cepheus-colors: (
+  'black': #000,
+  'near-black': #111,
+  'dark-gray': #333,
+  'mid-gray': #555,
+  'gray': #777,
+  'silver': #999,
+  'light-silver': #aaa,
+  'moon-gray': #ccc,
+  'light-gray': #eee,
+  'near-white': #f4f4f4,
+  'white': #fff,
+  'transparent': transparent,
+  'black-90': rgba(0, 0, 0, 0.9),
+  'black-80': rgba(0, 0, 0, 0.8),
+  'black-70': rgba(0, 0, 0, 0.7),
+  'black-60': rgba(0, 0, 0, 0.6),
+  'black-50': rgba(0, 0, 0, 0.5),
+  'black-40': rgba(0, 0, 0, 0.4),
+  'black-30': rgba(0, 0, 0, 0.3),
+  'black-20': rgba(0, 0, 0, 0.2),
+  'black-10': rgba(0, 0, 0, 0.1),
+  'black-05': rgba(0, 0, 0, 0.05),
+  'black-025': rgba(0, 0, 0, 0.025),
+  'black-0125': rgba(0, 0, 0, 0.0125),
+  'white-90': rgba(255, 255, 255, 0.9),
+  'white-80': rgba(255, 255, 255, 0.8),
+  'white-70': rgba(255, 255, 255, 0.7),
+  'white-60': rgba(255, 255, 255, 0.6),
+  'white-50': rgba(255, 255, 255, 0.5),
+  'white-40': rgba(255, 255, 255, 0.4),
+  'white-30': rgba(255, 255, 255, 0.3),
+  'white-20': rgba(255, 255, 255, 0.2),
+  'white-10': rgba(255, 255, 255, 0.1),
+  'white-05': rgba(255, 255, 255, 0.05),
+  'white-025': rgba(255, 255, 255, 0.025),
+  'white-0125': rgba(255, 255, 255, 0.0125),
+  'dark-red': #e7040f,
+  'red': #ff4136,
+  'light-red': #ff725c,
+  'orange': #ff6300,
+  'gold': #ffb700,
+  'yellow': #ffd700,
+  'light-yellow': #fbf1a9,
+  'purple': #5e2ca5,
+  'light-purple': #a463f2,
+  'dark-pink': #d5008f,
+  'hot-pink': #ff41b4,
+  'pink': #ff80cc,
+  'light-pink': #ffa3d7,
+  'dark-green': #137752,
+  'green': #19a974,
+  'light-green': #9eebcf,
+  'navy': #001b44,
+  'dark-blue': #00449e,
+  'blue': #357edd,
+  'light-blue': #96ccff,
+  'lightest-blue': #cdecff,
+  'washed-blue': #f6fffe,
+  'washed-green': #e8fdf5,
+  'washed-yellow': #fffceb,
+  'washed-red': #ffdfdf,
+  'inherit': inherit
+) !default;
+
+$cepheus-spacing-scale: (
+  '1': 0.125rem,
+  '2': 0.25rem,
+  '3': 0.5rem,
+  '4': 1rem,
+  '5': 2rem,
+  '6': 4rem,
+  '7': 8rem,
+  '8': 16rem,
+  '9': 32rem,
+  '10': 48rem,
+  '11': 64rem,
+  '12': 96rem,
+) !default;
+
+$cepheus-font-family-fallback: (
+  'sans-serif': '-apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif',
+  'serif': 'georgia, times, serif',
+  'monospace': 'Consolas, monaco, monospace'
+);
+
+$cepheus-font-family: (
+  '.sans-serif': ('font-family': map-get($cepheus-font-family-fallback, 'sans-serif')),
+  '.serif': ('font-family': map-get($cepheus-font-family-fallback, 'serif')),
+  '.code': ('font-family': map-get($cepheus-font-family-fallback, 'monospace')),
+  '.system-sans-serif': ('font-family': 'sans-serif'),
+  '.system-serif': ('font-family': 'serif'),
+  '.courier': ('font-family': '"Courier Next", courier, monospace'),
+  '.helvetica': ('font-family': '"helvetica neue", helvetica, sans-serif'),
+  '.avenir': ('font-family': '"avenir next", avenir, sans-serif'),
+  '.athelas': ('font-family': 'athelas, georgia, serif'),
+  '.georgia': ('font-family': 'georgia, serif'),
+  '.times': ('font-family': 'times, serif'),
+  '.bodoni': ('font-family': '"Bodoni MT", serif'),
+  '.calisto': ('font-family': '"Calisto MT", serif'),
+  '.garamond': ('font-family': 'garamond, serif'),
+  '.baskerville': ('font-family': 'baskerville, serif')
+) !default;
+
 $cepheus-text-decoration: (
   '.strike': ('text-decoration': 'line-through'),
   '.underline': ('text-decoration': 'underline'),
@@ -790,8 +958,4 @@ $cepheus-nested: (
   '.nested-links a': ('color': #357edd, 'transition': color 0.15s ease-in),
   '.nested-links a:hover': ('color': #96ccff, 'transition': color 0.15s ease-in),
   '.nested-links a:focus': ('color': #96ccff, 'transition': color 0.15s ease-in),
-) !default;
-
-$cepheus-images: (
-  'img': (max-width: 100%)
 ) !default;

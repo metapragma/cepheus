@@ -1,3 +1,0 @@
-@each $name, $value in $cepheus-images {
-  @include cepheus-register-partial('opacity', $name, $value);
-}
