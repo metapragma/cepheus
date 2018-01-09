@@ -1,9 +1,11 @@
 <template>
   <div>
-    <Header />   
+    <Header />  
+    <header class="db h2"> 
     <div class="fl w-50-l pr4-l h1 pa3">
       <h3 class="f5 ttu tracked mt0 black-70">{{ this.$route.name }}</h3>
     </div>
+    </header>
     <main class="bg-white black-70">
       <Nav at="introduction" />
       <h3 id="introduction" class="f4 b tl mt3 mb1 pl3">Introduction</h3>

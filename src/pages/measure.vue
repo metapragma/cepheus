@@ -1,7 +1,7 @@
 <template>
   <div>
     <Page>
-      <div slot="introduction" class="fl w-100 w-50-l">
+      <div slot="introduction" class="w-100 w-50-l fl">
         <p class="measure f4 lh-copy">
           Measure refers to the length of a line of text. It is one of the most important aspects
           of readability.
@@ -237,7 +237,4 @@ export default {
 </script>
 
 <style lang="scss">
-
 </style>
-
-
