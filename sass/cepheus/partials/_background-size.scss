@@ -1,3 +1,3 @@
 @each $name, $value in $cepheus-background-size {
-  @include cepheus-register-partial('background-size', $name, $value);
+  @include cepheus-register('background-size', $name, $value);
 }

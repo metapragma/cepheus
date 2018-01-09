@@ -1,3 +1,3 @@
 @each $name, $value in $cepheus-lists {
-  @include cepheus-register-partial('lists', $name, $value);
+  @include cepheus-register('lists', $name, $value);
 }

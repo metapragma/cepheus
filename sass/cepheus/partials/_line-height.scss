@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-line-height {
-  @include cepheus-register-partial('line-height', $name, $value);
-  @include cepheus-register-partial('line-height', '#{$name}-ns', $value);
-  @include cepheus-register-partial('line-height', '#{$name}-m', $value);
-  @include cepheus-register-partial('line-height', '#{$name}-l', $value);
+  @include cepheus-register('line-height', $name, $value);
+  @include cepheus-register('line-height', '#{$name}-ns', $value);
+  @include cepheus-register('line-height', '#{$name}-m', $value);
+  @include cepheus-register('line-height', '#{$name}-l', $value);
 }

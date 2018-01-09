@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-font-style {
-  @include cepheus-register-partial('font-style', $name, $value);
-  @include cepheus-register-partial('font-style', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-register-partial('font-style', '#{$name}-m', $value, 'medium');
-  @include cepheus-register-partial('font-style', '#{$name}-l', $value, 'large');
+  @include cepheus-register('font-style', $name, $value);
+  @include cepheus-register('font-style', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register('font-style', '#{$name}-m', $value, 'medium');
+  @include cepheus-register('font-style', '#{$name}-l', $value, 'large');
 }

@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-aspect-ratios {
-  @include cepheus-register-partial('aspect-ratios', $name, $value);
-  @include cepheus-register-partial('aspect-ratios', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-register-partial('aspect-ratios', '#{$name}-m', $value, 'medium');
-  @include cepheus-register-partial('aspect-ratios', '#{$name}-l', $value, 'large');
+  @include cepheus-register('aspect-ratios', $name, $value);
+  @include cepheus-register('aspect-ratios', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register('aspect-ratios', '#{$name}-m', $value, 'medium');
+  @include cepheus-register('aspect-ratios', '#{$name}-l', $value, 'large');
 }

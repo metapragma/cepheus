@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-white-space {
-  @include cepheus-register-partial('white-space', $name, $value);
-  @include cepheus-register-partial('white-space', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-register-partial('white-space', '#{$name}-m', $value, 'medium');
-  @include cepheus-register-partial('white-space', '#{$name}-l', $value, 'large');
+  @include cepheus-register('white-space', $name, $value);
+  @include cepheus-register('white-space', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register('white-space', '#{$name}-m', $value, 'medium');
+  @include cepheus-register('white-space', '#{$name}-l', $value, 'large');
 }

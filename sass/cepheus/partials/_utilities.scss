@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-utilities {
-  @include cepheus-register-partial('utilities', $name, $value);
-  @include cepheus-register-partial('utilities', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-register-partial('utilities', '#{$name}-m', $value, 'medium');
-  @include cepheus-register-partial('utilities', '#{$name}-l', $value, 'large');
+  @include cepheus-register('utilities', $name, $value);
+  @include cepheus-register('utilities', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register('utilities', '#{$name}-m', $value, 'medium');
+  @include cepheus-register('utilities', '#{$name}-l', $value, 'large');
 }

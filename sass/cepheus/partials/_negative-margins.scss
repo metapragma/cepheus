@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-negative-margins {
-  @include cepheus-register-partial('negative-margins', $name, $value);
-  @include cepheus-register-partial('negative-margins', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-register-partial('negative-margins', '#{$name}-m', $value, 'medium');
-  @include cepheus-register-partial('negative-margins', '#{$name}-l', $value, 'large');
+  @include cepheus-register('negative-margins', $name, $value);
+  @include cepheus-register('negative-margins', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register('negative-margins', '#{$name}-m', $value, 'medium');
+  @include cepheus-register('negative-margins', '#{$name}-l', $value, 'large');
 }

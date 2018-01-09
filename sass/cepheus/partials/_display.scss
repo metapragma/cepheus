@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-display {
-  @include cepheus-register-partial('display', $name, $value);
-  @include cepheus-register-partial('display', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-register-partial('display', '#{$name}-m', $value, 'medium');
-  @include cepheus-register-partial('display', '#{$name}-l', $value, 'large');
+  @include cepheus-register('display', $name, $value);
+  @include cepheus-register('display', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register('display', '#{$name}-m', $value, 'medium');
+  @include cepheus-register('display', '#{$name}-l', $value, 'large');
 }

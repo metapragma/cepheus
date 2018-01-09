@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-overflow {
-  @include cepheus-register-partial('overflow', $name, $value);
-  @include cepheus-register-partial('overflow', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-register-partial('overflow', '#{$name}-m', $value, 'medium');
-  @include cepheus-register-partial('overflow', '#{$name}-l', $value, 'large');
+  @include cepheus-register('overflow', $name, $value);
+  @include cepheus-register('overflow', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register('overflow', '#{$name}-m', $value, 'medium');
+  @include cepheus-register('overflow', '#{$name}-l', $value, 'large');
 }

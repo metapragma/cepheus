@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-widths {
-  @include cepheus-register-partial('visibility', $name, $value);
-  @include cepheus-register-partial('visibility', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-register-partial('visibility', '#{$name}-m', $value, 'medium');
-  @include cepheus-register-partial('visibility', '#{$name}-l', $value, 'large');
+  @include cepheus-register('visibility', $name, $value);
+  @include cepheus-register('visibility', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register('visibility', '#{$name}-m', $value, 'medium');
+  @include cepheus-register('visibility', '#{$name}-l', $value, 'large');
 }

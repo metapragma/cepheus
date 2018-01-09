@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-background-position {
-  @include cepheus-register-partial('background-position', $name, $value);
-  @include cepheus-register-partial('background-position', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-register-partial('background-position', '#{$name}-m', $value, 'medium');
-  @include cepheus-register-partial('background-position', '#{$name}-l', $value, 'large');
+  @include cepheus-register('background-position', $name, $value);
+  @include cepheus-register('background-position', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register('background-position', '#{$name}-m', $value, 'medium');
+  @include cepheus-register('background-position', '#{$name}-l', $value, 'large');
 }

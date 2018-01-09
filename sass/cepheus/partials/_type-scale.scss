@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-type-scale {
-  @include cepheus-register-partial('type-scale', $name, $value);
-  @include cepheus-register-partial('type-scale', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-register-partial('type-scale', '#{$name}-m', $value, 'medium');
-  @include cepheus-register-partial('type-scale', '#{$name}-l', $value, 'large');
+  @include cepheus-register('type-scale', $name, $value);
+  @include cepheus-register('type-scale', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register('type-scale', '#{$name}-m', $value, 'medium');
+  @include cepheus-register('type-scale', '#{$name}-l', $value, 'large');
 }

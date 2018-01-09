@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-typography {
-  @include cepheus-register-partial('typography', $name, $value);
-  @include cepheus-register-partial('typography', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-register-partial('typography', '#{$name}-m', $value, 'medium');
-  @include cepheus-register-partial('typography', '#{$name}-l', $value, 'large');
+  @include cepheus-register('typography', $name, $value);
+  @include cepheus-register('typography', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register('typography', '#{$name}-m', $value, 'medium');
+  @include cepheus-register('typography', '#{$name}-l', $value, 'large');
 }

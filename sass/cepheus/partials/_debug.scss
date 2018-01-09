@@ -1,3 +1,3 @@
 @each $name, $value in $cepheus-debug {
-  @include cepheus-register-partial('debug', $name, $value);
+  @include cepheus-register('debug', $name, $value);
 }

@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-outlines {
-  @include cepheus-register-partial('outlines', $name, $value);
-  @include cepheus-register-partial('outlines', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-register-partial('outlines', '#{$name}-m', $value, 'medium');
-  @include cepheus-register-partial('outlines', '#{$name}-l', $value, 'large');
+  @include cepheus-register('outlines', $name, $value);
+  @include cepheus-register('outlines', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register('outlines', '#{$name}-m', $value, 'medium');
+  @include cepheus-register('outlines', '#{$name}-l', $value, 'large');
 }

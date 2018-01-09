@@ -1,4 +1,4 @@
 @each $name, $color in $cepheus-colors {
-  @include cepheus-register-partial('skins', '.#{$name}', ('color': $color));
-  @include cepheus-register-partial('skins', '.bg-#{$name}', ('background-color': $color));
+  @include cepheus-register('skins', '.#{$name}', ('color': $color));
+  @include cepheus-register('skins', '.bg-#{$name}', ('background-color': $color));
 }

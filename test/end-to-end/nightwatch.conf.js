@@ -33,7 +33,7 @@ module.exports = {
         javascriptEnabled: true,
         acceptSslCerts: true,
         chromeOptions: {
-          args: ['--headless']
+          args: ['headless', 'no-sandbox', 'disable-gpu']
         }
       }
     },
