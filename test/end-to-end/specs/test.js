@@ -259,7 +259,7 @@ module.exports = {
       .assert.cssProperty("#l1", "text-align", "left")
       .assert.cssProperty("#l2", "text-align", "right")
       .assert.cssProperty("#l3", "text-align", "center")
-      .assert.cssProperty("#l4", "text-align", "start")
+      .assert.cssProperty("#l4", "text-align", "justify")
       .end()
   },
   // // 'partials/skins-pseudo' working but not testable with Nightwatch (support for pseudo-classes)

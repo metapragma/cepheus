@@ -117,7 +117,7 @@ $cepheus-text-align: (
   '.tl': ('text-align': left),
   '.tr': ('text-align': right),
   '.tc': ('text-align': center),
-  '.tj': ('text-align': justified)
+  '.tj': ('text-align': justify)
 ) !default;
 
 $cepheus-rotations: (
@@ -785,7 +785,7 @@ $cepheus-nested: (
   '.nested-list-reset ul': ('padding-left': 0, 'margin-left': 0, 'list-style-type': none),
   '.nested-list-reset ol': ('padding-left': 0, 'margin-left': 0, 'list-style-type': none),
   '.nested-copy-indent p+p': ('text-indent': 0.1em, 'margin-top': 0, 'margin-bottom': 0),
-  '.nested-copy-seperator p+p': ('margin-top': 1.5em),
+  '.nested-copy-separator p+p': ('margin-top': 1.5em),
   '.nested-img img': ('width': 100%, 'max-width': 100%, 'display': block),
   '.nested-links a': ('color': #357edd, 'transition': color 0.15s ease-in),
   '.nested-links a:hover': ('color': #96ccff, 'transition': color 0.15s ease-in),
