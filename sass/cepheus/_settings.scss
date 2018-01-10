@@ -2,6 +2,68 @@
 
 $cepheus-state: () !global;
 
+$cepheus-debug: false !default;
+
+$cepheus-imports: (
+  'gradients',
+  'word-break',
+  'aspect-ratios',
+  'background-size',
+  'background-position',
+  'outlines',
+  'borders',
+  'border-colors',
+  'border-radius',
+  'border-styles',
+  'border-widths',
+  'box-shadow',
+  'code',
+  'coordinates',
+  'clears',
+  'display',
+  'flexbox',
+  'floats',
+  'font-family',
+  'font-style',
+  'font-weight',
+  'forms',
+  'heights',
+  'letter-spacing',
+  'line-height',
+  'links',
+  'lists',
+  'max-widths',
+  'widths',
+  'overflow',
+  'position',
+  'opacity',
+  'rotations',
+  'skins',
+  'skins-pseudo',
+  'spacing',
+  'negative-margins',
+  'tables',
+  'text-decoration',
+  'text-align',
+  'text-transform',
+  'type-scale',
+  'typography',
+  'utilities',
+  'visibility',
+  'white-space',
+  'vertical-align',
+  'hovers',
+  'z-index',
+  'nested',
+) !default;
+
+@if $cepheus-debug {
+  $cepheus-imports: join((
+      'debug-children'
+      'debug'
+  ), $cepheus-imports) !global;
+}
+
 $cepheus-inhertiable-properties: (
   'azimuth',
   'border-collapse',
@@ -12,27 +74,27 @@ $cepheus-inhertiable-properties: (
   'direction',
   'elevation',
   'empty-cells',
+  'font',
   'font-family',
   'font-size',
   'font-style',
   'font-variant',
   'font-weight',
-  'font',
   'letter-spacing',
   'line-height',
+  'list-style',
   'list-style-image',
   'list-style-position',
   'list-style-type',
-  'list-style',
   'orphans',
-  'pitch-range',
   'pitch',
+  'pitch-range',
   'quotes',
   'richness',
+  'speak',
   'speak-header',
   'speak-numeral',
   'speak-punctuation',
-  'speak',
   'speech-rate',
   'stress',
   'text-align',
@@ -552,7 +614,7 @@ $cepheus-display: (
   '.dt--fixed': ('table-layout': fixed, 'width': 100%)
 ) !default;
 
-$cepheus-debug: (
+$cepheus-debug-outline: (
   'body': ('outline': 1px solid #2980b9 !important),
   'article': ('outline': 1px solid #3498db !important),
   'nav': ('outline': 1px solid #0088c3 !important),

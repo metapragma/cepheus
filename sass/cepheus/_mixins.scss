@@ -12,6 +12,7 @@
   $selector: if(type-of($input) == 'list' and length($input) != 1, cepheus-selector-nest($input), cepheus-unquote-if-string($input));
   $cepheus-state: append($cepheus-state,
     (
+      'name': $name,
       'breakpoint': $breakpoint,
       'property-map': $property-map,
       'selector': $selector,
@@ -20,28 +21,32 @@
 }
 
 // Stage 0
-@mixin cepheus-reset-inheritance {
+@mixin cepheus-reset-inheritance ($enabled) {
   @each $map in $cepheus-state {
-    $breakpoint: map-get($map, 'breakpoint');
-    $property-map: map-get($map, 'property-map');
-    $selector: map-get($map, 'selector');
+    $name: map-get($map, 'name');
 
-    @if cepheus-contains-any($cepheus-inhertiable-properties, cepheus-to-list($property-map, 'keys')) {
-      @if cepheus-breakpoint-exists($breakpoint) {
-        @include respond-to($breakpoint) {
+    @if cepheus-contains($enabled, $name) {
+      $breakpoint: map-get($map, 'breakpoint');
+      $property-map: map-get($map, 'property-map');
+      $selector: map-get($map, 'selector');
+
+      @if cepheus-contains-any($cepheus-inhertiable-properties, cepheus-to-list($property-map, 'keys')) {
+        @if cepheus-breakpoint-exists($breakpoint) {
+          @include respond-to($breakpoint) {
+            #{$selector} > * {
+              @each $property, $_ in $property-map {
+                @if cepheus-contains-any($cepheus-inhertiable-properties, $property) {
+                  #{unquote($property)}: initial;
+                }
+              }
+            }
+          }
+        } @else {
           #{$selector} > * {
             @each $property, $_ in $property-map {
               @if cepheus-contains-any($cepheus-inhertiable-properties, $property) {
                 #{unquote($property)}: initial;
               }
-            }
-          }
-        }
-      } @else {
-        #{$selector} > * {
-          @each $property, $_ in $property-map {
-            @if cepheus-contains-any($cepheus-inhertiable-properties, $property) {
-              #{unquote($property)}: initial;
             }
           }
         }
@@ -51,26 +56,35 @@
 }
 
 // Stage 1
-@mixin cepheus-partials {
+@mixin cepheus-partials ($enabled) {
   @each $map in $cepheus-state {
-    $breakpoint: map-get($map, 'breakpoint');
-    $property-map: map-get($map, 'property-map');
-    $selector: map-get($map, 'selector');
+    $name: map-get($map, 'name');
 
-    @if cepheus-breakpoint-exists($breakpoint) {
-      @include respond-to($breakpoint) {
+    @if cepheus-contains($enabled, $name) {
+      $breakpoint: map-get($map, 'breakpoint');
+      $property-map: map-get($map, 'property-map');
+      $selector: map-get($map, 'selector');
+
+      @if cepheus-breakpoint-exists($breakpoint) {
+        @include respond-to($breakpoint) {
+          #{$selector} {
+            @each $property, $value in $property-map {
+              #{unquote($property)}: cepheus-unquote-if-string($value);
+            }
+          }
+        }
+      } @else {
         #{$selector} {
           @each $property, $value in $property-map {
             #{unquote($property)}: cepheus-unquote-if-string($value);
           }
         }
       }
-    } @else {
-      #{$selector} {
-        @each $property, $value in $property-map {
-          #{unquote($property)}: cepheus-unquote-if-string($value);
-        }
-      }
     }
   }
+}
+
+@mixin cepheus ($enabled: $cepheus-imports) {
+  @include cepheus-reset-inheritance($enabled);
+  @include cepheus-partials($enabled);
 }

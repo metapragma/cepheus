@@ -1,8 +1,5 @@
 @import './partials/debug-children';
-// @import './debug';
-
-@import './partials/gradients';
-@import './partials/word-break';
+@import './partials/debug';
 
 @import './partials/aspect-ratios';
 @import './partials/background-size';
@@ -52,3 +49,7 @@
 @import './partials/hovers';
 @import './partials/z-index';
 @import './partials/nested';
+
+@import './partials/gradients';
+@import './partials/word-break';
+
