@@ -1,6 +1,6 @@
 @each $name, $value in $cepheus-clears {
-  @include cepheus-register('text-align', $name, $value);
-  @include cepheus-register('text-align', '#{$name}-ns', $value, 'not-small');
-  @include cepheus-register('text-align', '#{$name}-m', $value, 'medium');
-  @include cepheus-register('text-align', '#{$name}-l', $value, 'large');
+  @include cepheus-register('clears', $name, $value);
+  @include cepheus-register('clears', '#{$name}-ns', $value, 'not-small');
+  @include cepheus-register('clears', '#{$name}-m', $value, 'medium');
+  @include cepheus-register('clears', '#{$name}-l', $value, 'large');
 }
