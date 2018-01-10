@@ -2,7 +2,9 @@
   <div id="app">
     <main>
       <Sidebar />
-      <router-view />
+      <transition name="fade">
+        <router-view />
+      </transition>
     </main>
   </div>
 </template>
@@ -27,5 +29,18 @@ export default {
 
 * {
   margin: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: 0.25s;
+}
+
+.fade-enter-active {
+  transition-delay: 0.05s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
 </style>
