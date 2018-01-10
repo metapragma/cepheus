@@ -1,9 +1,19 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Typography from '../pages/typography/typography.vue'
 import TypeScale from '../pages/typography/type-scale.vue'
 import Measure from '../pages/typography/measure.vue'
 import LineHeight from '../pages/typography/line-height.vue'
+import Tracking from '../pages/typography/tracking.vue'
+import FontWeight from '../pages/typography/font-weight.vue'
+import FontStyle from '../pages/typography/font-style.vue'
+import VerticalAlign from '../pages/typography/vertical-align.vue'
+import TextAlign from '../pages/typography/text-align.vue'
+import TextTransform from '../pages/typography/text-transform.vue'
+import TextDecoration from '../pages/typography/text-decoration.vue'
+import WhiteSpace from '../pages/typography/white-space.vue'
+import FontFamily from '../pages/typography/font-family.vue'
 
 Vue.use(Router)
 
@@ -26,6 +36,51 @@ export default new Router({
           path: 'line-height',
           name: 'Line Height',
           component: LineHeight
+        },
+        {
+          path: 'tracking',
+          name: 'Tracking',
+          component: Tracking
+        },
+        {
+          path: 'font-weight',
+          name: 'Font Weight',
+          component: FontWeight
+        },
+        {
+          path: 'font-style',
+          name: 'Font Style',
+          component: FontStyle
+        },
+        {
+          path: 'vertical-align',
+          name: 'Vertical Align',
+          component: VerticalAlign
+        },
+        {
+          path: 'text-align',
+          name: 'Text Align',
+          component: TextAlign
+        },
+        {
+          path: 'text-transform',
+          name: 'Text Transform',
+          component: TextTransform
+        },
+        {
+          path: 'text-decoration',
+          name: 'Text Decoration',
+          component: TextDecoration
+        },
+        {
+          path: 'white-space',
+          name: 'White Space',
+          component: WhiteSpace
+        },
+        {
+          path: 'font-family',
+          name: 'Font Family',
+          component: FontFamily
         }
       ]
     }

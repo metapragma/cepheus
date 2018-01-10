@@ -1,0 +1,60 @@
+<template>
+  <div>
+    <Page>
+     
+      <article slot="introduction" class="pa3 ph5-ns">
+        <h3 class="f6 ttu tracked mt0">Text Decoration</h3>
+        <p class="measure f4 f3-ns lh-copy">
+          Utilities for decorating text with underlines, or removing
+          the default underlines browsers put on links.
+        </p>
+      </article>
+
+      <div slot="examples" class="ph3 ph5-ns pt4 pb5">
+        <h3 class="f5 mb4 pb2 bb">Examples</h3>
+        <h4 class="f5 fw6 pt4">Text Decoration None</h4>
+        <code class="f6 db">
+          &lt;a class="no-underline"&gt;no-underline&lt;/a&gt;
+        </code>
+        <a class="db no-underline mt2">no-underline</a>
+        <h4 class="f5 fw6 mt5">Text Decoration Underline</h4>
+        <code class="f6">
+          &lt;p class="underline"&gt;underline.&lt;/p&gt;
+        </code>
+        <p class="underline">
+          underline.
+        </p>
+        <h4 class="f5 fw6 mt4">Text Decoration Strikethrough</h4>
+        <code class="f6">
+          &lt;p class="strike"&gt;strike.&lt;/p&gt;
+        </code>
+        <p class="strike">strike</p>
+      </div>
+
+      <div slot="reference" class="mt5">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration" class="link fw6 blue dim">MDN - Text Decoration</a>
+      </div>
+
+    </Page>
+  </div>
+</template>
+
+<script>
+import Page from '../../components/Page.vue'
+
+export default {
+  data () {
+    return {}
+  }, 
+  components: {
+    Page, 
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+
+</style>
+
+
+

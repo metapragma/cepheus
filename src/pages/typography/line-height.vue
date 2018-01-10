@@ -59,20 +59,6 @@
         <h4 class="measure lh-solid  f2 f-subheadline-l fw6 mt0">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr
         </h4>
-        <div class="mt5 cf">
-          <div class="dib mr4">
-            <h4 class="f6 fw6">Previous</h4>
-            <a href="/docs/typography/measure/" class="link fw6 blue dim">Measure</a>
-          </div>
-          <div class="dib">
-            <h4 class="f6 fw6">Next</h4>
-            <a href="/docs/typography/tracking/" class="link fw6 blue dim">Tracking</a>
-          </div>
-        </div>
-        <div class="mt5">
-          <h4 class="f6 fw6">Reference</h4>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height" class="link fw6 blue dim">MDN - Line Height</a>
-        </div>
       </div>
 
       <div slot="reference" class="mt5">
@@ -91,7 +77,7 @@ export default {
     return {}
   }, 
   components: {
-    Page
+    Page, 
   }
 }
 </script>
@@ -99,5 +85,6 @@ export default {
 <style lang="scss" scoped>
 
 </style>
+
 
 

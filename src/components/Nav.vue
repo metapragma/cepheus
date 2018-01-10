@@ -38,12 +38,14 @@ export default {
   },
   methods: {
     scroll (target) {
-      const currentRoute = this.$route.name.toLowerCase()
-      this.$router.push({ path: `/${currentRoute}#${target}` })
+      const currentRoute = this.$route.path.toLowerCase()
+      console.log(currentRoute, typeof currentRoute)
       document.querySelector(`#${target}`).scrollIntoView({ 
         behavior: 'smooth',
         alignTop: true
       })
+      // TODO: review
+      // this.$router.push({ path: `/${currentRoute}#${target}` })
     }
   }
 }

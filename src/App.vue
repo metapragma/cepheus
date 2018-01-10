@@ -2,9 +2,9 @@
   <div id="app">
     <main>
       <Sidebar />
-      <transition name="fade">
+      <!-- <transition name="fade"> -->
         <router-view />
-      </transition>
+      <!-- </transition> -->
     </main>
   </div>
 </template>
