@@ -1,7 +1,7 @@
 <template>
   <div>
     <Page>
-      <div slot="introduction" class="w-100 w-50-l fl">
+      <div slot="introduction" class="w-50-l fl w-100 border-box ph3">
         <p class="measure f4 lh-copy">
           Measure refers to the length of a line of text. It is one of the most important aspects
           of readability.
@@ -13,7 +13,8 @@
         <p class="measure f5 lh-copy mt4 mb2">
           Tachyons provides 3 classes for setting measure.
         </p>
-        <code class="pre f6 lh-copy mt0">.measure = line lengths ~66 characters
+        <code class="whitespace f6 lh-copy mt0 border-box">
+          .measure = line lengths ~66 characters
           .measure-narrow = line lengths ~45 characters
           .measure-wide = line lengths ~80 characters
         </code>
@@ -22,7 +23,7 @@
       <div slot="examples" class="ph3 ph5-ns">
         <h3 class="f5 mb4 pb2 bb">Examples</h3>
         <h4 class="f6 ttu tracked fw6  mb0">6rem/96px at 30em</h4>
-        <code class="pre f6">
+        <code class="whitespace f6">
         &lt;h3 class="f-headline measure"&gt;Title&lt;/h3&gt;
         </code>
         <div class="w-100 overflow-auto">
@@ -31,7 +32,7 @@
           </p>
         </div>
         <h4 class="f6 ttu tracked fw6 pt5 bt mt2 mb0">5rem/80px at 30em</h4>
-        <code class="pre f6 mv0">
+        <code class="whitespace f6 mv0">
         &lt;h3 class="f-subheadline measure"&gt;Title&lt;/h3&gt;
         </code>
         <div class="w-100 overflow-x-scroll">
@@ -40,7 +41,7 @@
           </p>
         </div>
         <h4 class="f6 ttu tracked fw6 pt5 bt mt2 mb0"> 3rem(48px) at 30em</h4>
-        <code class="pre f6 mv0">
+        <code class="whitespace f6 mv0">
         &lt;h3 class="f1 measure"&gt;Title&lt;/h3&gt;
         </code>
         <div class="pb4 w-100 overflow-x-scroll">
@@ -49,7 +50,7 @@
           </p>
         </div>
         <h4 class="f6 ttu tracked fw6 pt5 bt mt2 mb0">2.25rem (36px) at 30em</h4>
-        <code class="pre f6 mv0">
+        <code class="whitespace f6 mv0">
         &lt;h3 class="f2 measure"&gt;Title&lt;/h3&gt;
         </code>
         <div class="cf w-100 pb4">
@@ -60,14 +61,14 @@
           </div>
         </div>
         <h4 class="f6 ttu tracked fw6 pt5 bt mt2 mb0">1.5rem (24px) at 34em</h4>
-        <code class="pre f6 mv0">
+        <code class="whitespace f6 mv0">
         &lt;h3 class="f3 measure-wide"&gt;Title&lt;/h3&gt;
         </code>
             <p class="f3 measure-wide lh-copy">
               Designers create hierarchy and contrast <span class="dn di-ns">by playing with the scale of letterforms. Changes in scale help create visual contrast, movement, and depth as well as express hierarchies of importance.</span>
             </p>
         <h4 class="f6 ttu tracked fw6 mt2 mb0">1.5rem (24px) at 30em</h4>
-        <code class="pre f6 mv0">
+        <code class="whitespace f6 mv0">
         &lt;h3 class="f3 measure"&gt;Title&lt;/h3&gt;
         </code>
         <div class="cf w-100 pb4">
@@ -77,7 +78,7 @@
             </p>
           </div>
           <h4 class="f6 ttu tracked fw6 pt5 bbt mt2 mb0">1.5rem (24px) at 20em</h4>
-          <code class="pre f6 mv0">
+          <code class="whitespace f6 mv0">
           &lt;h3 class="f3 measure-narrow"&gt;Title&lt;/h3&gt;
           </code>
            <div class="dib f4 measure-narrow mr4">
@@ -92,14 +93,14 @@
            </div>
         </div>
         <h4 class="f6 ttu tracked fw6 pt5 bt mt2 mb0">1.25rem/20px at 34em</h4>
-        <code class="pre f6 mv0">
+        <code class="whitespace f6 mv0">
         &lt;h3 class="f4 measure-wide"&gt;Title&lt;/h3&gt;
         </code>
           <p class="f4 measure-wide lh-copy">
             Designers create hierarchy and contrast. Changes in scale help create visual contrast, movement, and depth as well as express hierarchies of importance.
           </p>
         <h4 class="f6 ttu tracked fw6 pt4 mt2 mb0">1.25rem/20px at 30em</h4>
-        <code class="pre f6 mv0">
+        <code class="whitespace f6 mv0">
         &lt;h3 class="f4 measure"&gt;Title&lt;/h3&gt;
         </code>
         <div class="pb4">
@@ -107,7 +108,7 @@
             Designers create hierarchy and contrast. Changes in scale help create visual contrast, movement, and depth as well as express hierarchies of importance.
           </p>
           <h4 class="f6 ttu tracked fw6 mt4 mb0">1.25rem (20px) at 20em</h4>
-          <code class="pre f6 mv0">
+          <code class="whitespace f6 mv0">
           &lt;h3 class="f4 measure-narrow"&gt;Title&lt;/h3&gt;
           </code>
            <div class="dib f4 measure-narrow mr5 v-top">
@@ -128,7 +129,7 @@
            </div>
         </div>
         <h4 class="f6 ttu tracked fw6 pt5 bt mt2 mb0">1rem (16px) at 30em</h4>
-        <code class="pre f6 mv0">
+        <code class="whitespace f6 mv0">
         &lt;h3 class="f5 measure"&gt;Title&lt;/h3&gt;
         </code>
         <div class="pb4">
@@ -139,7 +140,7 @@
                 printed on a book page clook flabby and overweight.
           </p>
           <h4 class="f6 ttu tracked fw6 mt4 mb0">1rem (16px) at 20em</h4>
-          <code class="pre f6 mv0">
+          <code class="whitespace f6 mv0">
           &lt;h3 class="f5 measure-narrow"&gt;Title&lt;/h3&gt;
           </code>
           <div class="dib f5 measure-narrow mr4 v-top">
@@ -160,7 +161,7 @@
           </div>
         </div>
         <h4 class="f6 ttu tracked fw6 pt5 mt2 mb0 bt">.875rem (14px) at 34em</h4>
-        <code class="pre f6 mv0">
+        <code class="whitespace f6 mv0">
         &lt;h3 class="f6 measure-wide"&gt;Title&lt;/h3&gt;
         </code>
           <p class="f6 measure-wide lh-copy">
@@ -170,7 +171,7 @@
             no sea takimata sanctus est Lorem ipsum dolor sit amet.
           </p>
         <h4 class="f6 ttu tracked fw6 pt4 mt2 mb0">.875rem (14px) at 30em</h4>
-        <code class="pre f6 mv0">
+        <code class="whitespace f6 mv0">
         &lt;h3 class="f6 measure"&gt;Title&lt;/h3&gt;
         </code>
         <div class="pb4">
@@ -181,7 +182,7 @@
             no sea takimata sanctus est Lorem ipsum dolor sit amet.
           </p>
           <h4 class="f6 ttu tracked fw6 pt4 mt2 mb0">.875rem (14px) at 20em</h4>
-          <code class="pre f6 mv0">
+          <code class="whitespace f6 mv0">
           &lt;h3 class="f6 measure-narrow"&gt;Title&lt;/h3&gt;
           </code>
          <div class="dib f5 measure-narrow mr4 v-top">
@@ -224,7 +225,7 @@
 </template>
 
 <script>
-import Page from '../components/Page.vue'
+import Page from '../../components/Page.vue'
 
 export default {
   data () {
@@ -236,5 +237,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.border-box {
+  box-sizing: border-box;
+}
+
+// TODO review this
+.whitespace {
+  white-space: normal;
+}
 </style>

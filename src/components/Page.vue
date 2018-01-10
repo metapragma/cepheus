@@ -11,7 +11,9 @@
       <h3 id="introduction" class="f4 b tl mt3 mb1 pl3">Introduction</h3>
       
         <!-- Introduction start -->
-        <slot name="introduction"></slot>
+        <div>
+          <slot name="introduction"></slot>
+        </div>
         <!-- Introduction End -->
 
         <Nav at="examples" />
@@ -21,7 +23,7 @@
         <slot name="examples"></slot>
         <!-- Examples End -->
 
-        <Nav at="reference" />
+        <Nav at="reference" class="mv3" />
 
         <div class="mt3">
           <h3 id="reference" class="f4 b pl3">Reference</h3>

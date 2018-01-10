@@ -141,9 +141,9 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue'
-import Nav from '../components/Nav.vue'
-import Links from '../components/Links.vue'
+import Header from '../../components/Header.vue'
+import Nav from '../../components/Nav.vue'
+import Links from '../../components/Links.vue'
 
 export default {
   date () {

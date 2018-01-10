@@ -8,7 +8,7 @@
     <section class="cf w-100 mt3">
       <article class="fn fl-ns w-100 w-25-l">
         <h2 class="f6 fw7 ttu tracked mv3" id="typography">Typography</h2>
-        <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/scale" title="Type">Type Scale</a>
+        <router-link class="f5 fw4 dim link blue db pv1" to="/type-scale" title="Type">Type Scale</router-link>
         <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/measure/" title="Measure">Measure</a>
         <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/line-height" title="Line Height">Line Height / Leading</a>
         <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/tracking" title="Tracking">Tracking</a>
