@@ -1,13 +1,17 @@
-@each $name, $value in $cepheus-font-family {
-  @include cepheus-register('font-family', $name, $value);
-}
-
 @if global-variable-exists('cepheus-fonts') {
   @each $slug, $font in $cepheus-fonts {
     $fallback: cepheus-get-font-fallback($slug);
     $family: '#{map-get($font, 'font-family')}';
 
     @include cepheus-register('font-family', '.#{$slug}', ('font-family': '#{$fallback}'));
-    @include cepheus-register('font-family', ('.wf-#{$slug}-active', '.#{$slug}'), ('font-family': '#{$family}, #{$fallback}'));
+    @include cepheus-register('font-family', ('.#{$slug}-loaded', '.#{$slug}'), ('font-family': '#{$family}, #{$fallback}'));
+
+    @if map-has-key($cepheus-font-family, '.#{$slug}') {
+      $cepheus-font-family: map-remove($cepheus-font-family, '.#{$slug}') !global;
+    }
   }
+}
+
+@each $name, $value in $cepheus-font-family {
+  @include cepheus-register('font-family', $name, $value);
 }

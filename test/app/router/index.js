@@ -50,6 +50,7 @@ import PartialsClears from '../components/partials-clears.vue'
 import PartialsTables from '../components/partials-tables.vue'
 import PartialsUtilities from '../components/partials-utilities.vue'
 import PartialsNested from '../components/partials-nested.vue'
+import PartialsBaselineRhythm from '../components/partials-baseline-rhythm.vue'
 // debug, forms, nested
 
 Vue.use(Router)
@@ -257,6 +258,10 @@ export default new Router({
     {
       path: '/partials/nested',
       component: PartialsNested
+    },
+    {
+      path: '/partials/baseline-rhythm',
+      component: PartialsBaselineRhythm
     },
   ]
 })

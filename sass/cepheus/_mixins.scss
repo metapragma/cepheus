@@ -20,7 +20,6 @@
   ) !global;
 }
 
-// Stage 0
 @mixin cepheus-reset-inheritance ($enabled) {
   @each $map in $cepheus-state {
     $name: map-get($map, 'name');
@@ -55,7 +54,6 @@
   }
 }
 
-// Stage 1
 @mixin cepheus-partials ($enabled) {
   @each $map in $cepheus-state {
     $name: map-get($map, 'name');

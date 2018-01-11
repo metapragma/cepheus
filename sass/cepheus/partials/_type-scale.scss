@@ -1,4 +1,7 @@
-@each $name, $value in $cepheus-type-scale {
+@each $scale, $map in $cepheus-type-scale {
+  $value: ('font-size': cepheus-font-size($scale));
+  $name: '.f#{$scale}';
+
   @include cepheus-register('type-scale', $name, $value);
   @include cepheus-register('type-scale', '#{$name}-ns', $value, 'not-small');
   @include cepheus-register('type-scale', '#{$name}-m', $value, 'medium');

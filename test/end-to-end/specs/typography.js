@@ -2,6 +2,94 @@
 // http://nightwatchjs.org/guide#usage
 
 module.exports = {
+  'partials/baseline-rhythm': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/baseline-rhythm`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#a1", "font-size", "12px")
+      .assert.cssProperty("#a1", "line-height", "16px")
+      .assert.cssProperty("#a1", "margin-bottom", "0px")
+      .assert.cssProperty("#a1", "margin-top", "-4px")
+      .assert.cssProperty("#a1", "padding-bottom", "0.36368px")
+      .assert.cssProperty("#a1", "padding-top", "3.63632px")
+
+      .assert.cssProperty("#a2", "font-size", "14px")
+      .assert.cssProperty("#a2", "line-height", "20px")
+      .assert.cssProperty("#a2", "margin-bottom", "-4px")
+      .assert.cssProperty("#a2", "margin-top", "0px")
+      .assert.cssProperty("#a2", "padding-bottom", "3.09088px")
+      .assert.cssProperty("#a2", "padding-top", "0.90912px")
+
+      .assert.cssProperty("#a3", "font-size", "16px")
+      .assert.cssProperty("#a3", "line-height", "24px")
+      .assert.cssProperty("#a3", "margin-bottom", "0px")
+      .assert.cssProperty("#a3", "margin-top", "-4px")
+      .assert.cssProperty("#a3", "padding-bottom", "1.81824px")
+      .assert.cssProperty("#a3", "padding-top", "2.18176px")
+
+      .assert.cssProperty("#a4", "font-size", "20px")
+      .assert.cssProperty("#a4", "line-height", "28px")
+      .assert.cssProperty("#a4", "margin-bottom", "0px")
+      .assert.cssProperty("#a4", "margin-top", "-4px")
+      .assert.cssProperty("#a4", "padding-bottom", "1.2728px")
+      .assert.cssProperty("#a4", "padding-top", "2.7272px")
+
+      .assert.cssProperty("#a5", "font-size", "24px")
+      .assert.cssProperty("#a5", "line-height", "32px")
+      .assert.cssProperty("#a5", "margin-bottom", "0px")
+      .assert.cssProperty("#a5", "margin-top", "-4px")
+      .assert.cssProperty("#a5", "padding-bottom", "0.7272px")
+      .assert.cssProperty("#a5", "padding-top", "3.2728px")
+
+      .assert.cssProperty("#a6", "font-size", "36px")
+      .assert.cssProperty("#a6", "line-height", "52px")
+      .assert.cssProperty("#a6", "margin-bottom", "-4px")
+      .assert.cssProperty("#a6", "margin-top", "0px")
+      .assert.cssProperty("#a6", "padding-bottom", "3.09088px")
+      .assert.cssProperty("#a6", "padding-top", "0.90912px")
+
+      .assert.cssProperty("#a7", "font-size", "48px")
+      .assert.cssProperty("#a7", "line-height", "68px")
+      .assert.cssProperty("#a7", "margin-bottom", "-4px")
+      .assert.cssProperty("#a7", "margin-top", "0px")
+      .assert.cssProperty("#a7", "padding-bottom", "3.45456px")
+      .assert.cssProperty("#a7", "padding-top", "0.54544px")
+
+      .assert.cssProperty("#a8", "font-size", "80px")
+      .assert.cssProperty("#a8", "line-height", "112px")
+      .assert.cssProperty("#a8", "margin-bottom", "0px")
+      .assert.cssProperty("#a8", "margin-top", "-4px")
+      .assert.cssProperty("#a8", "padding-bottom", "1.09088px")
+      .assert.cssProperty("#a8", "padding-top", "2.90912px")
+
+      .assert.cssProperty("#a9", "font-size", "96px")
+      .assert.cssProperty("#a9", "line-height", "136px")
+      .assert.cssProperty("#a9", "margin-bottom", "-4px")
+      .assert.cssProperty("#a9", "margin-top", "0px")
+      .assert.cssProperty("#a9", "padding-bottom", "2.90912px")
+      .assert.cssProperty("#a9", "padding-top", "1.09088px")
+      .end()
+  },
+  'partials/type-scale': browser => {
+    const devServer = browser.globals.devServerURL
+
+    browser
+      .url(`${devServer}/partials/type-scale`)
+      .waitForElementVisible('#tests', 5000)
+      .assert.cssProperty("#l0", "font-size", "16px")
+      .assert.cssProperty("#l1", "font-size", "12px")
+      .assert.cssProperty("#l2", "font-size", "14px")
+      .assert.cssProperty("#l3", "font-size", "16px")
+      .assert.cssProperty("#l4", "font-size", "20px")
+      .assert.cssProperty("#l5", "font-size", "24px")
+      .assert.cssProperty("#l6", "font-size", "36px")
+      .assert.cssProperty("#l7", "font-size", "48px")
+      .assert.cssProperty("#l8", "font-size", "80px")
+      .assert.cssProperty("#l9", "font-size", "96px")
+      .end()
+  },
   'partials/font-family': browser => {
     // automatically uses dev Server port from /config.index.js
     // default: http://localhost:8080

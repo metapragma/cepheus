@@ -4,6 +4,53 @@ $cepheus-state: () !global;
 
 $cepheus-debug: false !default;
 
+$cepheus-grid-size: 0.25rem !default;
+
+$cepheus-type-scale: (
+  '1': ('font-size': 0.75rem, 'line-height': 4),
+  '2': ('font-size': 0.875rem, 'line-height': 5),
+  '3': ('font-size': 1rem, 'line-height': 6),
+  '4': ('font-size': 1.25rem, 'line-height': 7),
+  '5': ('font-size': 1.5rem, 'line-height': 8),
+  '6': ('font-size': 2.25rem, 'line-height': 13),
+  '7': ('font-size': 3rem, 'line-height': 17),
+  '8': ('font-size': 5rem, 'line-height': 28),
+  '9': ('font-size': 6rem, 'line-height': 34),
+) !default;
+
+$cepheus-spacing-scale: (
+  '1': 0.125rem,
+  '2': 0.25rem,
+  '3': 0.5rem,
+  '4': 1rem,
+  '5': 2rem,
+  '6': 4rem,
+  '7': 8rem,
+  '8': 16rem,
+  '9': 32rem,
+  '10': 48rem,
+  '11': 64rem,
+  '12': 96rem,
+) !default;
+
+$cepheus-breakpoints: (
+  // https://github.com/trello/trellisheets/blob/master/styleguide.md#media-queries
+  // https://github.com/at-import/breakpoint/wiki/Advanced-Media-Queries#or-queries
+  small: 'only screen' (max-width 29.9375em),
+  not-small: 'only screen' (min-width 30em),
+  medium: 'only screen' 30em 47.9375em,
+  large: 'only screen' 48em,
+  extra-large: 'only screen' 64em,
+  print: print
+) !default;
+
+@include breakpoint-set('no query fallbacks', true);
+@include breakpoint-set('to ems', true);
+
+@each $breakpoint-key, $breakpoint-value in $cepheus-breakpoints {
+  @include add-breakpoint($breakpoint-key, $breakpoint-value, true);
+}
+
 $cepheus-imports: (
   'gradients',
   'word-break',
@@ -46,6 +93,7 @@ $cepheus-imports: (
   'text-decoration',
   'text-align',
   'text-transform',
+  'baseline-rhythm',
   'type-scale',
   'typography',
   'utilities',
@@ -60,7 +108,7 @@ $cepheus-imports: (
 @if $cepheus-debug {
   $cepheus-imports: join((
       'debug-children'
-      'debug'
+      // 'debug'
   ), $cepheus-imports) !global;
 }
 
@@ -107,24 +155,6 @@ $cepheus-inhertiable-properties: (
   'widows',
   'word-spacing'
 );
-
-$cepheus-breakpoints: (
-  // https://github.com/trello/trellisheets/blob/master/styleguide.md#media-queries
-  // https://github.com/at-import/breakpoint/wiki/Advanced-Media-Queries#or-queries
-  small: 'only screen' (max-width 29.9375em),
-  not-small: 'only screen' (min-width 30em),
-  medium: 'only screen' 30em 47.9375em,
-  large: 'only screen' 48em,
-  extra-large: 'only screen' 64em,
-  print: print
-) !default;
-
-@include breakpoint-set('no query fallbacks', true);
-@include breakpoint-set('to ems', true);
-
-@each $breakpoint-key, $breakpoint-value in $cepheus-breakpoints {
-  @include add-breakpoint($breakpoint-key, $breakpoint-value, true);
-}
 
 $cepheus-colors: (
   'black': #000,
@@ -189,21 +219,6 @@ $cepheus-colors: (
   'washed-yellow': #fffceb,
   'washed-red': #ffdfdf,
   'inherit': inherit
-) !default;
-
-$cepheus-spacing-scale: (
-  '1': 0.125rem,
-  '2': 0.25rem,
-  '3': 0.5rem,
-  '4': 1rem,
-  '5': 2rem,
-  '6': 4rem,
-  '7': 8rem,
-  '8': 16rem,
-  '9': 32rem,
-  '10': 48rem,
-  '11': 64rem,
-  '12': 96rem,
 ) !default;
 
 $cepheus-font-family-fallback: (
@@ -899,20 +914,6 @@ $cepheus-text-transform: (
   '.ttl': ('text-transform': lowercase),
   '.ttu': ('text-transform': uppercase),
   '.ttn': ('text-transform': none)
-) !default;
-
-$cepheus-type-scale: (
-  '.f-6': ('font-size': 6rem),
-  '.f-headline': ('font-size': 6rem),
-  '.f-5': ('font-size': 5rem),
-  '.f-subheadline': ('font-size': 5rem),
-  '.f1': ('font-size': 3rem),
-  '.f2': ('font-size': 2.25rem),
-  '.f3': ('font-size': 1.5rem),
-  '.f4': ('font-size': 1.25rem),
-  '.f5': ('font-size': 1rem),
-  '.f6': ('font-size': 0.875rem),
-  '.f7': ('font-size': 0.75rem)
 ) !default;
 
 $cepheus-typography: (

@@ -1,3 +1,132 @@
+@function cepheus-strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// Check if a value is a non-negative integer
+@function cepheus-is-integer ($value) {
+  @return (unitless($value) and $value == round($value));
+}
+
+// Round value to the nearest quarter pixel
+// This provides reasonable precision and prevents grid creep (by fractions adding up) in most browsers
+@function cepheus-round ($value) {
+  @return round($value * 4) / 4;
+}
+
+@function cepheus-plumber(
+  $baseline: null,
+  $font-size: null,
+  $line-height: null,
+  $grid-height: null,
+  $leading-top: 0,
+  $leading-bottom: 0,
+  $use-baseline-origin: false
+) {
+  @if not unitless($font-size) or $font-size <= 0 {
+    @error '$font-size parameter must be a positive unitless number, got #{$font-size} instead';
+  }
+
+  @if not unitless($line-height) or $line-height != round($line-height) or $line-height < 1 {
+    @error '$line-height parameter must be a positive unitless integer, got #{$line-height} instead';
+  }
+
+  @if not cepheus-is-integer($leading-top) {
+    @error '$leading-top parameter must be a non-negative integer, got #{$leading-top} instead.';
+  }
+
+  @if not cepheus-is-integer($leading-bottom) {
+    @error '$leading-bottom parameter must be a non-negative integer, got #{$leading-bottom} instead';
+  }
+
+  @if unitless($grid-height) or $grid-height < 0 {
+    @error '$grid-height parameter must be a positive unit, got #{$grid-height} instead';
+  }
+
+  @if not $baseline {
+    @error '$baseline must be passed as a parameter or defined in defaults';
+  } @else if not (unitless($baseline) and $baseline >= 0 and $baseline < 1) {
+    @error '$baseline parameter must be a unitless fraction between 0 and 1, got #{$baseline} instead';
+  }
+
+  @if type-of($use-baseline-origin) != bool {
+    @error '$use-baseline-origin parameter must be Boolean, got #{$use-baseline-origin} instead';
+  }
+
+  // *** CALCULATE BASELINE CORRECTION ***
+  // the distance of the original baseline from the bottom
+  $baseline-from-bottom: ($line-height - $font-size) / 2 + ($font-size * $baseline);
+  // the corrected baseline will be on the nearest gridline
+  $corrected-baseline: round($baseline-from-bottom);
+  // the difference between the original and the corrected baseline
+  $baseline-difference: $corrected-baseline - $baseline-from-bottom;
+
+  // if baseline origin is used for leadings substract the distance of the baseline from the edges
+  @if $use-baseline-origin == true {
+    $leading-top: $leading-top - ($line-height - $corrected-baseline);
+    $leading-bottom: $leading-bottom - $corrected-baseline;
+  }
+
+  // *** CALCULATE FONT SIZE AND LINE HEIGHT
+  $font-size: $font-size * $grid-height;
+  $line-height: $line-height * $grid-height;
+
+  // *** CALCULATE MARGINS AND PADDINGS ***
+  $padding-top: null;
+  $margin-top: null;
+  $margin-bottom: null;
+  $padding-bottom: null;
+
+  @if $baseline-difference < 0 {
+    // add top leading
+    $margin-top: $leading-top * $grid-height;
+    // push the baseline down to the next gridline
+    $padding-top: - $baseline-difference * $grid-height;
+    // add the remaining distance to reach the next gridline
+    $padding-bottom: (1 + $baseline-difference) * $grid-height;
+    // add bottom leading and remove the 1 excess grid height that comes from pushing down
+    $margin-bottom: ($leading-bottom - 1) * $grid-height;
+  } @else {
+    // add top leading and remove the 1 excess grid height that comes from pulling up
+    $margin-top: ($leading-top - 1) * $grid-height;
+    // pull the baseline up to the previous gridline
+    $padding-top: (1 - $baseline-difference) * $grid-height;
+    // add the remaining distance to reach the next gridline
+    $padding-bottom: $baseline-difference * $grid-height;
+    // add bottom leading
+    $margin-bottom: $leading-bottom * $grid-height;
+  }
+
+  // round pixel values to decrease browser inconsistencies
+  @if unit($grid-height) == 'px' {
+    $line-height: cepheus-round($line-height);
+    $margin-bottom: cepheus-round($margin-bottom);
+    $margin-top: cepheus-round($margin-top);
+    $padding-bottom: cepheus-round($padding-bottom);
+    $padding-top: cepheus-round($padding-top);
+  }
+
+  @return (
+  'font-size': $font-size,
+  'line-height': $line-height,
+  'margin-bottom': $margin-bottom,
+  'margin-top': $margin-top,
+  'padding-bottom': $padding-bottom,
+  'padding-top': $padding-top,
+  );
+}
+
+@function cepheus-font-size ($key) {
+  @return map-get(map-get($cepheus-type-scale, '#{$key}'), 'font-size')
+}
+
+@function cepheus-line-height ($key) {
+  @return map-get(map-get($cepheus-type-scale, '#{$key}'), 'line-height')
+}
+
 @function cepheus-spacing ($key) {
   @if type-of($key) == 'number' {
     @if $key == 0 {
@@ -8,7 +137,7 @@
       @return map-get($cepheus-spacing-scale, '#{$key}')
     }
   } @else {
-    @error 'Cepheus: cepheus-spacing key must be a number'
+    @error 'Cepheus: cepheus-spacing argument must be a number'
   }
 }
 

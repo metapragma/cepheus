@@ -63,10 +63,10 @@ export default {
   methods: {
     toggle () {
       const cl = document.body.classList
-      if (cl.contains('wf-inter-ui-active')) {
-        cl.remove('wf-inter-ui-active')
+      if (cl.contains('inter-ui-loaded')) {
+        cl.remove('inter-ui-loaded')
       } else {
-        cl.add('wf-inter-ui-active')
+        cl.add('inter-ui-loaded')
       }
     }
   }

@@ -1,0 +1,19 @@
+@if global-variable-exists('cepheus-fonts') {
+  @each $slug, $font in $cepheus-fonts {
+    @each $scale, $size in $cepheus-type-scale {
+      $property-map: cepheus-plumber(
+        $baseline: map-get($font, 'font-baseline'),
+        $font-size: cepheus-strip-unit(cepheus-font-size($scale) / $cepheus-grid-size),
+        $line-height: cepheus-line-height($scale),
+        $grid-height: $cepheus-grid-size
+      );
+
+      $name: '.#{$slug}-#{$scale}';
+
+      @include cepheus-register('baseline-rhythm', $name, $property-map);
+      @include cepheus-register('baseline-rhythm', '#{$name}-ns', $property-map, 'not-small');
+      @include cepheus-register('baseline-rhythm', '#{$name}-m', $property-map, 'medium');
+      @include cepheus-register('baseline-rhythm', '#{$name}-l', $property-map, 'large');
+    }
+  }
+}
