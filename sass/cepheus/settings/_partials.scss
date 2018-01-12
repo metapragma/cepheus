@@ -251,19 +251,19 @@ $cepheus-hovers: (
   '.dim:hover': ('opacity': 0.5, 'transition': opacity 0.15s ease-in),
   '.dim:focus': ('opacity': 0.5, 'transition': opacity 0.15s ease-in),
   '.dim:active': ('opacity': 0.8, 'transition': opacity 0.15s ease-out),
-    // Animate opacity to 100% on hover by adding the glow class.
+  // Animate opacity to 100% on hover by adding the glow class.
   '.glow': ('transition': opacity 0.15s ease-in),
   '.glow:hover': ('opacity': 1, 'transition': opacity 0.15s ease-in),
   '.glow:focus': ('opacity': 1, 'transition': opacity 0.15s ease-in),
-    // Hide child & reveal on hover:
-    // Put the hide-child class on a parent element and any nested element with the
-    // child class will be hidden and displayed on hover or focus.
-    // <div class="hide-child">
-    //   <div class="child"> Hidden until hover or focus </div>
-    //   <div class="child"> Hidden until hover or focus </div>
-    //   <div class="child"> Hidden until hover or focus </div>
-    //   <div class="child"> Hidden until hover or focus </div>
-    // </div>
+  // Hide child & reveal on hover:
+  // Put the hide-child class on a parent element and any nested element with the
+  // child class will be hidden and displayed on hover or focus.
+  // <div class="hide-child">
+  //   <div class="child"> Hidden until hover or focus </div>
+  //   <div class="child"> Hidden until hover or focus </div>
+  //   <div class="child"> Hidden until hover or focus </div>
+  //   <div class="child"> Hidden until hover or focus </div>
+  // </div>
   '.hide-child .child': ('opacity': 0, 'transition': opacity 0.15s ease-in),
   '.hide-child:hover .child': ('opacity': 1, 'transition': opacity 0.15s ease-in),
   '.hide-child:focus .child': ('opacity': 1, 'transition': opacity 0.15s ease-in),
@@ -275,22 +275,20 @@ $cepheus-hovers: (
   '.grow': ('-moz-osx-font-smoothing': grayscale, 'backface-visibility': hidden, 'transform': translateZ(0), 'transition': transform 0.25s ease-out),
   '.grow:hover': ('transform': scale(1.05)),
   '.grow:focus': ('transform': scale(1.05)),
-  '.grow:active': ('transform': scale(0.90)),
+  '.grow:active': ('transform': scale(0.9)),
   '.grow-large': ('-moz-osx-font-smoothing': grayscale, 'backface-visibility': hidden, 'transform': translateZ(0), 'transition': transform 0.25s ease-in-out),
   'grow-large:hover': ('transform': scale(1.2)),
   'grow-large:focus': ('transform': scale(1.2)),
-  '.grow-large:active': ('transform': scale(.95)),
+  '.grow-large:active': ('transform': scale(0.95)),
   // Add pointer on hover
   '.pointer:hover': ('cursor': pointer),
-  /*
-    Add shadow on hover.
-    Performant box-shadow animation pattern from
-    http://tobiasahlin.com/blog/how-to-animate-box-shadow/
-  */
+  // Add shadow on hover.
+  // Performant box-shadow animation pattern from
+  // http://tobiasahlin.com/blog/how-to-animate-box-shadow/
   '.shadow-hover': ('cursor': pointer, 'position': relative, 'transition': all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)),
   '.shadow-hover::after': (
     'content': '',
-    'box-shadow': 0px 0px 16px 2px rgba( 0, 0, 0, .2 ),
+    'box-shadow': 0 0 16px 2px rgba(0, 0, 0, 0.2),
     'border-radius': inherit,
     'opacity': 0,
     'position': absolute,
@@ -303,15 +301,15 @@ $cepheus-hovers: (
   ),
   '.shadow-hover:hover::after': ('opacity': 1),
   '.shadow-hover:focus::after': ('opacity': 1),
-  /* Combine with classes in skins and skins-pseudo for 
-  * many different transition possibilities. */
+  // Combine with classes in skins and skins-pseudo for 
+  // * many different transition possibilities.
   '.bg-animate': ('transition': background-color 0.15s ease-in-out),
   '.bg-animate:hover': ('transition': background-color 0.15s ease-in-out),
   '.bg-animate:focus': ('transition': background-color 0.15s ease-in-out)
 ) !default;
 
 $cepheus-flexbox: (
-  '.flex-auto': ('flex': 1 1 auto, 'min-width': 0, /* 1 */ 'min-height': 0 /* 1 */),
+  '.flex-auto': ('flex': 1 1 auto, 'min-width': 0, 'min-height': 0),
   '.flex-none': ('flex': none),
   '.flex-column': ('flex-direction': column),
   '.flex-row': ('flex-direction': row),
@@ -383,130 +381,130 @@ $cepheus-aspect-ratios: (
 ) !default;
 
 $cepheus-background-size: (
-  '.cover': ('background-size': cover !important),
-  '.contain': ('background-size': contain !important)
+  '.cover': ('background-size': cover),
+  '.contain': ('background-size': contain)
 ) !default;
 
 $cepheus-display: (
-'.dn': ('display': none),
-'.di': ('display': inline),
-'.db': ('display': block),
-'.dib': ('display': inline-block),
-'.dit': ('display': inline-table),
-'.dt': ('display': table),
-'.dtc': ('display': table-cell),
-'.dt-row': ('display': table-row),
-'.dt-row-group': ('display': table-row-group),
-'.dt-column': ('display': table-column),
-'.dt-column-group': ('display': table-column-group),
-'.dt--fixed': ('table-layout': fixed, 'width': 100%)
+  '.dn': ('display': none),
+  '.di': ('display': inline),
+  '.db': ('display': block),
+  '.dib': ('display': inline-block),
+  '.dit': ('display': inline-table),
+  '.dt': ('display': table),
+  '.dtc': ('display': table-cell),
+  '.dt-row': ('display': table-row),
+  '.dt-row-group': ('display': table-row-group),
+  '.dt-column': ('display': table-column),
+  '.dt-column-group': ('display': table-column-group),
+  '.dt--fixed': ('table-layout': fixed, 'width': 100%)
 ) !default;
 
 $cepheus-debug: (
-  'body': ('outline': 1px solid  #2980b9 !important), 
-  'article': ('outline': 1px solid  #3498db !important),
-  'nav': ('outline': 1px solid  #0088c3 !important),
-  'aside': ('outline': 1px solid  #33a0Ce !important),
-  'section': ('outline': 1px solid  #66b8da !important),
-  'header': ('outline': 1px solid  #99cfe7 !important),
-  'footer': ('outline': 1px solid  #cce7f3 !important),
-  'h1': ('outline': 1px solid  #162544 !important),
-  'h2': ('outline': 1px solid  #314E6E !important),
-  'h3': ('outline': 1px solid  #3E5E85 !important),
-  'h4': ('outline': 1px solid  #449BAF !important),
-  'h5': ('outline': 1px solid  #C7D1CB !important),
-  'h6': ('outline': 1px solid  #4371D0 !important),
-  'main': ('outline': 1px solid  #2F4F90 !important),
-  'address': ('outline': 1px solid  #1A2C51 !important),
-  'div': ('outline': 1px solid  #036CDB !important),
-  'p': ('outline': 1px solid  #AC050B !important),
-  'hr': ('outline': 1px solid  #FF063F !important),
-  'pre': ('outline': 1px solid  #850440 !important),
-  'blockquote': ('outline': 1px solid  #F1B8E7 !important),
-  'ol': ('outline': 1px solid  #FF050C !important),
-  'ul': ('outline': 1px solid  #D90416 !important),
-  'li': ('outline': 1px solid  #D90416 !important),
-  'dl': ('outline': 1px solid  #FD3427 !important),
-  'dt': ('outline': 1px solid  #FF0043 !important),
-  'dd': ('outline': 1px solid  #E80174 !important),
-  'figure': ('outline': 1px solid  #FF00BB !important),
-  'figcaption': ('outline': 1px solid  #BF0032 !important),
-  'table': ('outline': 1px solid  #00CC99 !important),
-  'caption': ('outline': 1px solid  #37FFC4 !important),
-  'thead': (  'outline': 1px solid  #98DACA !important),
-  'tbody': (  'outline': 1px solid  #64A7A0 !important),
-  'tfoot': (  'outline': 1px solid  #22746B !important),
-  'tr': ('outline': 1px solid  #86C0B2 !important),
-  'th': ('outline': 1px solid  #A1E7D6 !important),
-  'td': ('outline': 1px solid  #3F5A54 !important),
-  'col': ('outline': 1px solid  #6C9A8F !important),
-  'colgroup': ('outline': 1px solid  #6C9A9D !important),
-  'button': ('outline': 1px solid  #DA8301 !important),
-  'datalist': ('outline': 1px solid  #C06000 !important),
-  'fieldset': ('outline': 1px solid  #D95100 !important),
-  'form': ('outline': 1px solid  #D23600 !important),
-  'input': ('outline': 1px solid  #FCA600 !important),
-  'keygen': ( 'outline': 1px solid  #B31E00 !important),
-  'label': ('outline': 1px solid  #EE8900 !important),
-  'legend': ('outline': 1px solid  #DE6D00 !important),
-  'meter': ('outline': 1px solid  #E8630C !important),
-  'optgroup': ('outline': 1px solid  #B33600 !important),
-  'option': ( 'outline': 1px solid  #FF8A00 !important),
-  'output': ( 'outline': 1px solid  #FF9619 !important),
-  'progress': ('outline': 1px solid  #E57C00 !important),
-  'select': ( 'outline': 1px solid  #E26E0F !important),
-  'textarea': ('outline': 1px solid  #CC5400 !important),
-  'details': ('outline': 1px solid  #33848F !important),
-  'summary': ('outline': 1px solid  #60A1A6 !important),
-  'command': ('outline': 1px solid  #438DA1 !important),
-  'menu': ('outline': 1px solid  #449DA6 !important),
-  'del': ( 'outline': 1px solid  #BF0000 !important),
-  'ins': ( 'outline': 1px solid  #400000 !important),
-  'img': ('outline': 1px solid #22746B !important),
-  'iframe': ('outline': 1px solid #64A7A0 !important),
-  'embed': ('outline': 1px solid #98DACA !important),
-  'object': ('outline': 1px solid #00CC99 !important),
-  'param': ('outline': 1px solid #37FFC4 !important),
-  'video': ('outline': 1px solid #6EE866 !important),
-  'audio': ('outline': 1px solid #027353 !important),
-  'source': ('outline': 1px solid #012426 !important),
-  'canvas': ('outline': 1px solid #A2F570 !important),
-  'track': ('outline': 1px solid #59A600 !important),
-  'map': ('outline': 1px solid #7BE500 !important),
-  'area': ('outline': 1px solid #305900 !important),
-  'a': ('outline': 1px solid #FF62AB !important),
-  'em': ('outline': 1px solid #800B41 !important),
-  'strong': ('outline': 1px solid #FF1583 !important),
-  'i': ('outline': 1px solid #803156 !important),
-  'b': ('outline': 1px solid #CC1169 !important),
-  'u': ('outline': 1px solid #FF0430 !important),
-  's': ('outline': 1px solid #F805E3 !important),
-  'small': ('outline': 1px solid #D107B2 !important),
-  'abbr': ('outline': 1px solid #4A0263 !important),
-  'q': ('outline': 1px solid #240018 !important),
-  'cite': ('outline': 1px solid #64003C !important),
-  'dfn': ('outline': 1px solid #B4005A !important),
-  'sub': ('outline': 1px solid #DBA0C8 !important),
-  'sup': ('outline': 1px solid #CC0256 !important),
-  'time': ('outline': 1px solid #D6606D !important),
-  'code': ('outline': 1px solid #E04251 !important),
-  'kbd': ('outline': 1px solid #5E001F !important),
-  'samp': ('outline': 1px solid #9C0033 !important),
-  'var': ('outline': 1px solid #D90047 !important),
-  'mark': ('outline': 1px solid #FF0053 !important),
-  'bdi': ('outline': 1px solid #BF3668 !important),
-  'bdo': ('outline': 1px solid #6F1400 !important),
-  'ruby': ('outline': 1px solid #FF7B93 !important),
-  'rt': ('outline': 1px solid #FF2F54 !important),
-  'rp': ('outline': 1px solid #803E49 !important),
-  'span': ('outline': 1px solid #CC2643 !important),
-  'br': ('outline': 1px solid #DB687D !important)
+  'body': ('outline': 1px solid  #2980b9),
+  'article': ('outline': 1px solid  #3498db),
+  'nav': ('outline': 1px solid  #0088c3),
+  'aside': ('outline': 1px solid  #33a0ce),
+  'section': ('outline': 1px solid  #66b8da),
+  'header': ('outline': 1px solid  #99cfe7),
+  'footer': ('outline': 1px solid  #cce7f3),
+  'h1': ('outline': 1px solid  #162544),
+  'h2': ('outline': 1px solid  #314e6e),
+  'h3': ('outline': 1px solid  #3e5e85),
+  'h4': ('outline': 1px solid  #449baf),
+  'h5': ('outline': 1px solid  #c7d1cb),
+  'h6': ('outline': 1px solid  #4371d0),
+  'main': ('outline': 1px solid  #2f4f90),
+  'address': ('outline': 1px solid  #1a2c51),
+  'div': ('outline': 1px solid  #036cdb),
+  'p': ('outline': 1px solid  #ac050b),
+  'hr': ('outline': 1px solid  #ff063f),
+  'pre': ('outline': 1px solid  #850440),
+  'blockquote': ('outline': 1px solid  #f1b8e7),
+  'ol': ('outline': 1px solid  #ff050c),
+  'ul': ('outline': 1px solid  #d90416),
+  'li': ('outline': 1px solid  #d90416),
+  'dl': ('outline': 1px solid  #fd3427),
+  'dt': ('outline': 1px solid  #ff0043),
+  'dd': ('outline': 1px solid  #e80174),
+  'figure': ('outline': 1px solid  #f0b),
+  'figcaption': ('outline': 1px solid  #bf0032),
+  'table': ('outline': 1px solid  #0c9),
+  'caption': ('outline': 1px solid  #37ffc4),
+  'thead': (  'outline': 1px solid  #98daca),
+  'tbody': (  'outline': 1px solid  #64a7a0),
+  'tfoot': (  'outline': 1px solid  #22746b),
+  'tr': ('outline': 1px solid  #86c0b2),
+  'th': ('outline': 1px solid  #a1e7d6),
+  'td': ('outline': 1px solid  #3f5a54),
+  'col': ('outline': 1px solid  #6c9a8f),
+  'colgroup': ('outline': 1px solid  #6c9a9d),
+  'button': ('outline': 1px solid  #da8301),
+  'datalist': ('outline': 1px solid  #c06000),
+  'fieldset': ('outline': 1px solid  #d95100),
+  'form': ('outline': 1px solid  #d23600),
+  'input': ('outline': 1px solid  #fca600),
+  'keygen': ( 'outline': 1px solid  #b31e00),
+  'label': ('outline': 1px solid  #ee8900),
+  'legend': ('outline': 1px solid  #de6d00),
+  'meter': ('outline': 1px solid  #e8630c),
+  'optgroup': ('outline': 1px solid  #b33600),
+  'option': ( 'outline': 1px solid  #ff8a00),
+  'output': ( 'outline': 1px solid  #ff9619),
+  'progress': ('outline': 1px solid  #e57c00),
+  'select': ( 'outline': 1px solid  #e26e0f),
+  'textarea': ('outline': 1px solid  #cc5400),
+  'details': ('outline': 1px solid  #33848f),
+  'summary': ('outline': 1px solid  #60a1a6),
+  'command': ('outline': 1px solid  #438da1),
+  'menu': ('outline': 1px solid  #449da6),
+  'del': ( 'outline': 1px solid  #bf0000),
+  'ins': ( 'outline': 1px solid  #400000),
+  'img': ('outline': 1px solid #22746b),
+  'iframe': ('outline': 1px solid #64a7a0),
+  'embed': ('outline': 1px solid #98daca),
+  'object': ('outline': 1px solid #0c9),
+  'param': ('outline': 1px solid #37ffc4),
+  'video': ('outline': 1px solid #6ee866),
+  'audio': ('outline': 1px solid #027353),
+  'source': ('outline': 1px solid #012426),
+  'canvas': ('outline': 1px solid #a2f570),
+  'track': ('outline': 1px solid #59a600),
+  'map': ('outline': 1px solid #7be500),
+  'area': ('outline': 1px solid #305900),
+  'a': ('outline': 1px solid #ff62ab),
+  'em': ('outline': 1px solid #800b41),
+  'strong': ('outline': 1px solid #ff1583),
+  'i': ('outline': 1px solid #803156),
+  'b': ('outline': 1px solid #cc1169),
+  'u': ('outline': 1px solid #ff0430),
+  's': ('outline': 1px solid #f805e3),
+  'small': ('outline': 1px solid #d107b2),
+  'abbr': ('outline': 1px solid #4a0263),
+  'q': ('outline': 1px solid #240018),
+  'cite': ('outline': 1px solid #64003c),
+  'dfn': ('outline': 1px solid #b4005a),
+  'sub': ('outline': 1px solid #dba0c8),
+  'sup': ('outline': 1px solid #cc0256),
+  'time': ('outline': 1px solid #d6606d),
+  'code': ('outline': 1px solid #e04251),
+  'kbd': ('outline': 1px solid #5e001f),
+  'samp': ('outline': 1px solid #9c0033),
+  'var': ('outline': 1px solid #d90047),
+  'mark': ('outline': 1px solid #ff0053),
+  'bdi': ('outline': 1px solid #bf3668),
+  'bdo': ('outline': 1px solid #6f1400),
+  'ruby': ('outline': 1px solid #ff7b93),
+  'rt': ('outline': 1px solid #ff2f54),
+  'rp': ('outline': 1px solid #803e49),
+  'span': ('outline': 1px solid #cc2643),
+  'br': ('outline': 1px solid #bd687d)
 ) !default;
 
 $cepheus-debug-children: (
-  '.debug *': ('outline': 1px solid gold),
-  '.debug-white *': ('outline': 1px solid white),
-  '.debug-black *': ('outline': 1px solid black)
+  '.debug *': ('outline': 1px solid #ffd700),
+  '.debug-white *': ('outline': 1px solid #fff),
+  '.debug-black *': ('outline': 1px solid #000)
 ) !default;
 
 $cepheus-font-style: (
@@ -721,8 +719,8 @@ $cepheus-utilities: (
 
 $cepheus-visibility: (
   '.clip': (
-    'position': fixed !important, 
-    '_position': absolute !important, 
+    'position': fixed,
+    '_position': absolute,
     'clip': rect(1px, 1px, 1px, 1px)
   )
 ) !default;
@@ -808,7 +806,7 @@ $cepheus-nested: (
   '.nested-img img': ('width': 100%, 'max-width': 100%, 'display': block),
   '.nested-links a': ('color': #357edd, 'transition': color 0.15s ease-in),
   '.nested-links a:hover': ('color': #96ccff, 'transition': color 0.15s ease-in),
-  '.nested-links a:focus': ('color': #96ccff, 'transition': color 0.15s ease-in), 
+  '.nested-links a:focus': ('color': #96ccff, 'transition': color 0.15s ease-in),
 ) !default;
 
 $cepheus-images: (
