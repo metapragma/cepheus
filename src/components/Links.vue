@@ -8,18 +8,18 @@
     <section class="cf w-100 mt3">
       <article class="fn fl-ns w-100 w-25-l">
         <h2 class="f6 fw7 ttu tracked mv3" id="typography">Typography</h2>
-        <router-link class="f5 fw4 dim link blue db pv1" to="typography/type-scale" title="Type">Type Scale</router-link>
-        <router-link class="f5 fw4 dim link blue db pv1" to="typography/measure/" title="Measure">Measure</router-link>
-        <router-link class="f5 fw4 dim link blue db pv1" to="/docs/typography/line-height" title="Line Height">Line Height / Leading</router-link>
-        <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/tracking" title="Tracking">Tracking</a>
-        <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/font-weight" title="Font Weights">Font Weights</a>
-        <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/font-style" title="Font Families">Font Style</a>
-        <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/vertical-align" title="Font Families">Vertical Align</a>
-        <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/text-align" title="Text Align">Text Align</a>
-        <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/text-transform" title="Text Transform">Text Transform</a>
-        <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/text-decoration" title="Text Decoration">Text Decoration</a>
-        <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/white-space" title="White Space">White Space</a>
-        <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/font-family" title="Font Families">Font Families</a>
+        <router-link class="f5 fw4 dim link blue db pv1" to="/typography/type-scale" title="Type">Type Scale</router-link>
+        <router-link class="f5 fw4 dim link blue db pv1" to="/typography/measure" title="Measure">Measure</router-link>
+        <router-link class="f5 fw4 dim link blue db pv1" to="/typography/line-height" title="Line Height">Line Height / Leading</router-link>
+        <router-link class="f5 fw4 dim link blue db pv1" to="/typography/tracking" title="Tracking">Tracking</router-link>
+        <router-link class="f5 fw4 dim link blue db pv1" to="/typography/font-weight" title="Font Weights">Font Weights</router-link>
+        <router-link class="f5 fw4 dim link blue db pv1" to="/typography/font-style" title="Font Families">Font Style</router-link>
+        <router-link class="f5 fw4 dim link blue db pv1" to="/typography/vertical-align" title="Font Families">Vertical Align</router-link>
+        <router-link class="f5 fw4 dim link blue db pv1" to="/typography/text-align" title="Text Align">Text Align</router-link>
+        <router-link class="f5 fw4 dim link blue db pv1" to="/typography/text-transform" title="Text Transform">Text Transform</router-link>
+        <router-link class="f5 fw4 dim link blue db pv1" to="/typography/text-decoration" title="Text Decoration">Text Decoration</router-link>
+        <router-link class="f5 fw4 dim link blue db pv1" to="/typography/white-space" title="White Space">White Space</router-link>
+        <router-link class="f5 fw4 dim link blue db pv1" to="/typography/font-family" title="Font Families">Font Families</router-link>
         <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/font-family/avenir" title="Font Families">Avenir Next</a>
         <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/font-family/helvetica" title="Font Families">Helvetica</a>
         <a class="f5 fw4 dim link blue db pv1" href="/docs/typography/font-family/roboto" title="Font Families">Roboto</a>

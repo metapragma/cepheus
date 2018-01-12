@@ -15,6 +15,13 @@ import TextDecoration from '../pages/typography/text-decoration.vue'
 import WhiteSpace from '../pages/typography/white-space.vue'
 import FontFamily from '../pages/typography/font-family.vue'
 
+import Elements from '../pages/elements/elements.vue'
+import Links from '../pages/elements/links.vue'
+import Lists from '../pages/elements/lists.vue'
+import Forms from '../pages/elements/forms.vue'
+import Tables from '../pages/elements/tables.vue'
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -82,6 +89,30 @@ export default new Router({
           name: 'Font Family',
           component: FontFamily
         }
+      ]
+    },
+    { path: '/elements', component: Elements,
+      children: [
+        {
+          path: 'links',
+          name: 'Links',
+          component: Links
+        },
+        {
+          path: 'lists',
+          name: 'Lists',
+          component: Lists
+        },
+        {
+          path: 'forms',
+          name: 'Forms',
+          component: Forms
+        },
+        {
+          path: 'tables',
+          name: 'Tables',
+          component: Tables
+        },  
       ]
     }
   ]

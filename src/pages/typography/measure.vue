@@ -213,7 +213,7 @@
         </p>
       </div>
 
-      <div slot="reference" class="mv4 pv4 bt bb b--black-10">
+      <div slot="reference" class="mb5 mt3 ph3">
         <div class="dib">
           <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width" class="dib link fw6 blue dim mr3">MDN - width</a>
           <a href="http://webtypography.net/2.1.2" class="link fw6 blue dib dim">Choose a Comfortable Measure</a>

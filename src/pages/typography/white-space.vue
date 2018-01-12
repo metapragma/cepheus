@@ -66,7 +66,7 @@ for displaying unix style commands where indicating everything is on one line is
 
         </div>
        
-        <div slot="reference" class="mt5">
+        <div slot="reference" class="mb5 mt3 ph3">
           <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space" class="link fw6 blue dim">MDN - White Space</a>
         </div>
 

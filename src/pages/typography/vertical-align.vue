@@ -133,7 +133,7 @@ children of an element with a class of <code>dt</code>.
         </div>
       </div>
 
-      <div class="mt5">
+      <div class="mb5 mt3 ph3">
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align" class="link fw6 blue dim">MDN - Vertical Align</a>
       </div>
 

@@ -57,7 +57,7 @@
         </div>
       </div>
 
-      <div class="mt5">
+      <div class="mb5 mt3 ph3">
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing" class="link fw6 blue dim">MDN - Letter Spacing</a>
       </div>
 

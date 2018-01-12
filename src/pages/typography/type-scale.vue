@@ -107,20 +107,10 @@
         <p class="f6 lh-copy mt0 measure word-wrap">
           A modular scale, like a musical scale, is a prearranged set of harmonious proportions.
         </p>
-        <div class="mt5 cf">
-          <div class="dib mr4">
-            <h4 class="f6 fw6">Previous</h4>
-            <a href="/docs/elements/forms/" class="link fw6 blue dim">Forms</a>
-          </div>
-          <div class="dib">
-            <h4 class="f6 fw6">Next</h4>
-            <a href="/docs/typography/measure/" class="link fw6 blue dim">Measure</a>
-          </div>
-        </div>
       </div>
     </div>
 
-    <div slot="reference" class="mt5">
+    <div slot="reference" class="mb5 mt3 ph3">
       <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" class="link fw6 blue dim">MDN - Font-size</a>
     </div>
 

@@ -27,13 +27,9 @@
           A quote from Jan Tschichold about typography.
         </p>
         
-        <div class="mt5">
-          <h4 class="f6 fw6">Reference</h4>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight" class="link fw6 blue dim">MDN - Font Weight</a>
-        </div>
       </div>
 
-      <div slot="reference" class="mt5">
+      <div slot="reference" class="mb5 mt3 ph3">
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight" class="link fw6 blue dim">MDN - Font Weight</a>
       </div>
 

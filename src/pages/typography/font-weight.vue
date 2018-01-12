@@ -66,7 +66,7 @@
           <p class="f4 f3-ns fw9 pl3 pl4-ns bl bw2 b--black-10 mb5">Font-weight: 900</p>
       </div>
 
-      <div slot="reference" class="mt5">
+      <div slot="reference" class="mb5 mt3 ph3">
         <h4 class="f6 fw6">Reference</h4>
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight" class="link fw6 blue dim">MDN - Font Weight</a>
       </div>
