@@ -21,6 +21,16 @@ import Lists from '../pages/elements/lists.vue'
 import Forms from '../pages/elements/forms.vue'
 import Tables from '../pages/elements/tables.vue'
 
+import Theming from '../pages/theming/theming.vue'
+import Skins from '../pages/theming/skins.vue'
+import SkinsPseudo from '../pages/theming/skins-pseudo.vue'
+import Hovers from '../pages/theming/hovers.vue'
+import BackgroundSize from '../pages/theming/background-size.vue'
+import Borders from '../pages/theming/borders.vue'
+import BorderRadius from '../pages/theming/border-radius.vue'
+import BoxShadow from '../pages/theming/box-shadow.vue'
+import Opacity from '../pages/theming/opacity.vue'
+
 
 Vue.use(Router)
 
@@ -113,6 +123,55 @@ export default new Router({
           name: 'Tables',
           component: Tables
         },  
+      ]
+    },
+    { path: '/theming', component: Theming,
+      children: [
+        {
+          path: 'links',
+          name: 'Links',
+          component: Links
+        },
+        {
+          path: 'skins',
+          name: 'Skins',
+          component: Skins
+        },
+        {
+          path: 'skins-pseudo',
+          name: 'Skins Pseudo',
+          component: SkinsPseudo
+        },
+        {
+          path: 'hovers',
+          name: 'Hovers',
+          component: Hovers
+        },
+        {
+          path: 'background-size',
+          name: 'Background Size',
+          component: BackgroundSize
+        },
+        {
+          path: 'borders',
+          name: 'Borders',
+          component: Borders
+        },
+        {
+          path: 'border-radius',
+          name: 'Border Raduis',
+          component: BorderRadius
+        },
+        {
+          path: 'box-shadow',
+          name: 'Box Shadow',
+          component: BoxShadow
+        },
+        {
+          path: 'opacity',
+          name: 'Opacity',
+          component: Opacity
+        } 
       ]
     }
   ]
