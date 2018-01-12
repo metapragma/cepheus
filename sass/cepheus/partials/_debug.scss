@@ -1,3 +1,0 @@
-@each $name, $value in $cepheus-debug-outline {
-  @include cepheus-register('debug', $name, $value);
-}

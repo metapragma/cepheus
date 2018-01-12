@@ -34,7 +34,7 @@ import PartialsHovers from '../components/partials-hovers.vue'
 import PartialsFlexbox from '../components/partials-flexbox.vue'
 import PartialsAspectRatios from '../components/partials-aspect-ratios.vue'
 import PartialsBackgroundSize from '../components/partials-background-size.vue'
-import PartialsDebugChildren from '../components/partials-debug-children.vue'
+import PartialsDebug from '../components/partials-debug.vue'
 import PartialsDisplay from '../components/partials-display.vue'
 import PartialsFontStyle from '../components/partials-font-style.vue'
 import PartialsFontWeight from '../components/partials-font-weight.vue'
@@ -196,8 +196,8 @@ export default new Router({
       component: PartialsBackgroundSize
     },
     {
-      path: '/partials/debug-children',
-      component: PartialsDebugChildren
+      path: '/partials/debug',
+      component: PartialsDebug
     },
     {
       path: '/partials/display',

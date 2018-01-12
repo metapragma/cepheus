@@ -17,6 +17,11 @@
   @return round($value * 4) / 4;
 }
 
+
+/// PLUMBER - Easy baseline grids with SASS
+/// @author  Viktor Honti
+/// @license MIT
+/// @link https://jamonserrano.github.io/plumber-sass
 @function cepheus-plumber(
   $baseline: null,
   $font-size: null,
@@ -215,3 +220,87 @@
 
   @return if(type-of($value) != 'list', ($value,), $value);
 }
+
+/// A small function allowing skipping base64 encoding
+/// and simply pasting the SVG markup right in the CSS.
+/// @author Jakob Eriksen
+/// @link http://codepen.io/jakob-e/pen/doMoML
+/// @param {String} $svg - SVG image to encode
+/// @return {String} - Encoded SVG data uri
+@function cepheus-svg-uri($svg) {
+  $encoded: '';
+  $slice: 2000;
+  $index: 0;
+  $loops: ceil(str-length($svg) / $slice);
+
+  @for $i from 1 through $loops {
+    $chunk: str-slice($svg, $index, $index + $slice - 1);
+    // scss:
+    $chunk: cepheus-str-replace($chunk, '"', "'"); // sass-lint:disable-line quotes
+    $chunk: cepheus-str-replace($chunk, '<', '%3C');
+    $chunk: cepheus-str-replace($chunk, '>', '%3E');
+    $chunk: cepheus-str-replace($chunk, '&', '%26');
+    $chunk: cepheus-str-replace($chunk, '#', '%23');
+    $encoded: #{$encoded}#{$chunk};
+    $index: $index + $slice;
+  }
+
+  @return url("data:image/svg+xml;charset=utf8,#{$encoded}"); // sass-lint:disable-line quotes
+}
+
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @link http://sassmeister.com/gist/1b4f2da5527830088e4d
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function cepheus-str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + cepheus-str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@function cepheus-svg-color ($color) {
+  @return 'rgb(#{red($color)},#{green($color)},#{blue($color)})'
+}
+
+@function cepheus-svg-grid ($rows: 10, $columns: 5, $zoom: 1) {
+  $size: if($rows >= $columns, $rows * $cepheus-grid-size, $columns * $cepheus-grid-size);
+  $color-major: map-get($cepheus-colors, 'gold');
+  $color-minor: map-get($cepheus-colors, 'mid-gray');
+
+  $svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">';
+
+  @for $i from 0 through $rows {
+    $color: cepheus-svg-color(if($i == 0 or $i == $rows, $color-major, $color-minor));
+    $step: 100 / $rows;
+    $y: $step * $i;
+    $opacity: 1.5 * (0.1 + abs(0.5 - (abs($i - $rows) / $rows)));
+    $svg: $svg + '<line y1="#{$y}" y2="#{$y}" x1="0" x2="100" style="stroke:#{$color};stroke-opacity:#{$opacity};stroke-width:1"/>';
+  }
+
+  @for $i from 0 through $columns {
+    $color: cepheus-svg-color(if($i == 0 or $i == $columns, $color-major, $color-minor));
+    $step: 100 / $columns;
+    $x: 100 - ($step * $i);
+    $opacity: 1.5 * (0.1 + abs(0.5 - (abs($i - $columns) / $columns)));
+    $svg: $svg + '<line x1="#{$x}" x2="#{$x}" y1="0" y2="100" style="stroke:#{$color};stroke-opacity:#{$opacity};stroke-width:1"/>';
+  }
+
+  $svg: $svg + '</svg>';
+
+  $property-map: (
+    'background-image': cepheus-svg-uri($svg),
+    'background-size': $size * $zoom $size * $zoom,
+    'background-position': 0 0,
+    'background-repeat': repeat
+  );
+
+  @return $property-map
+}
+

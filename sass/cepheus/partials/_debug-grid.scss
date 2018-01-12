@@ -1,0 +1,3 @@
+@each $name, $value in $cepheus-debug-grid {
+  @include cepheus-register('debug-grid', $name, $value);
+}

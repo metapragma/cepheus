@@ -28,17 +28,9 @@
       <div id="a9" class="inter-ui inter-ui-9 measure">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
 
     </div>
-
-    <button class="mv2 mh3" id="toggle" v-on:click="toggle">Toggle</button>
+    <button class="mv3 mh3 h2 pv0 ph4" id="toggle" v-on:click="toggle">Toggle</button>
   </div>
 </template>
-
-<style>
-.test-debug-grid {
-  background-image: linear-gradient(to top, rgba(242, 201, 76, 0.5) 0, rgba(242, 201, 76, 0.5) 1px, transparent 1px);
-  background-size: 100% 0.25rem;
-}
-</style>
 
 <script>
 export default {
@@ -54,10 +46,10 @@ export default {
   methods: {
     toggle () {
       const cl = document.body.classList
-      if (cl.contains('test-debug-grid')) {
-        cl.remove('test-debug-grid')
+      if (cl.contains('debug-grid')) {
+        cl.remove('debug-grid')
       } else {
-        cl.add('test-debug-grid')
+        cl.add('debug-grid')
       }
     }
   }
