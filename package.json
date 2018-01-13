@@ -1,14 +1,19 @@
 {
   "name": "cepheus",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
+  "version": "1.0.1",
+  "description": "functional css",
   "author": "escapace <opensource@escapace.com>",
   "license": "MPL-2.0",
+  "files": [
+    "sass"
+  ],
+  "main": "sass/_cepheus.scss",
   "scripts": {
     "lint": "sass-lint -vq",
     "watch:end-to-end": "cross-env NODE_END_TO_END=True node build/dev-server.js",
     "test:end-to-end": "cross-env NODE_END_TO_END=True node test/end-to-end/runner.js",
-    "test": "npm run test:end-to-end && npm run lint"
+    "test": "npm run test:end-to-end && npm run lint",
+    "test:travis": "npm run test"
   },
   "eyeglass": {
     "sassDir": "sass",
@@ -17,13 +22,12 @@
     "needs": "^1.0.0"
   },
   "dependencies": {
-    "breakpoint-sass": "^2.7.1",
-    "cepheus-typeface-inter-ui": "^3.2.0",
-    "plumber-sass": "^0.7.7",
-    "susy": "^3.0.1"
+    "breakpoint-sass": "^2.7.1"
   },
   "devDependencies": {
+    "susy": "^3.0.1",
     "autoprefixer": "^7.2.4",
+    "cepheus-typeface-inter-ui": "^3.2.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-loader": "^7.1.2",

@@ -2,6 +2,7 @@ language: node_js
 node_js:
 - 8
 addons:
+  chrome: beta
   apt:
     packages:
     - bc
@@ -18,3 +19,5 @@ env:
   global:
   - JQ_BINARY="https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64"
   - PATH="/usr/bin:$PATH"
+  - secure: i+b8ihCtdCVhha9s6NTEORPtXXq7oTstjbqRKgbAVQiG8b9qEJoDkzOd9F2vwA3Fa2gFw6HCwWgBWgsZSecnXXlqnnIlKIOK52RNByAFA0aCdDtHC6EBOEg09y3fWCl6NwEkLnqBjA3KwZoQX6iX+BOSbdsebV2Vpj8vXfEWPveLFDsoK6Tm95ak+xVgAqKGvS/2+LY3LovDyz3s1AbFCX8oPtmvLZ5OoGXU/nUy5wBN/RAQxDXtohyGLv58Y3xVbR19GQht8ilOo5b4aGU+hw0ihapEJtili0sS+An6PUPhHqZzCw+bGImCTYV4I0eMS918wqsPngirtIqNEkU6bmxGsUJYYbPGR6v0fkgJlBSkU1NpEyzjkwCSQSlMXHNXNsYc8Q1IbMRPGa4tKkz/wn8yXUppB1ZuTwEyeh/CdPCobujPFLXLBI96VF7ia82pQxYuF5uqg1YgKHcOI3ONZ/Z7XktFW+IFC5GXO4F5aFAAadGsF2kdOVhl47uk7wfo1tFJCO3EfP+k9qxHOp7xBXwhQxjKv/jEmYsdzKoz/s7eNXeiTLCtmue+h3TiXgZT3UjEp3iWkv+vmA0X/zVmIp6knZA9xSyj3tsi89DWTvoO0hos4sod34xmnzjmkt2l0jyHalKg7vLFrxR60OIH+Auq6fKyIOJCd3FMyJ9/DPE=
+  - secure: Y15kDsyHWxhPLPxydoHEPOU3wkvPQyf3hszUGfF4QFdhqybHaThxohEL5kKLFQeVpwBbmaOmcO5Dw9Bz7ZlYfSf+4diT/sgKl+Bs9STCvNQC9D6gzbh8HA6aCiLwJpEaDCXMm0yCqJElglUanyVvUo9zmn/lCzBDC53azIMOttE+ihutQUen6eVwe4XlGyqo1ATAcUwqrCsd1qnJ6qSYHJePm5YheRCUe9I5z5XrF/Vidjz+4M+d7ZKPvYXNBBBmtIAztU/l7/k//2jPXuMyehGDGcPcpcgXoaqKL9nLdH8hahH74VrwHmd+yBN87PioRAaQ6HoiuGwgzNc+XjgS+pl46Ze5nEcuyMlbkiUiO71FrKxrR8G1dYJ5Hzo/OzY8qLLi1aDFzzwai0mayOrr/4wL7+u0TMQ4eNQaBgpvohbjRKyYo8WOxwIH81CIXKsZQ9Vq4F9cYIMR7jHmxLqYyPa9S7gA9mmnpj8+D8qVM5g942IcVl2E2rGcFK+E30evmdo5Em9Zum4CDx/5BQYczYPbYlz1jI1cl1Kg/Ut1WTnzMGhGdXouynUpwIHQmwtToyIHTEr0Aa/vcs0n+0QgTnIkwlXz3goeaBVA4pdLv7yqBTxuADe9PbD+X+jIRUrGyfl63zWU8Rk00z23N7QhejOPB0c8/mEkiDZ2T/OC944=
