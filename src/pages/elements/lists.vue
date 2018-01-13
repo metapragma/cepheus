@@ -28,7 +28,6 @@
       </div>
 
       <div slot="reference" class="mt3 mb5 ph3">
-        <h1 class="f6 f5-ns ttu tracked fw6 gray">Reference</h1>
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type" class="f5 f4-ns link db fw6 blue dim">MDN - List Style Type</a>
       </div>
 
