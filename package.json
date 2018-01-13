@@ -9,6 +9,7 @@
   ],
   "main": "sass/_cepheus.scss",
   "scripts": {
+    "build": "echo 'No build required'",
     "lint": "sass-lint -vq",
     "watch:end-to-end": "cross-env NODE_END_TO_END=True node build/dev-server.js",
     "test:end-to-end": "cross-env NODE_END_TO_END=True node test/end-to-end/runner.js",
