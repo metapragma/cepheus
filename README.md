@@ -29,14 +29,14 @@ We found ourselves writing the same piece of CSS over and over. Handwriting it i
 
 ### Functional CSS
 
-The idea of functional CSS deals with all of these issues.  It ensures that the UI is consistent, totally predictable and free of side-effects. 
+The idea of functional CSS deals with all of these issues.  It ensures that the UI is consistent, totally predictable and free of side-effects.
 - [Functional Programming, CSS, and your sanity](http://jon.gold/2015/07/functional-css/)  
 - [CSS and Scalability](http://mrmrs.github.io/writing/2016/03/24/scalable-css/)
 - [Rationalizing Functional CSS](https://marcelosomers.com/writing/rationalizing-functional-css/)
 
 ### Semantics
 
-After reading the class names applied to an element, it becomes immediately obvious what it looks like. Development time is reduced significantly. Maintenance becomes much easier. Each class has a very limited responsibility. The risk of mutation — changing a property somewhere and breaking code elsewhere — is eliminated.
+After reading the class names applied to an element, it becomes immediately obvious what it looks like. This reduces development time significantly. Maintenance becomes much easier. Each class takes very limited responsibility so the risk of mutation — changing a property somewhere and breaking code elsewhere — is eliminated.
 
 ## Cepheus
 
