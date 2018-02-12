@@ -11,11 +11,14 @@
 
 ### Problem
 
-We found ourselves writing the same piece of CSS over and over. Handwriting it is very time-consuming, repetitive and results in lots of duplication. “Zombie code” is plenty and nobody risks removing it. This, in turn, results in much more CSS shipped than you really need. 
+We found ourselves writing the same piece of CSS over and over. Handwriting it is very time-consuming, repetitive and results in lots of duplication. “Zombie code” is plenty and nobody risks removing it. This results in much more CSS shipped than you really need. 
 
 ### Functional CSS
 
 The idea of functional CSS deals with all of these issues.  It ensures that the UI is consistent, totally predictable and free of side-effects. 
+- [Functional Programming, CSS, and your sanity](http://jon.gold/2015/07/functional-css/)  
+- [CSS and Scalability](http://mrmrs.github.io/writing/2016/03/24/scalable-css/)
+- [Rationalizing Functional CSS](https://marcelosomers.com/writing/rationalizing-functional-css/)
 
 ### Semantics
 
