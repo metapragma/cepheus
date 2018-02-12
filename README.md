@@ -9,11 +9,20 @@
 
 ## Overview
 
-We had a problem. We found ourselves writing the same piece of CSS over and over. Handwriting it is very time-consuming, repetitive and results in lots of duplication. “Zombie code” is plenty and nobody risks removing it. This, in turn, results in much more CSS shipped than you really need. 
+### Problem
 
-The idea of functional CSS deals with all of these issues.  It ensures that the UI is totally predictable and free of side-effects. Functional CSS ensures consistency: it’s easy to compose consistent spacing and typography rules which give your layout beautiful horizontal and vertical rhythm. Each class has a very limited responsibility, hence the risk of mutation — changing a property somewhere and breaking code elsewhere — is eliminated.  After reading the class names applied to an element, it becomes immediately obvious what it looks like. UI is updated in only one place — single utility classes. Thanks to this, development time is reduced significantly which makes it very useful for rapid prototyping. Maintenance becomes much easier. 
+We found ourselves writing the same piece of CSS over and over. Handwriting it is very time-consuming, repetitive and results in lots of duplication. “Zombie code” is plenty and nobody risks removing it. This, in turn, results in much more CSS shipped than you really need. 
 
-Cepheus is inspired by these ideas. It utilizes modules from tachyons.io. The type-scale module is modified. Modules providing default baseline rhythm and flexible debug options are added. These 53 modules adhere to the principles of atomic, functional design. Every module is self-contained and responsible for its own little, encapsulated functionality. They cover the whole CSS spectrum — typography to spacing, theming to elements. Built mobile-first to ensure it works with all devices — big, small and in-between, Cepheus is lightweight and contains minimal code. It can be used to create modular, reusable UI components, providing the base building blocks. A wide range of Sass variables gives it flexibility and loose coupling. An important thing to note is that users are able to add custom values whenever they need it. Cepheus is built with independent modules, which means you can import only the parts you’re going to use, decreasing import size. The built-in debug grid helps you catch and solve spacing and layout issues. 
+### Functional CSS
+
+The idea of functional CSS deals with all of these issues.  It ensures that the UI is consistent, totally predictable and free of side-effects. 
+
+### Semantics
+After reading the class names applied to an element, it becomes immediately obvious what it looks like. Development time is reduced significantly. Maintenance becomes much easier. Each class has a very limited responsibility. The risk of mutation — changing a property somewhere and breaking code elsewhere — is eliminated.
+
+### Motivation
+
+Cepheus is inspired by these ideas. It utilizes modules from tachyons.io. The type-scale module is modified. Modules providing default baseline rhythm and flexible debug options are added. It’s easy to compose consistent spacing and typography rules which give your layout beautiful horizontal and vertical rhythm. These 53 modules adhere to the principles of atomic, functional design. Every module is self-contained and responsible for its own little, encapsulated functionality. They cover the whole CSS spectrum — typography to spacing, theming to elements. Built mobile-first to ensure it works with all devices — big, small and in-between, Cepheus is lightweight and contains minimal code. It can be used to create modular, reusable UI components, providing the base building blocks. A wide range of Sass variables gives it flexibility and loose coupling. An important thing to note is that users are able to add custom values whenever they need it. Cepheus is built with independent modules, which means you can import only the parts you’re going to use, decreasing import size. The built-in debug grid helps you catch and solve spacing and layout issues. 
 
 
 ## Usage Example
