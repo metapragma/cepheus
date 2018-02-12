@@ -7,6 +7,20 @@
 #### WIP
 **Cepheus — functional CSS utility class generator**
 
+## Table of Contents
+
+-   [Overview](#overview)
+    -   [Problem](#problem)
+    -   [Functional CSS](#functional-css)
+    -   [Semantics](#semantics)
+-   [Cepheus](#cepheus)
+    -   [Features](#features)
+    -   [Usage Example](#usage-example)
+    -   [Installation](#installation)
+    -   [Configuration](#configuration)
+-   [Contributing](#contributing)
+-   [License](#license)
+
 ## Overview
 
 ### Problem
@@ -61,7 +75,7 @@ Applying these principles, we construct a simple button using Cepheus utility cl
 ![Button created with Cepheus](https://i.imgur.com/7kwCIr4.png)
 
 
-## Installation Instructions
+## Installation
 
 Install Cepheus
 ``` bash
