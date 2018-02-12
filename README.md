@@ -40,18 +40,8 @@ After reading the class names applied to an element, it becomes immediately obvi
 
 ## Cepheus
 
-Cepheus is inspired by these ideas. It utilizes modules from tachyons.io. These 53 modules adhere to the principles of atomic, functional CSS. They cover the whole spectrum — typography to spacing, theming to elements. 
-It can be used to create modular, reusable UI components, providing the base building blocks.
-
-### Features
-
-- Mobile-first architecture
-- Minimal code
-- Default baseline rhythm and flexible debug options
-- Consistent composition of spacing and typography rules
-- Flexibility though Sass variables
-- Built-in debug grid
-- Partial import options
+Cepheus is inspired by these ideas. It utilizes modules from tachyons.io. These 53 modules adhere to the principles of atomic, functional CSS, covering the whole spectrum — typography to spacing, theming to elements. 
+Cepheus can be used to create modular, reusable UI components, providing the base building blocks.
 
 ### Usage Example
 
@@ -73,6 +63,16 @@ Applying these principles, we construct a simple button using Cepheus utility cl
 - **white-90** — color: `rgba(255, 255, 255, 0.9)`
 
 ![Button created with Cepheus](https://i.imgur.com/7kwCIr4.png)
+
+### Features
+
+- Mobile-first architecture
+- Minimal code
+- Default baseline rhythm and flexible debug options
+- Consistent composition of spacing and typography rules
+- Flexibility though Sass variables
+- Built-in debug grid
+- Partial import options
 
 
 ## Installation
