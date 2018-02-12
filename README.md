@@ -22,7 +22,15 @@ After reading the class names applied to an element, it becomes immediately obvi
 
 ### Motivation
 
-Cepheus is inspired by these ideas. It utilizes modules from tachyons.io. The type-scale module is modified. Modules providing default baseline rhythm and flexible debug options are added. It’s easy to compose consistent spacing and typography rules which give your layout beautiful horizontal and vertical rhythm. These 53 modules adhere to the principles of atomic, functional design. Every module is self-contained and responsible for its own little, encapsulated functionality. They cover the whole CSS spectrum — typography to spacing, theming to elements. Built mobile-first to ensure it works with all devices — big, small and in-between, Cepheus is lightweight and contains minimal code. It can be used to create modular, reusable UI components, providing the base building blocks. A wide range of Sass variables gives it flexibility and loose coupling. An important thing to note is that users are able to add custom values whenever they need it. Cepheus is built with independent modules, which means you can import only the parts you’re going to use, decreasing import size. The built-in debug grid helps you catch and solve spacing and layout issues. 
+Cepheus is inspired by these ideas. It utilizes modules from tachyons.io. Features include but are not limited to:
+- Mobile-first architecture
+- Minimal code
+- Default baseline rhythm and flexible debug options
+- Consistent composition of spacing and typography rules
+- Flexibility though Sass variables
+- Built-in debug grid
+
+The type-scale module is modified. Modules providing default baseline rhythm and flexible debug options are added. It’s easy to compose consistent spacing and typography rules which give your layout beautiful horizontal and vertical rhythm. These 53 modules adhere to the principles of atomic, functional design. Every module is self-contained and responsible for its own little, encapsulated functionality. They cover the whole CSS spectrum — typography to spacing, theming to elements. Built mobile-first to ensure it works with all devices — big, small and in-between, Cepheus is lightweight and contains minimal code. It can be used to create modular, reusable UI components, providing the base building blocks. A wide range of Sass variables gives it flexibility and loose coupling. An important thing to note is that users are able to add custom values whenever they need it. Cepheus is built with independent modules, which means you can import only the parts you’re going to use, decreasing import size. The built-in debug grid helps you catch and solve spacing and layout issues. 
 
 
 ## Usage Example
@@ -50,9 +58,15 @@ Applying these principles, we construct a simple button using Cepheus utility cl
 
 ## Installation Instructions
 
-cepheus-cli
+Install Cepheus
+``` bash
+$ npm install -S cepheus 
+```
 
+And include it in your main Sass file
+``` sass
+@import '/node_modules/cepheus/sass/cepheus';
+```
 
 ## Configuration
-
-partial imports options, debug=true : debug=false
+~
