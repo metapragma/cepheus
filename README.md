@@ -58,7 +58,7 @@ Applying these principles, we construct a simple button using Cepheus utility cl
 - **items-center** — `align-items: center`
 - **white-90** — color: `rgba(255, 255, 255, 0.9)`
 
-![Button created with Cepheus](https://d2mxuefqeaa7sj.cloudfront.net/s_F6609529F3546F0A4C73ACCCF1F64CA88C1057BEFBE7EAE75895C6B6E4901828_1516572402623_Screenshot+from+2018-01-22+02-04-17.png)
+![Button created with Cepheus](https://i.imgur.com/7kwCIr4.png)
 
 
 ## Installation Instructions
