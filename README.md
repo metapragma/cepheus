@@ -94,4 +94,4 @@ And include it in your main Sass file
 Please read our [contributing](https://github.com/paerallax/contributing) guideline.
 
 ## License
-[MPLv2](https://www.mozilla.org/en-US/MPL/2.0/)
+[MPL](https://www.mozilla.org/en-US/MPL/2.0/)
