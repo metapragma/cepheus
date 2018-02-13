@@ -64,7 +64,7 @@ Applying these principles, we construct a simple button using Cepheus utility cl
 | **items-center**    | align-items            | center        |
 | **white**           | color                  | white         |
 
-![Button created with Cepheus](https://i.imgur.com/5UnIxXk.png)
+![Button created with Cepheus](https://i.imgur.com/qqlx3ZV.png)
 
 ### Features
 
