@@ -45,6 +45,8 @@ Cepheus is inspired by these ideas. It utilizes modules from tachyons.io. These 
 
 ### Usage Example
 
+![Button created with Cepheus](https://i.imgur.com/qqlx3ZV.png)
+
 Applying these principles, we construct a simple button using Cepheus utility classes
 
 ``` html
@@ -64,8 +66,6 @@ Applying these principles, we construct a simple button using Cepheus utility cl
 | **items-center**    | align-items            | center        |
 | **white**           | color                  | white         |
 
-![Button created with Cepheus](https://i.imgur.com/qqlx3ZV.png)
-
 ### Features
 
 - Mobile-first architecture
@@ -79,7 +79,7 @@ Applying these principles, we construct a simple button using Cepheus utility cl
 
 ## Installation
 
-Install Cepheus
+Install Cepheus([Imgur](
 ``` bash
 $ npm install -S cepheus 
 ```
