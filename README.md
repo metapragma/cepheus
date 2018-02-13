@@ -59,8 +59,8 @@ Applying these principles, we construct a simple button using Cepheus utility cl
 |---------------------|:----------------------:| -------------:|
 | **w4**              | width                  | 8rem          |
 | **h3**              | height                 | 3rem          |
-| **br4**             | border-radius          | 1rem          |
-| **bg-light-red**    | background-color       | #ff725c       |
+| **br3**             | border-radius          | 10.75rem      |
+| **bg-blue**         | background-color       | #408BC9       |
 | **flex**            | display                | flex          |
 | **justify-center**  | justify-content        | center        |
 | **items-center**    | align-items            | center        |
@@ -79,7 +79,7 @@ Applying these principles, we construct a simple button using Cepheus utility cl
 
 ## Installation
 
-Install Cepheus([Imgur](
+Install Cepheus
 ``` bash
 $ npm install -S cepheus 
 ```
