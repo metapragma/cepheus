@@ -22,6 +22,7 @@
 -   [License](#license)
 
 ## Overview
+Cepheus is a functional CSS utility class generator. It provides a suit of encapsulated modules that adhere to the principles of functional, atomic CSS, as well as sensible spacing / typography defaults and a built-in debug grid.
 
 ### Problem
 
@@ -40,8 +41,7 @@ After reading the class names applied to an element, it becomes immediately obvi
 
 ## Cepheus
 
-Cepheus is inspired by these ideas. It utilizes modules from tachyons.io. These 53 modules adhere to the principles of atomic, functional CSS, covering the whole spectrum — typography to spacing, theming to elements. 
-Cepheus can be used to create modular, reusable UI components, providing the base building blocks.
+Cepheus is inspired by these ideas. It utilizes modules from tachyons.io. These 53 modules cover the whole spectrum — typography to spacing, theming to elements. Cepheus can be used to create modular, reusable UI components, providing the base building blocks.
 
 ### Usage Example
 
@@ -67,12 +67,12 @@ Applying these principles, we construct a simple button using Cepheus utility cl
 ### Features
 
 - Mobile-first architecture
-- Minimal code
-- Default baseline rhythm and flexible debug options
 - Consistent composition of spacing and typography rules
-- Flexibility though Sass variables
+- Default baseline rhythm and flexible debug options
 - Built-in debug grid
+- Flexibility though Sass variables
 - Partial import options
+- Minimal code
 
 
 ## Installation
