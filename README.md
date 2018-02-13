@@ -26,7 +26,7 @@ Cepheus is a functional CSS utility class generator. It provides a suit of encap
 
 ### Problem
 
-We found ourselves writing the same piece of CSS over and over. Handwriting it is very time-consuming, repetitive and results in lots of duplication. “Zombie code” is plenty and nobody risks removing it. This results in much more CSS shipped than you really need. 
+We found ourselves writing the same piece of CSS over and over. Handwriting it is very time-consuming, repetitive and results in lots of duplication. “Zombie code” is plenty and nobody risks removing it. This results in much more CSS shipped than we really need. 
 
 ### Functional CSS
 
