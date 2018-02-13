@@ -49,18 +49,20 @@ Applying these principles, we construct a simple button using Cepheus utility cl
 
 ``` html
 <div class="w4 h2 br4 bg-light-red flex justify-center items-center">
-  <div class="white-90">Button</div>
+  <div class="white">Button</div>
 </div>
 ```
 
-- **w4** ```width: 8rem```
-- **h3** `height: 3rem`
-- **br4** `border-radius: 1rem`
-- **bg-light-red** `background-color: #ff725c`
-- **flex** `display: flex`
-- **justify-center** `justify-content: center`
-- **items-center** `align-items: center`
-- **white-90** `color: rgba(255, 255, 255, 0.9)`
+| Class Name          | CSS property           | Value         |
+|---------------------|:----------------------:| -------------:|
+| **w4**              | width                  | 8rem          |
+| **h3**              | height                 | 3rem          |
+| **br4**             | border-radius          | 1rem          |
+| **bg-light-red**    | background-color       | #ff725c       |
+| **flex**            | display                | flex          |
+| **justify-center**  | justify-content        | center        |
+| **items-center**    | align-items            | center        |
+| **white**           | color                  | white         |
 
 ![Button created with Cepheus](https://i.imgur.com/7kwCIr4.png)
 
