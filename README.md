@@ -41,7 +41,7 @@ After reading the class names applied to an element, it becomes immediately obvi
 
 ## Cepheus
 
-Cepheus is inspired by these ideas. It utilizes modules from tachyons.io. These 53 modules cover the whole spectrum — typography to spacing, theming to elements. Cepheus can be used to create modular, reusable UI components, providing the base building blocks.
+Cepheus is inspired by these ideas. It utilizes modules from tachyons.io. These 53 modules cover the whole spectrum: typography to spacing, theming to elements. Cepheus provides the base building blocks which can be used to create modular, reusable UI components.
 
 ### Usage Example
 
